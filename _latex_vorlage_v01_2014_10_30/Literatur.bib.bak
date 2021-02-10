@@ -1,0 +1,26 @@
+% Encoding: UTF-8
+	
+@inproceedings{ams09,
+  author={A. Bloch},
+	title={ACC Akut},
+	booktitle={auto motor sport, Ausg: 2010--01},
+	pages={68-73},
+	year={2009},
+	}
+@InProceedings{Badue2019,
+  author    = {Badue, Claudine;Guidolini, Rânik;Carneiro, Raphael Vivacqua;Azevedo,Pedro;Cardoso, Vinicius Brito;Forechi, Avelino;Jesus, Luan;Berriel, Rodrigo;Paixão, Thiago;Mutz, Filipe;Veronese, Lucas;Oliveira-Santos, Thiago;De Souza, Alberto Ferreira},
+  booktitle = {Self-Driving Cars: A Survey},
+  year      = {2019},
+  month     = jan,
+}
+
+@Book{Thrun2006,
+  author    = {Thrun, Sebastian},
+  publisher = {The MIT Press},
+  title     = {Probabilistic robotics},
+  year      = {2006},
+  address   = {Cambridge, Massachusetts},
+  isbn      = {9780262201629},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}

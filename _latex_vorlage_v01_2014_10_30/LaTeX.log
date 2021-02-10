@@ -1,0 +1,1427 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.3)  11 FEB 2021 00:01
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**LaTeX.tex
+(./LaTeX.tex
+LaTeX2e <2020-10-01> patch level 3
+L3 programming layer <2020-12-07> xparse <2020-03-03> (./Header.tex
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2020/09/21 v3.32 KOMA-Script package (file load hooks)
+
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2020/09/21 v3.32 KOMA-Script package (using LaTeX hooks)
+
+
+LaTeX3 Info: Defining command \BeforeFile with sig. 'm' on line 61.
+
+
+LaTeX3 Info: Defining command \AfterFile with sig. 'm' on line 65.
+
+
+LaTeX3 Info: Defining command \BeforeClass with sig. 'm' on line 69.
+
+
+LaTeX3 Info: Defining command \BeforePackage with sig. 'm' on line 73.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfClass with sig. 'smo+m' on line 83.
+
+
+LaTeX3 Info: Defining command \AfterAtEndOfPackage with sig. 'smo+m' on line
+(LaTeX3)     93.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterClass with sig. 'smo+m' on line
+(LaTeX3)     173.
+
+
+LaTeX3 Info: Defining command \AfterClass with sig. '' on line 174.
+
+
+LaTeX3 Info: Defining command \scrlfile@AfterPackage with sig. 'smo+m' on line
+(LaTeX3)     191.
+
+
+LaTeX3 Info: Defining command \AfterPackage with sig. '' on line 192.
+
+
+LaTeX3 Info: Defining command \ReplaceInput with sig. '' on line 193.
+
+
+LaTeX3 Info: Defining command \ReplaceClass with sig. 'mm' on line 196.
+
+
+LaTeX3 Info: Defining command \ReplacePackage with sig. 'mm' on line 199.
+
+
+LaTeX3 Info: Defining command \UnReplaceInput with sig. '' on line 200.
+
+
+LaTeX3 Info: Defining command \UnReplaceClass with sig. 'm' on line 203.
+
+
+LaTeX3 Info: Defining command \UnReplacePackage with sig. 'mm' on line 206.
+
+
+LaTeX3 Info: Defining command \PreventPackageFromLoading with sig. 's+om' on
+(LaTeX3)     line 234.
+
+
+LaTeX3 Info: Defining command \StorePreventPackageFromLoading with sig. 'm' on
+(LaTeX3)     line 242.
+
+
+LaTeX3 Info: Defining command \ResetPreventPackageFromLoading with sig. '' on
+(LaTeX3)     line 247.
+
+
+LaTeX3 Info: Defining command \UnPreventPackageFromLoading with sig. 'sm' on
+(LaTeX3)     line 261.
+
+
+LaTeX3 Info: Defining command \BeforeClosingMainAux with sig. 'om' on line
+(LaTeX3)     274.
+
+
+LaTeX3 Info: Defining command \AfterReadingMainAux with sig. 'om' on line 287.
+
+
+LaTeX3 Info: Defining command \protected@immediate@write with sig. 'm+m+m' on
+(LaTeX3)     line 298.
+
+
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2020/09/21 v3.32 KOMA-Script package (logo)
+)))
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrartcl.cls
+Document Class: scrartcl 2020/09/21 v3.32 KOMA-Script document class (article)
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2020/09/21 v3.32 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2020/09/21 v3.32 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+)))
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2020/09/21 v3.32 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip47
+\scr@dte@tocline@numbox=\box47
+)
+Package tocbasic Info: babel extension for `toc' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 135.
+Class scrartcl Info: You've used standard option `oneside'.
+(scrartcl)           This is correct!
+(scrartcl)           Internally I'm using `twoside=false'.
+(scrartcl)           If you'd like to set the option with \KOMAoptions,
+(scrartcl)           you'd have to use `twoside=false' there
+(scrartcl)           instead of `oneside', too.
+Package scrartcl Info: You've used standard option `12pt'.
+(scrartcl)             This is correct!
+(scrartcl)             Internally I'm using `fontsize=12pt'.
+(scrartcl)             If you'd like to set the option with \KOMAoptions,
+(scrartcl)             you'd have to use `fontsize=12pt' there
+(scrartcl)             instead of `12pt', too.
+Class scrartcl Info: Switching compatibility level to `first'.
+Class scrartcl Info: File `scrsize12pt.clo' used to setup font sizes on input l
+ine 2222.
+
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrsize12pt.clo
+File: scrsize12pt.clo 2020/09/21 v3.32 KOMA-Script font size class option (12pt
+)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2020/09/21 v3.32 KOMA-Script package (type area)
+\ta@bcor=\skip48
+\ta@div=\count177
+Package typearea Info: You've used standard option `pdftex'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `pagesize=pdftex'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `pagesize=pdftex' there
+(typearea)             instead of `pdftex', too.
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
+Package typearea Info: Switching compatibility level to `first'.
+\ta@hblk=\skip49
+\ta@vblk=\skip50
+\ta@temp=\skip51
+\footheight=\skip52
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 12
+(typearea)             BCOR = 0.0pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 448.13095pt
+(typearea)              DIV departure   = -6%
+(typearea)              \evensidemargin = 2.4185pt
+(typearea)              \oddsidemargin  = 2.4185pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 606.5pt
+(typearea)              \topmargin      = -1.84941pt
+(typearea)              \headheight     = 18.125pt
+(typearea)              \headsep        = 21.75pt
+(typearea)              \topskip        = 12.0pt
+(typearea)              \footskip       = 50.75pt
+(typearea)              \baselineskip   = 14.5pt
+(typearea)              on input line 1740.
+)
+\c@part=\count178
+\c@section=\count179
+\c@subsection=\count180
+\c@subsubsection=\count181
+\c@paragraph=\count182
+\c@subparagraph=\count183
+\scr@dte@section@maxnumwidth=\skip53
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\section on input line 4795.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\section on input line 4795.
+\scr@dte@part@maxnumwidth=\skip54
+Class scrartcl Info: using compatibility default `afterindent=false'
+(scrartcl)           for `\part on input line 4803.
+\scr@dte@subsection@maxnumwidth=\skip55
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsection on input line 4813.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsection on input line 4813.
+\scr@dte@subsubsection@maxnumwidth=\skip56
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subsubsection on input line 4823.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subsubsection on input line 4823.
+\scr@dte@paragraph@maxnumwidth=\skip57
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\paragraph on input line 4834.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\paragraph on input line 4834.
+\scr@dte@subparagraph@maxnumwidth=\skip58
+Class scrartcl Info: using compatibility default `runin=bysign'
+(scrartcl)           for `\subparagraph on input line 4844.
+Class scrartcl Info: using compatibility default `afterindent=bysign'
+(scrartcl)           for `\subparagraph on input line 4844.
+\abovecaptionskip=\skip59
+\belowcaptionskip=\skip60
+\c@pti@nb@sid@b@x=\box48
+Package tocbasic Info: babel extension for `lof' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6076.
+
+\scr@dte@figure@maxnumwidth=\skip61
+\c@figure=\count184
+Package tocbasic Info: babel extension for `lot' omitted
+(tocbasic)             because of missing \bbl@set@language on input line 6088.
+
+\scr@dte@table@maxnumwidth=\skip62
+\c@table=\count185
+Class scrartcl Info: Using old \@makefntext due to compatibility level
+(scrartcl)           less than 3.22 on input line 6239.
+Class scrartcl Info: Redefining `\numberline' on input line 6252.
+\bibindent=\dimen138
+)
+(c:/texlive/2020/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
+(c:/texlive/2020/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+
+(c:/texlive/2020/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+))
+\Gm@cnth=\count186
+\Gm@cntv=\count187
+\c@Gm@tempcnt=\count188
+\Gm@bindingoffset=\dimen139
+\Gm@wd@mp=\dimen140
+\Gm@odd@mp=\dimen141
+\Gm@even@mp=\dimen142
+\Gm@layoutwidth=\dimen143
+\Gm@layoutheight=\dimen144
+\Gm@layouthoffset=\dimen145
+\Gm@layoutvoffset=\dimen146
+\Gm@dimlist=\toks16
+)
+(c:/texlive/2020/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip63
+\LTright=\skip64
+\LTpre=\skip65
+\LTpost=\skip66
+\LTchunksize=\count189
+\LTcapwidth=\dimen147
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count190
+\LT@rows=\count191
+\c@LT@tables=\count192
+\c@LT@chunks=\count193
+\LT@p@ftn=\toks17
+)
+Class scrartcl Info: longtable captions redefined on input line 24.
+
+(c:/texlive/2020/texmf-dist/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen148
+\lightrulewidth=\dimen149
+\cmidrulewidth=\dimen150
+\belowrulesep=\dimen151
+\belowbottomsep=\dimen152
+\aboverulesep=\dimen153
+\abovetopsep=\dimen154
+\cmidrulesep=\dimen155
+\cmidrulekern=\dimen156
+\defaultaddspace=\dimen157
+\@cmidla=\count194
+\@cmidlb=\count195
+\@aboverulesep=\dimen158
+\@belowrulesep=\dimen159
+\@thisruleclass=\count196
+\@lastruleclass=\count197
+\@thisrulewidth=\dimen160
+)
+(c:/texlive/2020/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2020/08/01 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/latin1.def
+File: latin1.def 2020/08/01 v1.3d Input encoding file
+))
+(c:/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/12/16 3.52 The Babel package
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/12/16 3.52 Babel common definitions
+\babel@savecnt=\count198
+\U@D=\dimen161
+\l@babelnohyphens=\language86
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+)
+\bbl@dirlevel=\count199
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel-german/ngerman.ldf
+Language: ngerman 2020/07/21 v2.12 German support for babel (post-1996 orthogra
+phy)
+
+(c:/texlive/2020/texmf-dist/tex/generic/babel-german/ngermanb.ldf
+Language: ngermanb 2020/07/21 v2.12 German support for babel (post-1996 orthogr
+aphy)
+Package babel Info: Making " an active character on input line 121.
+)))
+(c:/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2019-12-06 v5.2j context-sensitive quotations (JAW)
+
+(c:/texlive/2020/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count266
+)
+\csq@reset=\count267
+\csq@gtype=\count268
+\csq@glevel=\count269
+\csq@qlevel=\count270
+\csq@maxlvl=\count271
+\csq@tshold=\count272
+\csq@ltx@everypar=\toks20
+
+(c:/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2019-12-06 v5.2j csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(c:/texlive/2020/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)
+Package csquotes Info: Option 'babel' depreciated.
+(csquotes)             Using 'autostyle'.
+Package csquotes Info: Enabling multilingual quotes.
+Package csquotes Info: Redefining alias 'german' -> 'german/quotes'.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/setspace/setspace.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2020/09/21 v3.32 KOMA-Script package (end user interf
+ace for scrlayer)
+
+(c:/texlive/2020/texmf-dist/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 2020/09/21 v3.32 KOMA-Script package (defining layers and pag
+e styles)
+Package scrlayer Info: Using already defined \footheight
+(scrlayer)             hoping, that this is a length and
+(scrlayer)             not only a macro on input line 109.
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 211
+6.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1085.
+Package scrlayer-scrpage Info: deactivating warning for font element
+(scrlayer-scrpage)             `pagefoot' on input line 1109.
+)
+Package scrlayer-scrpage Info: auto-selection of `pagestyleset=KOMA-Script'.
+
+
+Package scrlayer-scrpage Warning: Command deprecated!
+(scrlayer-scrpage)                Usage of `\setheadtopline', `\setheadsepline'
+,
+(scrlayer-scrpage)                `\setfootsepline', and `\setfootbotline'
+(scrlayer-scrpage)                became deprecated with scrlayer-scrpage.
+(scrlayer-scrpage)                You should use KOMA-Script options
+(scrlayer-scrpage)                `headsepline', `headtopline', `footsepline',
+(scrlayer-scrpage)                or `footbotline' with values
+(scrlayer-scrpage)                `<line thickness>:<line length>' to setup
+(scrlayer-scrpage)                the line length and thickness, and
+(scrlayer-scrpage)                `\setkomafont' or `\addtokomafont' to
+(scrlayer-scrpage)                setup the colour on input line 47.
+
+
+Package scrlayer-scrpage Warning: Command deprecated!
+(scrlayer-scrpage)                Usage of `\setheadtopline', `\setheadsepline'
+,
+(scrlayer-scrpage)                `\setfootsepline', and `\setfootbotline'
+(scrlayer-scrpage)                became deprecated with scrlayer-scrpage.
+(scrlayer-scrpage)                You should use KOMA-Script options
+(scrlayer-scrpage)                `headsepline', `headtopline', `footsepline',
+(scrlayer-scrpage)                or `footbotline' with values
+(scrlayer-scrpage)                `<line thickness>:<line length>' to setup
+(scrlayer-scrpage)                the line length and thickness, and
+(scrlayer-scrpage)                `\setkomafont' or `\addtokomafont' to
+(scrlayer-scrpage)                setup the colour on input line 48.
+
+1: section
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2020/02/24 v1.2b Standard LaTeX Color (DPC)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))
+(c:/texlive/2020/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+
+(c:/texlive/2020/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(c:/texlive/2020/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(c:/texlive/2020/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+)
+\@linkdim=\dimen162
+\Hy@linkcounter=\count273
+\Hy@pagecounter=\count274
+
+(c:/texlive/2020/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(c:/texlive/2020/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count275
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count276
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen163
+
+(c:/texlive/2020/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(c:/texlive/2020/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count277
+\Field@Width=\dimen164
+\Fld@charsize=\dimen165
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2020/08/17 v1.0a Emulation of the original atbegshi packa
+ge
+with kernel methods
+)
+\Hy@abspage=\count278
+\c@Item=\count279
+\c@Hfootnote=\count280
+)
+Package hyperref Info: Driver: hpdftex.
+
+(c:/texlive/2020/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atvery packag
+e
+with kernel methods
+)
+\Fld@listcount=\count281
+\c@bookmark@seq@number=\count282
+
+(c:/texlive/2020/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+
+(c:/texlive/2020/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+86.
+)
+\Hy@SectionHShift=\skip67
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 100.
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/09/23 v2.17i AMS math features
+\@mathmargin=\skip68
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen166
+))
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen167
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count283
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count284
+\leftroot@=\count285
+LaTeX Info: Redefining \overline on input line 399.
+\classnum@=\count286
+\DOTSCASE@=\count287
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box53
+\strutbox@=\box54
+\big@size=\dimen168
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count288
+\c@MaxMatrixCols=\count289
+\dotsspace@=\muskip17
+\c@parentequation=\count290
+\dspbrk@lvl=\count291
+\tag@help=\toks22
+\row@=\count292
+\column@=\count293
+\maxfields@=\count294
+\andhelp@=\toks23
+\eqnshift@=\dimen169
+\alignsep@=\dimen170
+\tagshift@=\dimen171
+\tagwidth@=\dimen172
+\totwidth@=\dimen173
+\lineht@=\dimen174
+\@envbody=\toks24
+\multlinegap=\skip69
+\multlinetaggap=\skip70
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2923.
+LaTeX Info: Redefining \] on input line 2924.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+(c:/texlive/2020/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip71
+\bibsep=\skip72
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count295
+)
+(c:/texlive/2020/texmf-dist/tex/latex/acronym/acronym.sty
+Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
+
+(c:/texlive/2020/texmf-dist/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(c:/texlive/2020/texmf-dist/tex/generic/xstring/xstring.sty
+(c:/texlive/2020/texmf-dist/tex/generic/xstring/xstring.tex
+\integerpart=\count296
+\decimalpart=\count297
+)
+Package: xstring 2019/02/06 v1.83 String manipulations (CT)
+)
+\AC@clearlist=\toks26
+)
+(c:/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2020/10/01 v2.5c Tabular extension package (FMi)
+\col@sep=\dimen175
+\ar@mcellbox=\box55
+\extrarowheight=\dimen176
+\NC@list=\toks27
+\extratabsurround=\skip73
+\backup@length=\skip74
+\ar@cellbox=\box56
+)
+(c:/texlive/2020/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2019/05/31 v2.5 Span multiple rows of a table
+\multirow@colwidth=\skip75
+\multirow@cntb=\count298
+\multirow@dima=\skip76
+\bigstrutjot=\dimen177
+)
+(c:/texlive/2020/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+)
+(c:/texlive/2020/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+\openout3 = `LaTeX.idx'.
+
+
+Writing index file LaTeX.idx
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2020/08/30 v1.4c Standard LaTeX Graphics (DPC,SPQR)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 105.
+))
+(c:/texlive/2020/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
+
+(c:/texlive/2020/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+(c:/texlive/2020/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count299
+\calc@Bcount=\count300
+\calc@Adimen=\dimen178
+\calc@Bdimen=\dimen179
+\calc@Askip=\skip77
+\calc@Bskip=\skip78
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count301
+\calc@Cskip=\skip79
+)
+(c:/texlive/2020/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen180
+\ESO@tempdimb=\dimen181
+)
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2020/09/09 v1.2b Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen182
+\Gin@req@width=\dimen183
+)
+\AM@pagewidth=\dimen184
+\AM@pageheight=\dimen185
+
+(c:/texlive/2020/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
+)
+\AM@pagebox=\box57
+\AM@global@opts=\toks28
+\AM@pagecnt=\count302
+\AM@toc@title=\toks29
+\c@AM@survey=\count303
+\AM@templatesizebox=\box58
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+
+(c:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
+\l__kernel_color_stack_int=\count304
+\l__pdf_internal_box=\box59
+)
+(./LaTeX.aux (./Aufgabenstellung_Dummy.aux) (./Sperrklausel.aux) (./Eid.aux)
+(./Abstract.aux) (./Abbildungsverzeichnis.aux) (./Tabellenverzeichnis.aux)
+(./Abkuerzungsverzeichnis.aux) (./Symbolverzeichnis.aux) (./Kapitel1.aux)
+(./Kapitel2.aux) (./Kapitel3.aux) (./Anhang.aux))
+\openout1 = `LaTeX.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: includehead includefoot 
+* h-part:(L,W,R)=(85.35826pt, 426.79135pt, 85.35826pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=612.15808pt
+* \oddsidemargin=13.08827pt
+* \evensidemargin=13.08827pt
+* \topmargin=-1.1381pt
+* \headheight=19.794pt
+* \headsep=21.75pt
+* \topskip=12.0pt
+* \footskip=50.75pt
+* \marginparwidth=49.79233pt
+* \marginparsep=12.8401pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2020/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count305
+\scratchdimen=\dimen186
+\scratchbox=\box60
+\nofMPsegments=\count306
+\nofMParguments=\count307
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count308
+\MPscratchDim=\dimen187
+\MPnumerator=\count309
+\makeMPintoPDFobject=\count310
+\everyMPtoPDFconversion=\toks31
+) (c:/texlive/2020/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(c:/texlive/2020/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package hyperref Info: Link coloring ON on input line 3.
+
+(c:/texlive/2020/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+
+(c:/texlive/2020/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(c:/texlive/2020/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count311
+)
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
+
+(./LaTeX.out) (./LaTeX.out)
+\@outlinefile=\write4
+\openout4 = `LaTeX.out'.
+
+Class scrartcl Info: loading recommended package `bookmark'.
+(scrartcl)           Using `bookmark' together with `hyperref' is recommended,
+(scrartcl)           because of handling of possible bookmark level gaps.
+(scrartcl)           You can avoid loading `bookmark' with KOMA-Script option
+(scrartcl)           `bookmarkpackage=false' before \begin{document} and
+(scrartcl)           you can avoid this message adding:
+(scrartcl)             \usepackage{bookmark}
+(scrartcl)           before \begin{document} on input line 3.
+
+(c:/texlive/2020/texmf-dist/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
+
+(c:/texlive/2020/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
+\BKM@id=\count312
+))
+(c:/texlive/2020/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+
+(c:/texlive/2020/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+))
+<pics/Logo_Deckblatt.pdf, id=4, 648.67331pt x 117.45882pt>
+File: pics/Logo_Deckblatt.pdf Graphic file (type pdf)
+<use pics/Logo_Deckblatt.pdf>
+Package pdftex.def Info: pics/Logo_Deckblatt.pdf  used on input line 6.
+(pdftex.def)             Requested size: 426.79135pt x 77.28288pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--35
+
+ []
+
+[1
+
+{c:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./pics/Logo_Dec
+kblatt.pdf>] [2]
+\openout2 = `Aufgabenstellung_Dummy.aux'.
+
+ (./Aufgabenstellung_Dummy.tex) [3
+
+]
+\openout2 = `Sperrklausel.aux'.
+
+ (./Sperrklausel.tex)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 42.
+
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 42.
+
+
+(c:/texlive/2020/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) [4
+
+
+
+]
+\openout2 = `Eid.aux'.
+
+ (./Eid.tex)
+[5
+
+
+
+]
+\openout2 = `Abstract.aux'.
+
+ (./Abstract.tex) [6
+
+
+
+] (./LaTeX.toc
+Overfull \hbox (3.22107pt too wide) detected at line 2
+ []\OT1/cmss/bx/n/12 VIII
+ []
+
+)
+\tf@toc=\write5
+\openout5 = `LaTeX.toc'.
+
+ [7
+
+
+]
+\openout2 = `Abbildungsverzeichnis.aux'.
+
+ (./Abbildungsverzeichnis.tex (./LaTeX.lof)
+\tf@lof=\write6
+\openout6 = `LaTeX.lof'.
+
+) [8
+
+]
+\openout2 = `Tabellenverzeichnis.aux'.
+
+
+(./Tabellenverzeichnis.tex (./LaTeX.lot)
+\tf@lot=\write7
+\openout7 = `LaTeX.lot'.
+
+) [9
+
+
+
+]
+\openout2 = `Abkuerzungsverzeichnis.aux'.
+
+ (./Abkuerzungsverzeichnis.tex)
+[10
+
+
+
+]
+\openout2 = `Symbolverzeichnis.aux'.
+
+ (./Symbolverzeichnis.tex) [11
+
+
+
+]
+\openout2 = `Kapitel1.aux'.
+
+ (./Kapitel1.tex
+Overfull \hbox (6.63742pt too wide) in paragraph at lines 6--13
+\OT1/cmr/m/n/12 schied-li-che Her-an-ge-hens-wei-sen f[]ur au-to-no-me Ent-wick
+-lung, wel-che aus Robotik-Ansatz
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 
+      [1
+
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 18--20
+
+ []
+
+)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
+ been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.55 \include{Kapitel1}
+                        [2]
+\openout2 = `Kapitel2.aux'.
+
+ (./Kapitel2.tex
+
+pdfTeX warning: pdflatex.exe (file ./pics/Umfeldmodelle_Klassen.pdf): PDF inclu
+sion: found PDF version <1.7>, but at most version <1.5> allowed
+<pics/Umfeldmodelle_Klassen.pdf, id=178, 551.05777pt x 143.03438pt>
+File: pics/Umfeldmodelle_Klassen.pdf Graphic file (type pdf)
+<use pics/Umfeldmodelle_Klassen.pdf>
+Package pdftex.def Info: pics/Umfeldmodelle_Klassen.pdf  used on input line 11.
+
+(pdftex.def)             Requested size: 426.79135pt x 110.78282pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.16 \subsubsection
+                   {Objektbasierte Modelle} [3
+
+
+
+]
+
+pdfTeX warning: pdflatex.exe (file ./pics/FeatureMap.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<pics/FeatureMap.pdf, id=192, 493.09117pt x 167.87718pt>
+File: pics/FeatureMap.pdf Graphic file (type pdf)
+<use pics/FeatureMap.pdf>
+Package pdftex.def Info: pics/FeatureMap.pdf  used on input line 20.
+(pdftex.def)             Requested size: 426.79135pt x 145.31166pt.
+
+Overfull \hbox (26.7534pt too wide) in paragraph at lines 17--25
+\OT1/cmr/m/n/12 Objektbasierte Mo-del-le wer-den auch als merk-mal-ba-sier-te U
+m-feld-mo-del-le (engl. landmark-
+ []
+
+
+Overfull \hbox (7.19304pt too wide) in paragraph at lines 17--25
+\OT1/cmr/m/n/12 Au-^^Yer-dem soll-ten die Merk-ma-len zu-verl[]assig be-ob-ach-
+tet und ge-mes-sen werden[[]].
+ []
+
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/Ebene von Occupancy Grid.pdf): PDF in
+clusion: found PDF version <1.7>, but at most version <1.5> allowed
+<pics/Ebene von Occupancy Grid.pdf, id=199, 276.28218pt x 110.66344pt>
+File: pics/Ebene von Occupancy Grid.pdf Graphic file (type pdf)
+<use pics/Ebene von Occupancy Grid.pdf>
+Package pdftex.def Info: pics/Ebene von Occupancy Grid.pdf  used on input line 
+30.
+(pdftex.def)             Requested size: 213.39568pt x 85.4745pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/Raumdiskretisierung.pdf): PDF inclusi
+on: found PDF version <1.7>, but at most version <1.5> allowed
+<pics/Raumdiskretisierung.pdf, id=203, 267.24844pt x 267.24844pt>
+File: pics/Raumdiskretisierung.pdf Graphic file (type pdf)
+<use pics/Raumdiskretisierung.pdf>
+Package pdftex.def Info: pics/Raumdiskretisierung.pdf  used on input line 37.
+(pdftex.def)             Requested size: 213.39568pt x 213.40349pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/OccupancyGrid.pdf): PDF inclusion: fo
+und PDF version <1.7>, but at most version <1.5> allowed
+<pics/OccupancyGrid.pdf, id=208, 581.92308pt x 192.72pt>
+File: pics/OccupancyGrid.pdf Graphic file (type pdf)
+<use pics/OccupancyGrid.pdf>
+Package pdftex.def Info: pics/OccupancyGrid.pdf  used on input line 44.
+(pdftex.def)             Requested size: 426.79135pt x 141.34607pt.
+[4 <./pics/Umfeldmodelle_Klassen.pdf>] [5 <./pics/FeatureMap.pdf> <./pics/Ebene
+ von Occupancy Grid.pdf>] [6 <./pics/Raumdiskretisierung.pdf>] [7 <./pics/Occup
+ancyGrid.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./pics/HMM.pdf): PDF inclusion: found PDF ve
+rsion <1.7>, but at most version <1.5> allowed
+<pics/HMM.pdf, id=268, 490.83273pt x 213.04594pt>
+File: pics/HMM.pdf Graphic file (type pdf)
+<use pics/HMM.pdf>
+Package pdftex.def Info: pics/HMM.pdf  used on input line 59.
+(pdftex.def)             Requested size: 213.39568pt x 92.62221pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/reducedHMM.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<pics/reducedHMM.pdf, id=278, 490.83273pt x 213.04594pt>
+File: pics/reducedHMM.pdf Graphic file (type pdf)
+<use pics/reducedHMM.pdf>
+Package pdftex.def Info: pics/reducedHMM.pdf  used on input line 84.
+(pdftex.def)             Requested size: 213.39568pt x 92.62221pt.
+[8 <./pics/HMM.pdf>] [9] [10 <./pics/reducedHMM.pdf>] [11] [12]
+Overfull \hbox (16.25256pt too wide) in alignment at lines 147--151
+ [] [] [] 
+ []
+
+
+Overfull \hbox (16.25256pt too wide) in alignment at lines 151--152
+ [] [] [] 
+ []
+
+
+Underfull \hbox (badness 1442) in paragraph at lines 158--159
+[]\OT1/cmr/m/n/12 eine ho-he Aufl[]osung und
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 160--161
+\OT1/cmr/m/n/12 jek-ten bei Ste-reo-ka-me-ras
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 167--168
+\OT1/cmr/m/n/12 jek-ten bei Ste-reo-ka-me-ras
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+[]\OT1/cmr/m/n/12 nicht von der Licht-be-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+\OT1/cmr/m/n/12 din-gun-gen und Ob-jek-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 175--176
+\OT1/cmr/m/n/12 to-ber-fl[]achenmerkmale
+ []
+
+
+Underfull \hbox (badness 3108) in paragraph at lines 176--177
+[]\OT1/cmr/m/n/12 eine bes-se-re Sicht durch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+[]\OT1/cmr/m/n/12 niedrigere Aufl[]osung im
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--185
+\OT1/cmr/m/n/12 Ver-gleich zur sicht-ba-ren
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 192--193
+\OT1/cmr/m/n/12 ten Sicht-verh[]altnissen vor
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 199--200
+[]\OT1/cmr/m/n/12 eine ge-rin-ge Ge-nau-ig-keit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+[]\OT1/cmr/m/n/12 begrenzte In-for-ma-tio-nen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+\OT1/cmr/m/n/12 noch Far-b-in-for-ma-tio-nen)
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 201--202
+[]\OT1/cmr/m/n/12 das Pro-blem we-gen der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
+[]\OT1/cmr/m/n/12 schlechte Azimut- und
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 203--204
+[]\OT1/cmr/m/n/12 ohne ei-ner Erh[]ohung der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+\OT1/cmr/m/n/12 Leis-tung Ra-dard[]ampfung
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 210--211
+\OT1/cmr/m/n/12 ten Sicht-verh[]altnissen vor
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 217--218
+[]\OT1/cmr/m/n/12 eine ge-rin-ge Ge-nau-ig-keit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+[]\OT1/cmr/m/n/12 begrenzte In-for-ma-tio-nen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 218--219
+\OT1/cmr/m/n/12 noch Far-b-in-for-ma-tio-nen)
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 219--220
+[]\OT1/cmr/m/n/12 das Pro-blem we-gen der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--221
+[]\OT1/cmr/m/n/12 schlechte Azimut- und
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 221--222
+[]\OT1/cmr/m/n/12 ohne ei-ner Erh[]ohung der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 221--222
+\OT1/cmr/m/n/12 Leis-tung Ra-dard[]ampfung
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 228--229
+[]\OT1/cmr/m/n/12 gro^^Ye Ent-fer-nun-gen vor
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--230
+[]\OT1/cmr/m/n/12 volle $360[]$- und 3D-
+ []
+
+
+Underfull \hbox (badness 2452) in paragraph at lines 237--238
+\OT1/cmr/m/n/12 ter-schei-dung bei der Er-
+ []
+
+
+Overfull \hbox (16.25256pt too wide) in alignment at lines 152--241
+ [] [] [] 
+ []
+
+
+Underfull \vbox (badness 10000) detected at line 241
+ []
+
+[13] [14] [15]) [16]
+\openout2 = `Kapitel3.aux'.
+
+ (./Kapitel3.tex
+<pics/accBosch.pdf, id=374, 370.13683pt x 216.01804pt>
+File: pics/accBosch.pdf Graphic file (type pdf)
+<use pics/accBosch.pdf>
+Package pdftex.def Info: pics/accBosch.pdf  used on input line 9.
+(pdftex.def)             Requested size: 426.79135pt x 249.08792pt.
+
+
+Package natbib Warning: Citation `Badue2019' on page 17 undefined on input line
+ 14.
+
+Package acronym Info: Label `acro:IfF' newly defined as it shall be overridden
+although it is yet undefined on input line 14.
+
+Package natbib Warning: Citation `ams09' on page 17 undefined on input line 14.
+
+
+[17
+
+
+
+ <./pics/accBosch.pdf>]
+Underfull \hbox (badness 1442) in paragraph at lines 57--58
+[]\OT1/cmr/m/n/12 eine ho-he Aufl[]osung und
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 59--60
+\OT1/cmr/m/n/12 jek-ten bei Ste-reo-ka-me-ras
+ []
+
+
+Underfull \hbox (badness 3930) in paragraph at lines 66--67
+\OT1/cmr/m/n/12 jek-ten bei Ste-reo-ka-me-ras
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 74--75
+\OT1/cmr/m/n/12 ten Sicht-verh[]altnissen vor
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 81--82
+[]\OT1/cmr/m/n/12 eine ge-rin-ge Ge-nau-ig-keit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+[]\OT1/cmr/m/n/12 begrenzte In-for-ma-tio-nen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+\OT1/cmr/m/n/12 noch Far-b-in-for-ma-tio-nen)
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 83--84
+[]\OT1/cmr/m/n/12 das Pro-blem we-gen der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+[]\OT1/cmr/m/n/12 schlechte Azimut- und
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 85--86
+[]\OT1/cmr/m/n/12 ohne ei-ner Erh[]ohung der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+\OT1/cmr/m/n/12 Leis-tung Ra-dard[]ampfung
+ []
+
+
+Underfull \hbox (badness 1092) in paragraph at lines 92--93
+\OT1/cmr/m/n/12 ten Sicht-verh[]altnissen vor
+ []
+
+
+Underfull \hbox (badness 5924) in paragraph at lines 99--100
+[]\OT1/cmr/m/n/12 eine ge-rin-ge Ge-nau-ig-keit
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+[]\OT1/cmr/m/n/12 begrenzte In-for-ma-tio-nen
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 100--101
+\OT1/cmr/m/n/12 noch Far-b-in-for-ma-tio-nen)
+ []
+
+
+Underfull \hbox (badness 5231) in paragraph at lines 101--102
+[]\OT1/cmr/m/n/12 das Pro-blem we-gen der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+[]\OT1/cmr/m/n/12 schlechte Azimut- und
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 103--104
+[]\OT1/cmr/m/n/12 ohne ei-ner Erh[]ohung der
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 103--104
+\OT1/cmr/m/n/12 Leis-tung Ra-dard[]ampfung
+ []
+
+
+Overfull \hbox (16.25256pt too wide) in paragraph at lines 51--107
+ [][] 
+ []
+
+
+LaTeX Warning: Float too large for page by 156.3919pt on input line 107.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [18] [19] [20] (./LaTeX.bbl [21
+
+
+]) [22]
+\openout2 = `Anhang.aux'.
+
+ (./Anhang.tex) [23
+
+]
+
+Package natbib Warning: There were undefined citations.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     62.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     62.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     62.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     62.
+
+
+LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
+(LaTeX3)     62.
+
+(./LaTeX.aux (./Aufgabenstellung_Dummy.aux) (./Sperrklausel.aux) (./Eid.aux)
+(./Abstract.aux) (./Abbildungsverzeichnis.aux) (./Tabellenverzeichnis.aux)
+(./Abkuerzungsverzeichnis.aux) (./Symbolverzeichnis.aux) (./Kapitel1.aux)
+(./Kapitel2.aux) (./Kapitel3.aux) (./Anhang.aux))
+Package rerunfilecheck Info: File `LaTeX.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+ ) 
+Here is how much of TeX's memory you used:
+ 15287 strings out of 479310
+ 279385 string characters out of 5871341
+ 809066 words of memory out of 5000000
+ 31979 multiletter control sequences out of 15000+600000
+ 415544 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 82i,20n,93p,10615b,682s stack positions out of 5000i,500n,10000p,200000b,80000s
+{c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><c:/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmex10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmmi10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mmi8.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
+c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><c:/texlive
+/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><c:/texlive/2020/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/texlive/2020/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsl12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmss12.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmss17.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mssbx10.pfb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/tex
+live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2020
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2020/texmf-di
+st/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on LaTeX.pdf (34 pages, 956036 bytes).
+PDF statistics:
+ 585 PDF objects out of 1000 (max. 8388607)
+ 486 compressed objects within 5 object streams
+ 106 named destinations out of 1000 (max. 500000)
+ 222 words of extra memory for PDF output out of 10000 (max. 10000000)
+

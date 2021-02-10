@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2020/W32TeX)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: LaTeX.aux
+A level-1 auxiliary file: Aufgabenstellung_Dummy.aux
+A level-1 auxiliary file: Sperrklausel.aux
+A level-1 auxiliary file: Eid.aux
+A level-1 auxiliary file: Abstract.aux
+A level-1 auxiliary file: Abbildungsverzeichnis.aux
+A level-1 auxiliary file: Tabellenverzeichnis.aux
+A level-1 auxiliary file: Abkuerzungsverzeichnis.aux
+A level-1 auxiliary file: Symbolverzeichnis.aux
+A level-1 auxiliary file: Kapitel1.aux
+A level-1 auxiliary file: Kapitel2.aux
+A level-1 auxiliary file: Kapitel3.aux
+The style file: alphadin.bst
+A level-1 auxiliary file: Anhang.aux
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: Literatur.bib
+Warning--I didn't find a database entry for "Badue2019"
+Warning--I didn't find a database entry for "ams09"
+Warning--to sort, need editor, organization, or key in .0612201908122019
+Warning--empty organization and editor in .0612201908122019
+You've used 13 entries,
+            4793 wiz_defined-function locations,
+            1010 strings with 9499 characters,
+and the built_in function-call counts, 11137 in all, are:
+= -- 1216
+> -- 308
+< -- 378
++ -- 429
+- -- 116
+* -- 818
+:= -- 1893
+add.period$ -- 17
+call.type$ -- 13
+change.case$ -- 82
+chr.to.int$ -- 13
+cite$ -- 16
+duplicate$ -- 254
+empty$ -- 690
+format.name$ -- 209
+if$ -- 2153
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 42
+newline$ -- 89
+num.names$ -- 36
+pop$ -- 96
+preamble$ -- 1
+purify$ -- 108
+quote$ -- 0
+skip$ -- 560
+stack$ -- 0
+substring$ -- 1046
+swap$ -- 72
+text.length$ -- 61
+text.prefix$ -- 4
+top$ -- 0
+type$ -- 114
+warning$ -- 2
+while$ -- 91
+width$ -- 16
+write$ -- 193
+(There were 4 warnings)

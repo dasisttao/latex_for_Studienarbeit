@@ -1,0 +1,140 @@
+\RequirePackage{scrlfile}
+\ReplacePackage{scrpage2}{scrlayer-scrpage}
+
+\documentclass[
+	pdftex, %pdftex verwenden
+	a4paper, %DIN A4
+	oneside, %einseitig
+	titlepage,
+	headsepline, %Linie nach Kopfzeile
+	parskip=half, %Absaetze
+	captions=oneline, %Ueber- und Unterschriften fuer Tabellen und Abbildungen
+	12pt, %groessere Schrift fuer bessere Lesbarkeit am Bildschirm
+	bibliography=totoc, %Literaturverzeichnis ohne Nummer im Inhaltsverzeichnis
+	toc=listof,
+	version=first %neues Kommando von bibtotoc
+]{scrartcl}
+
+% Seitenraender
+\usepackage{geometry}
+\geometry{includeheadfoot,left=3cm,right=3cm,top=2.5cm,bottom=2.5cm}
+
+% Tabellen
+\usepackage{longtable}
+\usepackage{booktabs}
+%\usepackage{setspace}
+%					\doublespacing
+
+% Zeichensatz
+\usepackage[latin1]{inputenc}
+
+% deutsches Woerterbuch
+\usepackage[ngerman]{babel}
+
+% Anfuehrungszeichen mit \enquote{}
+\usepackage[babel,german=quotes]{csquotes}
+
+% Zeilenabstand
+\usepackage{setspace}
+\onehalfspacing
+
+% Kopf- und Fusszeile
+% Format der Kopf- und Fusszeile
+\usepackage{scrpage2}
+\pagestyle{scrheadings}
+\setlength{\headheight}{1.1\baselineskip}
+%\setheadtopline{1.5pt}
+\setheadsepline{current}
+\setfootsepline{current}
+%\setfootbotline{1.5pt}
+\automark{section}
+\lehead{\headmark}
+\cehead{}
+\rehead{\pagemark}
+\lefoot{}
+\cefoot{}
+\refoot{}
+\lohead{\headmark}
+\cohead{}
+\rohead{\pagemark}
+\lofoot{}
+\cofoot{}
+\rofoot{}
+
+% Abstaende zwischen Fussnoten auf 6pt setzen
+\renewcommand{\footnotesep}{6pt}
+
+% Grafiken
+%\usepackage[final]{graphicx}
+%\usepackage{graphicx}
+%\makeatletter
+%\def\ScaleIfNeeded{%
+%	\ifdim\Gin@nat@width>\linewidth
+%		\linewidth
+%	\else
+%		\Gin@nat@width
+%	\fi
+%}
+%\makeatother
+
+% Farben
+\usepackage{color}
+\definecolor{LinkColor}{rgb}{0.0,0.0,0.0}
+\definecolor{HellGruen}{rgb}{.4,.8,.4}
+\definecolor{Pink}{rgb}{.77,0,.38}
+\definecolor{Lila}{rgb}{.49,0,.49}
+\definecolor{Orange}{rgb}{.94,.47,0}
+
+
+\usepackage[hyphens]{url}
+\usepackage[pdftitle={},
+	pdfauthor={Louisa Liesner},
+	pdfcreator={},
+	pdfsubject={},
+	pdfkeywords={}]{hyperref}
+\hypersetup{colorlinks=true,
+	linkcolor=LinkColor,
+	citecolor=LinkColor,
+	filecolor=LinkColor,
+	menucolor=LinkColor,
+	urlcolor=LinkColor}
+
+% Mathematische Symbole
+\usepackage{amsmath}
+\numberwithin{equation}{section}
+\usepackage{amssymb}
+
+% Literaturverzeichnis
+
+%\PassOptionsToPackage{hyphens}{url}
+%\usepackage{hyperref}
+\usepackage[numbers]{natbib}
+\usepackage[printonlyused]{acronym}
+
+\usepackage{array}
+
+% Einstellungen f�r Tabelle
+\usepackage{multirow}
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+% Indexerstellung
+\usepackage{makeidx}
+\makeindex
+
+% Grafiken
+%\usepackage[final]{graphicx}
+\usepackage{graphics}
+% optionally - this creates: Figure 1.1 ... Figure 2.2
+\renewcommand{\thefigure}{\arabic{section}.\arabic{figure}}
+
+\makeatletter
+\def\ScaleIfNeeded{%
+	\ifdim\Gin@nat@width>\linewidth
+		\linewidth
+	\else
+		\Gin@nat@width
+	\fi
+}
+\makeatother
+
+\usepackage{pdfpages}
