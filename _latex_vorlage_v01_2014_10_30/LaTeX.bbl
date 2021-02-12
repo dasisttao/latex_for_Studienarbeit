@@ -30,6 +30,13 @@
 \newblock {\"O}rebro : Universitetsbiblioteket, 2005. --
 \newblock ISBN 91--7668--454--7
 
+\bibitem[Eff09]{Effertz.2009}
+\textsc{Effertz}, Jan:
+\newblock \emph{Autonome Fahrzeugf{\"u}hrung in urbaner Umgebung Autonome
+  Fahrzeugf{\"u}hrung in urbaner Umgebung durch Kombination objekt- und
+  kartenbasierter Umfeldmodelle}, {Technischen Universit{\"a}t
+  Carolo-Wilhelmina zu Braunschweig}, Dissertation, 2009
+
 \bibitem[Elf89]{Elfes.1989}
 \textsc{Elfes}, Alberto:
 \newblock Using occupancy grids for mobile robot perception and navigation -

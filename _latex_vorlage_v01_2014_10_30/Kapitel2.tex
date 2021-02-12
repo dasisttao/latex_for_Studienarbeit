@@ -23,6 +23,7 @@ Objektbasierte Modelle werden auch als merkmalbasierte Umfeldmodelle (engl. land
 \end{figure}
 \\Objektbasierte Umfeldmodelle sind vor allem eignet für Szenen, wo die Objekte entweder im großen offenen Räume mit vordefinierten Merkmalen (z.B. Autobahn) oder dynamisch und einfach modelliert (z.B. Fußgänger oder Fahrzeuge) sind\citep{Hegerhorst.2018}\citep{Wurm.2010}. Da es im Rahmen dieser Arbeit ein statisches Umfeld im urbanen Raum angeht, ist dieses Modell ungeeignet und daher zu verzichten.  
 \subsubsection{Gitterbasierte Modelle}
+\label{Abschnitt:Gitterbasierte Modelle}
 In gitterbasierten Modellen wird die zentrale Idee der probabilistischen Robotik eingeführt, die Wahrscheinlichkeitsverteilung unbeobachteter Zustände eines Systems bei gegebenen Beobachtung und Messungen zu schätzen. Zur Modellierung des Umfelds ist der zentrale und entschiedene Zustand der sogenannte Belegungszustand. Der Belegungszustand erweist sich, ob eine Gitterzelle belegt ist. Daraus ergibt sich eine Zufallsvariable X, den Belegungszustand repräsentiert. Die Variable X kann zwei Werte annehmen, welche 0 und 1 sind. Die entsprechen dabei, dass das Gitter frei und belegt ist.
 \\Ein Modell, welches auf der obenerwähnten Idee aufbaut, wird als Occupancy Grid beschrieben. Das Occupancy Grid ist ein mehrdimensionales Zufallsfeld, das stochastische Schätzungen des Belegungszustands der Zellen in einem räumlichen Gitter halten~\citep{Elfes.1989}. Wie in Abbildung~\ref{fig:EbeneVonOccupancyGrid} gezeigt, lässt Occupancy Grid sich in zwei Ebenen zerlegen.
 \begin{figure}[htbp]
@@ -49,7 +50,7 @@ In gitterbasierten Modellen wird die zentrale Idee der probabilistischen Robotik
 \begin{equation}\label{Gleichung:Zustandschaetzung}
 	bel(x_t)=p(x_{t}|z_{1:t},u_{1:t})
 \end{equation}
-\\Um die Wahrscheinlichkeitsverteilung einzugehen und eine rekursive Form zu entdecken, ist der stochastische Prozess der Zustandsänderung als Hidden Markov Model (HMM), auch dynamic Bayes network (DBN) genannt, zu betrachten. Unter Anwendung dieser Annahme gilt: Die Wahrscheinlichkeit eines Zustandes bei Zeitstempel $t$ ($x_t$) ist einschließlich abhängig von Zustand bei Zeitstempel $t-1$ ($x_{t-1}$) und nicht von Zuständen bei Zeitstempel, die früher als $t-1$ sind. Mathematisch wird HMM als eine Gleichung in \ref{Gleichung:HMM} beschrieben.
+Um die Wahrscheinlichkeitsverteilung einzugehen und eine rekursive Form zu entdecken, ist der stochastische Prozess der Zustandsänderung als Hidden Markov Model (HMM), auch dynamic Bayes network (DBN) genannt, zu betrachten. Unter Anwendung dieser Annahme gilt: Die Wahrscheinlichkeit eines Zustandes bei Zeitstempel $t$ ($x_t$) ist einschließlich abhängig von Zustand bei Zeitstempel $t-1$ ($x_{t-1}$) und nicht von Zuständen bei Zeitstempel, die früher als $t-1$ sind. Mathematisch wird HMM als eine Gleichung in \ref{Gleichung:HMM} beschrieben.
 \begin{equation}\label{Gleichung:HMM}
  	p(x_{t}|x_{1:t})=p(x_t|x_{t-1}) 
 \end{equation}
@@ -142,10 +143,10 @@ Um ein Umfeld zu modellieren, welches komplizierte Szenarien repräsentieren kann
 \subsection{Sensorik und ihr inverses Sensormodell}
 \label{Abschnitt:Sensor}
 Zweifellos dient eine Wahrnehmung bzw. eine Erfassung als eine wichtige Voraussetzung zur Umfeldmodelleirung, weil sie die Informationsquelle bietet. Wahrnehmung eines Fahrzeugs besteht wesentlich aus die Bestimmung der eigenen Position samt Orientierung und die Erfassung der Umgebung um das eigenen Fahrzeug. Die Lokalisierung ist im Rahmen dieser Arbeit nebensächlich und durch die vorgegebene GPS-Information bestimmt. Darauf soll an dieser Arbeit nicht näher eingegangen werden.
-\subsubsection{Überblick über verschiedener Sensoren zur Umfeldmodellierung}
-Um ein zuverlässiges Umfeldmodell zu entwickeln und danach das Modell in Praxis effektiv umzusetzen, spielt einer Auswahl der erfassenden Sensoren entweder in Akademie oder in Industrie eine große Rolle. Die wichtigsten Fahrzeugsensoren zur Wahrnehmung der Umgebung sind Kameras, fernes Infrarot- (engl.Far-infrared, als FIR gekürzt) Radar-, LiDAR (Light Detection and Ranging) - und Ultraschallsensoren. Nach~\citep{Mohammed.2020} sind die Vorteilen neben der Nachteilen in Tabelle~\ref{tab:Vergleich der Sensoren} aufgelistet.
+\subsubsection{Überblick über verschiedene Sensoren zur Umfeldmodellierung}
+Um ein zuverlässiges Umfeldmodell zu entwickeln und danach das Modell in Praxis effektiv umzusetzen, spielt einer Auswahl der erfassenden Sensoren entweder in Akademie oder in Industrie eine große Rolle. Die wichtigsten und am weitverbreitetsten Fahrzeugsensoren zur Wahrnehmung der Umgebung sind Kameras, fernes Infrarot- (engl.Far-infrared, als FIR abgekürzt) Radar-, LiDAR (Light Detection and Ranging) - und Ultraschallsensoren. Nach~\citep{Mohammed.2020} sind die Vorteilen neben der Nachteilen in Tabelle~\ref{tab:Vergleich der Sensoren} aufgelistet.
 \begin{longtable}{|m{0.15\textwidth}<{\centering}|m{0.4\textwidth}<{\centering}|m{0.4\textwidth}<{\centering}|}
-	\caption{Vorteile und Nachteile von Kamera, fernes Infrarotsensor,  Radar-, Ultraschall- und Lidarsensor}
+	\caption{Vorteile und Nachteile von Kamera, fernes Infrarotsensor,  Radar-, Ultraschall- und Lidarsensor~\citep{Mohammed.2020}}
 	\centering
 	\label{tab:Vergleich der Sensoren}
 	\endfirsthead
@@ -226,7 +227,7 @@ Um ein zuverlässiges Umfeldmodell zu entwickeln und danach das Modell in Praxis 
 	\begin{itemize}  
 		\setlength\itemsep{0em} 
 		\item große Entfernungen vor dem Auto bei guten Sichtverhältnissen erfassen
-		\item volle $360^0$- und 3D-Punktwolken bieten 
+		\item volle $360^\circ$- und 3D-Punktwolken bieten 
 		\item eine gute Genauigkeit und Auflösung haben
 		\item keine signifikanten Interferenzen bei mehreren Lidarsensoren haben
 	\end{itemize}&
@@ -239,8 +240,59 @@ Um ein zuverlässiges Umfeldmodell zu entwickeln und danach das Modell in Praxis 
 	\end{itemize} 
 	\\ \hline
 \end{longtable}
-Im Rahmen dieser Arbeit sind die am ifF (Institut für Fahrzeugtechnik) bereits bestehende Fahrzeugarchitektur mit Ibeo LUX Laserscanner versehen. Daher wird folgend in Abschnitt~\ref{Abschnitt:Laserscanner} auf der Mechanismus und das darauf resultierende Sensormodell des Laserscanners eingegangen. Außerdem werden die technische Details bei Einführung der inversen Sensormodellierung vorgestellt, weil die reale technische Größen dabei ein wichtiger Faktor sind.  
-\subsubsection{Laserscanner}
-\label{Abschnitt:Laserscanner}
+Im Rahmen dieser Arbeit ist die am ifF (Institut für Fahrzeugtechnik) bereits bestehende Fahrzeugarchitektur mit Ibeo LUX Laserscanner versehen. Daher wird folgend in Abschnitt~\ref{Abschnitt:Laserscanner} auf der Mechanismus und das darauf resultierende Sensormodell des Laserscanners eingegangen. Außerdem werden die technische Details bei Einführung der inversen Sensormodellierung vorgestellt, weil die reale technische Größen dabei ein wichtiger Faktor sind.  
+\subsubsection{Funktionsprinzip des Lasersensors}
 Ist ein angemessenes Sensormodell zu finden, ist es sinnvoll das Mechanismus, die Eingenschaften und die Gründe des Unsicherheit zu untersuchen. Die Angemessenheit hierbei bedeutet, dass eine Abwägung bzw. ein Kompromiss immer nach verschiedenen Anwendungsszenarien gemacht werden muss. 
-\\Laserscanner beruht auf dem Prinzip ToF (Time-of-flight). Nach diesem Prinzip wird die Entfernung zwischen dem Ziel und Laserscanner dadurch berechnet, dass die Zeit gemessen wird, die ein Lichtimpuls benötigt, um von der Lichtquelle zum beobachteten Ziel und dann zum Detektor (normalerweise zusammen mit der Lichtquelle) zu gelangen~\citep{Siciliano.2008}.
+\\Laserscanner beruht auf dem Prinzip ToF (Time-of-flight). Nach diesem Prinzip wird die Entfernung zwischen dem Ziel und Laserscanner dadurch berechnet, dass die Zeit gemessen wird, die ein Lichtimpuls benötigt, um von der Lichtquelle zum beobachteten Ziel und dann zum Detektor (normalerweise zusammen mit der Lichtquelle) zu gelangen~\citep{Siciliano.2008}. Im Prinzip ist Laserscanner ähnlich wie Radarsensor, wobei nur anstatt Mikrowellen beim Laserscanner Infrarot-, Ultraviolett- oder Strahlen aus dem Bereich des sichtbaren Lichts eingesetzt werden~\citep{Winner.2015}. Mathematische Beschreibung des Prinzips lässt sich in Gleichung~\ref{Gleichung:Tof} darstellen. Dabei bezeichnet d den Abstand zwischen Laserscanner und dem detektierten Objekt. Das Lichtgeschwindigkeit wird als c dargestellt. In einigen hochpräzisen Lasersensoren wird Lichtausbreitungsmedium auch berücksichtigt und dazu wird c der Umgebung gemäß kompensiert. Zeit t benötigt das Licht um die Ausbreitungsstrecke zu decken, die doppelte Entfernung zwischen Laserscanner und Objekt ist. Es wird in der Tat gemessen und in Abstand	d überführt. Der Sensor sendet periodisch Lichtimpulse aus und berechnet eine durchschnittliche Zielentfernung von der Zeit der zurückkehrenden Impulse~\citep{Siciliano.2008}.
+\begin{equation}
+	\label{Gleichung:Tof}
+	d=\frac{c\cdot t}{2}
+\end{equation}
+Im Bereich des selbstfahrenden Fahren wird der Lichtpuls mit nicht nur eine Ausrichtung ausgestrahlt, weil ein relativ großer Beobachtungsbereich mehrere in unterschiedlichen Richtungen ausgesendet Lichtstrahl benötigt. Aktuell gibt es zwei verschiedenen LiDAR-Systeme. Zum einen ist das feststehende Sensor, in dem mehrere Sende- / Empfangseinheiten mit unterschiedlicher Ausrichtungen angeordnet werden~\citep{Effertz.2009}. Zum anderen ist das rotierende LiDAR-System dadurch realisiert, dass der Lichtimpuls über eine drehbare Spiegeleinheit abgelenkt~\citep{Effertz.2009}. Das in dieser Arbeit verwendete Laserscanner Ibeo-LUX-8L gehört zu dem zweiten Sensorsystem.
+\subsubsection{Theorie des inversen Sensormodells}
+Ein inverses Sensormodell hat die Aufgabe, den schon in~\ref{Abschnitt:Gitterbasierte Modelle} erwähnten mathematischen Ausdruck $p(m_i|z)$ zu finden, d.h. die Wahrscheinlichkeitsverteilung des Belegungszustands der Zelle mit Index i zu beschreiben. Nach~\citep{Pieringer.2013} lässt sich das inverse Sensormodell im Prinzip in drei Bestandteile zerlegen. Die sind, wie in Abbildung gezeigt, Hinderniskartierung, Freiraummodellierung und Beschreibung unbekannter Gebiete.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{pics/Bestandteile_Sensormodell.pdf}
+	\caption{Bestandteile des Prinzips von Inverses Sensormodell }
+	\label{fig:Bestandteile_Sensormodell}
+\end{figure}
+\\Unter Hinderniskartierung werden das Verfahren verstanden, dass die vom Sensor detektierten Objekte in das gitterbasierte Umfeldmodell bzw. das Occupancy Grid Map eingebracht werden~\citep{Pieringer.2013}. Zwei Probleme sind in diesem Bestandteil des inversen Sensormodell zu lösen. Zum einen gewinnt es die Relevanz, welche Form für das detektierte Objekt bzw. das Hindernis angenommen wird~\citep{Pieringer.2013}. Die Form (z.B. Linie oder Ellipse), die das Hindernis repräsentiert, ist theoretisch eng mit Unsicherheitsquellen des Laserscanners verbunden. Jedoch wird die Form in der Praxis ausgewählt unter Berücksichtigung der Ausführlichkeit bzw. Genauigkeit und Echtzeitanforderung. Zum anderen ist das Problem, mit welchem Zahlenwert die Wahrscheinlichkeit der kartierten Zelle erfüllt ist. Diese zwei Probleme werden folgend bei der tatsächlichen Sensormodellierung vertieftet eingegangen.
+\\Bei Freiraum handelt sich um den beobachtbaren Bereich zwischen Sensor und dem detektieren Objekt. Analog zur Hinderniskartierung stehen die Bestimmung von der Form des Freiraums und der Wahrscheinlichkeit der betreffenden Zelle in Zentrum der Freiraummodellierung. Jedoch ist die Form des Freiraums abhängig von der oben bestimmten Hindernisform. Beispielweise wird der Freiraum als Linie oder Dreiecke modelliert, wenn die Hindernisse punktförmig oder linieförmig beschrieben werden. Bei Wahrscheinlichkeitsverteilung über den Freiraum spielt die Gründe der Unsicherheit eine große Spiele. Zum Beispiel wird die von Laserscanner erfasste Entfernungsinformation von dem Hindernis mit zunehmender Distanz weniger sicher. Auf diesem Grund ist dabei ein Modell zu entwickeln, die Unsicherheit in gewissem Grade widerspiegeln kann. In Anwendung sind ebenso die Korrektheit und die Zeitaufwand zu gewichten.
+\\Der sich innerhalb der Reichweite von Laserscanner befindende Raum, der weder Hindernis noch Freiraum ist, ist der unbekannte Bereich des Modell. Ein typisches Beispiel dafür ist der Raum hinter dem Hindernis. Normalerweise wird der Wahrscheinlichkeit der unbekannten Zell die A-priori-Wahrscheinlichkeit zugewiesen. Der Grund liegt darin, dass keine neue Informationen über den Belegungszustand eingegeben werden. Typischerweise wird die A-priori-Wahrscheinlichkeit bzw. die Wahrscheinlichkeit der unbekannte Zellen als $0,5$ zugewiesen.
+\subsubsection{Technische Details von Ibeo-LUX-8L}
+In die am IfF bereits bestehende Fahrzeugarchitektur ist Laserscanner Ibeo-LUX-8L von Ibeo Automotive Systems GmbH für Erfassung der Umgebung um das selbstfahrende Fahrzeug verwendet. Um ein angemessenes Sensormodell für das Laserscanner zu entwickeln, ist es voraussetzt, dass die technische Details von dem Sensor zur Verfügung steht.
+\\
+\begin{table}[ht]
+	\caption{Tabular technische Details von Ibeo LUX 8L}
+	\centering
+	\begin{tabular}{|c|c|}
+		\hline
+		\textbf{Technische Daten} & \textbf{Wert}\\
+		\hline
+		Reichweite & 50m mit $10\%$ Remission\\
+		\hline
+		Genauigkeit & 10cm\\
+		\hline
+		Entfernungsauflösung & 4cm\\
+		\hline
+		Horizontaler Öffnungswinkel & $110^\circ ?50^\circ bis -60^\circ?$ \\
+		\hline
+		Vertikaler Öffnungswinkel & $6.4^\circ$\\
+		\hline
+		Horizontale Winkelauflösung & $0.25^\circ$\\
+		\hline
+		Vertikale Winkelauflösung & $0.8^\circ$\\
+		\hline
+		Bildrate & 25.0 Hz\\
+		\hline
+		Multi-Layer & 8 (2 Paare von 4 Layers)\\
+		\hline
+		Ausgabe & Roh- und Objektdaten\\
+		\hline
+		Abmaße (B$\times$T$\times$H) & 164,5$\times$93,2$\times$88mm\\
+		\hline
+		Gewicht & 998,7g\\
+		\hline
+	\end{tabular}
+\end{table}
