@@ -59,6 +59,15 @@
 \newblock Braunschweig, {Technische Universist{\"a}t Braunschweig},
   Masterarbeit, 2018
 
+\bibitem[HKOB10]{Homm.2106201024062010}
+\textsc{Homm}, Florian ; \textsc{Kaempchen}, Nico ; \textsc{Ota}, Jeff  ;
+  \textsc{Burschka}, Darius:
+\newblock Efficient occupancy grid computation on the GPU with lidar and radar
+  for road boundary detection.
+\newblock {In: }\emph{2010 IEEE Intelligent Vehicles Symposium}, IEEE,
+  21/06/2010 - 24/06/2010. --
+\newblock ISBN 978--1--4244--7866--8, S. 1006--1013
+
 \bibitem[MAA{\etalchar{+}}20]{Mohammed.2020}
 \textsc{Mohammed}, Abdul~S. ; \textsc{Amamou}, Ali ; \textsc{Ayevide},
   Follivi~K. ; \textsc{Kelouwani}, Sousso ; \textsc{Agbossou}, Kodjo  ;

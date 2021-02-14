@@ -261,10 +261,10 @@ Ein inverses Sensormodell hat die Aufgabe, den schon in~\ref{Abschnitt:Gitterbas
 \\Bei Freiraum handelt sich um den beobachtbaren Bereich zwischen Sensor und dem detektieren Objekt. Analog zur Hinderniskartierung stehen die Bestimmung von der Form des Freiraums und der Wahrscheinlichkeit der betreffenden Zelle in Zentrum der Freiraummodellierung. Jedoch ist die Form des Freiraums abhängig von der oben bestimmten Hindernisform. Beispielweise wird der Freiraum als Linie oder Dreiecke modelliert, wenn die Hindernisse punktförmig oder linieförmig beschrieben werden. Bei Wahrscheinlichkeitsverteilung über den Freiraum spielt die Gründe der Unsicherheit eine große Spiele. Zum Beispiel wird die von Laserscanner erfasste Entfernungsinformation von dem Hindernis mit zunehmender Distanz weniger sicher. Auf diesem Grund ist dabei ein Modell zu entwickeln, die Unsicherheit in gewissem Grade widerspiegeln kann. In Anwendung sind ebenso die Korrektheit und die Zeitaufwand zu gewichten.
 \\Der sich innerhalb der Reichweite von Laserscanner befindende Raum, der weder Hindernis noch Freiraum ist, ist der unbekannte Bereich des Modell. Ein typisches Beispiel dafür ist der Raum hinter dem Hindernis. Normalerweise wird der Wahrscheinlichkeit der unbekannten Zell die A-priori-Wahrscheinlichkeit zugewiesen. Der Grund liegt darin, dass keine neue Informationen über den Belegungszustand eingegeben werden. Typischerweise wird die A-priori-Wahrscheinlichkeit bzw. die Wahrscheinlichkeit der unbekannte Zellen als $0,5$ zugewiesen.
 \subsubsection{Technische Details von Ibeo-LUX-8L}
-In die am IfF bereits bestehende Fahrzeugarchitektur ist Laserscanner Ibeo-LUX-8L von Ibeo Automotive Systems GmbH für Erfassung der Umgebung um das selbstfahrende Fahrzeug verwendet. Um ein angemessenes Sensormodell für das Laserscanner zu entwickeln, ist es voraussetzt, dass die technische Details von dem Sensor zur Verfügung steht.
-\\
+In die am IfF bereits bestehende Fahrzeugarchitektur ist Laserscanner Ibeo-LUX-8L von Ibeo Automotive Systems GmbH für Erfassung der Umgebung um das selbstfahrende Fahrzeug verwendet. Um ein angemessenes Sensormodell für das Laserscanner zu entwickeln, ist es voraussetzt, dass die technische Details von dem Sensor zur Verfügung steht. Nach~\citep{IbeoAutomotiveSystemsGmbH.2017} werden die relevante technische Größen in Tabelle~\ref{tab:technische Details von Ibeo LUX 8L} aufgelistet.
 \begin{table}[ht]
 	\caption{Tabular technische Details von Ibeo LUX 8L}
+	\label{tab:technische Details von Ibeo LUX 8L}
 	\centering
 	\begin{tabular}{|c|c|}
 		\hline
@@ -276,15 +276,15 @@ In die am IfF bereits bestehende Fahrzeugarchitektur ist Laserscanner Ibeo-LUX-8
 		\hline
 		Entfernungsauflösung & 4cm\\
 		\hline
-		Horizontaler Öffnungswinkel & $110^\circ ?50^\circ bis -60^\circ?$ \\
+		Horizontaler Öffnungswinkel & $110^\circ (50^\circ-60^\circ)$ \\
 		\hline
-		Vertikaler Öffnungswinkel & $6.4^\circ$\\
+		Vertikaler Öffnungswinkel & $6,4^\circ$\\
 		\hline
-		Horizontale Winkelauflösung & $0.25^\circ$\\
+		Horizontale Winkelauflösung & $0,25^\circ$\\
 		\hline
-		Vertikale Winkelauflösung & $0.8^\circ$\\
+		Vertikale Winkelauflösung & $0,8^\circ$\\
 		\hline
-		Bildrate & 25.0 Hz\\
+		Bildrate & 25 Hz\\
 		\hline
 		Multi-Layer & 8 (2 Paare von 4 Layers)\\
 		\hline
@@ -296,3 +296,26 @@ In die am IfF bereits bestehende Fahrzeugarchitektur ist Laserscanner Ibeo-LUX-8
 		\hline
 	\end{tabular}
 \end{table}
+\subsubsection{Das zu verwendendes Sensormodell}
+Nachdem die Theorie des inversen Sensormodell und technische Daten des verwendenden Laserscanner Ibeo-LUX-8L vorgestellt wurden, wird in diesem Abschnitt ein angemessenes Sensormodell entwickelt, um die Wirkung der Sensorinformation auf Glauben des Zellenbelegungszustands zu beschreiben. Hierbei wird ein Kompromiss zwischen Genauigkeit und Effizienz gemacht. Die Modellierung ist mit zwei Schritte aufgrund der Messunsicherheit und der in Tabelle~\ref{tab:technische Details von Ibeo LUX 8L} aufgelisteten Laserscanner-Spezifikationen durchgeführt. Im ersten Schritt wird die Form des Hindernis mitsamt des entsprechenden Freiraums festgestellt. Darauffolgend wird es bestimmt, welche Wahrscheinlichkeit konkret in welchen Bereichen zugewiesen werden~\citep{Pieringer.2013}.
+\\Ein genaues Modell sollte die Wahrscheinlichkeit jeder Zelle in Abhängigkeit von der Position in der Karte, der Strahlbreite und dem Abstand zum Zentrum des Strahls berechnen~\Citep{Homm.2106201024062010}. Wenn die Positionsunsicherheit beträchtlich ist, sollte eine kreis- oder ellipsenförmige Form für Hindernis unter Anwendung einer zweidimensionalen Gaußfunktion angenommen~\citep{Pieringer.2013}. Steht eine hinreichende Genauigkeit des Sensors zu Verfügung, kann die Form zu einer Linie vereinfacht werden. Wenn die horizontale Winkellösung zugleich niedrig ist, lässt sich die Form weiter zu einem Punkt vereinfachen. 
+\\Im Rahmen dieser Arbeit ist die Auflösung der Zelle als $0,1m\times0,1m$ zugewiesen. Außerdem ist es sinnvoll, die maximale erfasste Entfernung $d_{max}$ des Laserscanners zu beschränken, obwohl die Reichweite nach Tabelle~\ref{tab:technische Details von Ibeo LUX 8L} 50m ist. Dies kann die wegen großer Entfernung entstehende Unsicherheit verringern. Nach dem Test wird der Wert von $d_{max}$ als 10m bestimmt. Die horizontale Winkelauflösung $\Delta\theta$ beträgt nach Tabelle~\ref{tab:technische Details von Ibeo LUX 8L} $0,25^\circ$ oder 0,004363(rad). Durch die Multiplikation mit $d_{max}$ und $\Delta\theta$ ergibt sich der Kreisbogen den Wert $0,043$, der die wegen der Strahlbreite entstehende Divergenz beschreiben. Da $0,043<0,1m$ gilt, lässt sich der Einfluss von Strahlbreite vernachlässigen. Zudem wird die Genauigkeit mit 0,1m als ausreichend präzise angenommen. Damit ist es deutlich, dass Hindernisse im Rahmen dieser Arbeit aufgrund der Sensorspezifikation als Punkte zu beschreiben sind. Daraus lassen sich herleiten, dass das entsprechende Freiraummodell als Linie dargestellt wird. Um ein Objekt zu detektieren, dessen Abmessung größer als Auflösung ist, ist der bekannte Begriff Raycasting zu einsetzen. Hierbei werden die einzelnen physikalischen Strahlen des Laserscanners zwischen dem Sensor und einem Objekt nachgebildet. Basierend darauf wird der zweite Schritt der Modellierung eines Sensors simplifiziert und es ist nur erwartet, das inverses Sensor einziges Laserstrahls zu beschreiben. Bei Implementierung werden alle Laserstrahlen mit demselben Sensormodell behandelt. Das inverse Modell einziges Strahls ist 1-dimensional und das für idealen Laserscanner eingesetzte Modell ist in Abbildung~\ref{fig:ideal_sensormodell} gezeigt. Das Diagramm veranschaulicht die Zusammenhang zwischen der Belegungswahrscheinlichkeit der Zelle mit Index i und dem Abstand von Laserscanner. Es ist angenommen, dass sich ein punktförmiges Objekt mit Abstand D befindet. Ohne Messabweichung bzw. Unsicherheit besitzt ein ideales Modell eine besonders einfache Funktion. Vor dem Objekt bzw. dem Hindernis ist es festgestellt, dass es unmöglich ein anderes Hindernis existiert. Die Zelle, die von Laserscanner mit Abstand D entfernt, ist mit Wahrscheinlichkeit 1 versehen. Hinter dem Hindernis sind alle Zelle verborgen, weshalb die Wahrscheinlichkeit unverändert bleibt und als A-priori-Wahrscheinlichkeit $0,50$ gegeben. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pics/ideal_sensormodell.pdf}
+	\caption{Das ideale Sensormodell}
+	\label{fig:ideal_sensormodell}
+\end{figure}
+\\Jedoch unterliegt jede Messung aus verschiedenen Gründen einer gewissen  Messunsicherheit~\citep{Hegerhorst.2018}, weshalb ein ideales Sensormodell bietet eine bescheidene Genauigkeit. Unter Berücksichtigung der Messunsicherheit kann das inverses Sensormodell von ideal vereinfachend bis stark komplex sein~\citep{Pieringer.2013}. Allerdings werden die Funktion, die das inverses Sensormodell definiert, in der Praxis nach der bisherigen Erfahrungen bestimmt. Basierend auf~\citep{Weiss.1306200715062007}~\citep{Pieringer.2013}~\citep{Hegerhorst.2018} wird im Rahmen dieser Arbeit je nach Situation eine bestimmte abschnittsweise definierte Funktionen angewendet. Die beide Funktion weisen darauf hin, dass die Zellen innerhalb der minimalen erfassbaren Abstand mit einer niedrigen und konstante Wahrscheinlichkeit hinzugefügt. Das inverses Sensormodell ist eine Erweiterung zu dem idealen Sensormodell, wenn ein Hindernis detektiert wird. Der Freiraum vor dem detektierten Hindernis, wie in Abbildung~\ref{fig:sesormodellmitD} dargestellt, ist mit einer monoton ansteigenden linearen Funktion zu beschreiben. Hierbei wird die mit größerer Entfernung entstehenden Messunsicherheit abgebildet, indem sich die Belegungswahrscheinlichkeit mit zunehmender Distanz von dem Laserscanner erhöht~\citep{Hegerhorst.2018}. Besteht kein Hindernis, wird die Funktion in in Abbildung~\ref{fig:sesormodellohneD} gezeigte Beschreibung umgewandelt. Dabei wird nur der Freiraum außer dem Bereich innerhalb der minimalen Abstand modelliert. Da die Funktionen linear und einfach sind, wird der Echtzeitanforderung in gewissem Maß gewährleistet. Darüber hinaus werden die Steigung, der minimale bzw. maximale Abstand und die Wahrscheinlichkeit der Zelle mit dem Abstand parametrisiert und  bei der folgenden Implementierung justiert.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pics/sesormodellmitD.pdf}
+	\caption{Das inverses Sensormodell, wenn ein Hindernis detektiert wird}
+	\label{fig:sesormodellmitD}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.8\textwidth]{pics/sesormodellohneD.pdf}
+	\caption{Das inverses Sensormodell, wenn kein Hindernis detektiert wird}
+	\label{fig:sesormodellohneD}
+\end{figure}
