@@ -43,6 +43,14 @@
   Computer.
 \newblock {In: }\emph{IEEE} 22, No. 6 (1989), S. 46--57
 
+\bibitem[Fer15]{Fernandez.2015}
+\textsc{Fern{\'a}ndez}, Enrique:
+\newblock \emph{Learning ROS for robotics programming: Your one-stop guide to
+  the Robot Operating System / Enrique Fern{\'a}ndez [and three others]}.
+\newblock Birmingham, UK : {Packt Publishing}, 2015 (Community experience
+  distilled). --
+\newblock ISBN 978--1--78398--759--7
+
 \bibitem[FHR{\etalchar{+}}20]{FawadAhmad.2020}
 \textsc{{Fawad Ahmad}} ; \textsc{{Hang Qiu}} ; \textsc{{Ray Eells}} ;
   \textsc{{Fan Bai}}  ; \textsc{{Ramesh Govindan}}:
@@ -68,6 +76,22 @@
   21/06/2010 - 24/06/2010. --
 \newblock ISBN 978--1--4244--7866--8, S. 1006--1013
 
+\bibitem[{Ibe}17]{IbeoAutomotiveSystemsGmbH.2017}
+\textsc{{Ibeo Automotive Systems GmbH}}:
+\newblock \emph{ibeo LUX 4L / ibeo LUX 8L / ibeo LUX HD DATA SHEET}.
+\newblock
+  \url{https://cdn.www.ibeo-as.com/f4b928ce695cc32b6e93db216f2e1bee56ddaa26/ibeo%2BLUX%2BFamily%2BData%2BSheet.pdf.pdf}.
+\newblock \,Version:\,2017
+
+\bibitem[Kou16]{Koubaa.2016}
+\textsc{Koub{\^a}a}, Anis:
+\newblock \emph{Studies in computational intelligence, 1860-949x}. Bd. volume
+  625: {\emph{Robot operating system (ROS): The complete reference. Volume 1 /
+  Anis Koub{\^a}a, Editors}}.
+\newblock First edition.
+\newblock Cham : Springer, 2016 \url{http://link.springer.com/ BLDSS}. --
+\newblock ISBN 978--3--319--26054--9
+
 \bibitem[MAA{\etalchar{+}}20]{Mohammed.2020}
 \textsc{Mohammed}, Abdul~S. ; \textsc{Amamou}, Ali ; \textsc{Ayevide},
   Follivi~K. ; \textsc{Kelouwani}, Sousso ; \textsc{Agbossou}, Kodjo  ;
@@ -82,6 +106,14 @@
 \textsc{Pieringer}, Christian:
 \newblock \emph{Modellierung des Fahrzeugumfelds mit Occupancy Grids}.
 \newblock Passau, {Universit{\"a}t Passau}, Masterarbeit, 2013
+
+\bibitem[QGS15]{Quigley.2015}
+\textsc{Quigley}, Morgan ; \textsc{Gerkey}, Brian  ; \textsc{Smart},
+  William~D.:
+\newblock \emph{Programming robots with ROS}.
+\newblock First edition.
+\newblock Sebastopol, CA : {O'Reilly Media}, 2015. --
+\newblock ISBN 978--1--4493--2551--0
 
 \bibitem[SK08]{Siciliano.2008}
 \textsc{Siciliano}, Bruno ; \textsc{Khatib}, Oussama:

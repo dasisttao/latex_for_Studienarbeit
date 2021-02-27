@@ -1,185 +1,106 @@
 \section{Implementierung}
 Um das ober
 
-\subsection{Unterkapitel 1}\label{Unterkapitel1Link}
-Beispiel für eine Fußnote\footnote{Fußnoten sind gut.}.
-
+\subsection{Versuchsfahrzeug}
+Bevor mit Implementierung des in Kapitel~\ref{Kapitel:Theoretische Grundlagen} entwickelten Umfeldmodells begonnen wird, werden die relevanten Informationen über das Versuchsfahrzeug mitsamt die darin eingebauten Sensoren dokumentiert und in der eigentlichen Implementierung parametriert.
+\subsubsection{Dimension über Versuchsfahrzeug}
+Bei Implementierung im Rahmen dieser Arbeit ist es auch bedeutungsvoll, die Position bzw. den belegten Raum des Versuchsfahrzeugs zu modellieren und dokumentieren, was einen konkreten Beitrag zur kollisionsfrei Navigation leistet. Außerdem ist die Information über die Anordnung der Lasersensoren eng verbunden mit der Abmessung des Fahrzeugs. Daher wird die Dimension des Fahrzeugs als ein wichtiges Element betrachtet. Die Abbildung~\ref{fig:DimensionVonAuto} zeigt, dass die wichtige Größen von Abmessung des Fahrzeugs parametriert werden. Obwohl die Zeichnungsbemaßung eigentlich redundant ist, wird sie mit Absicht angewendet, um die Darstellung der wichtigen Größen sichtbar zu machen. Der Rot Punkt bezeichnet hierbei die Koordinatenursprung des Fahrzeugkoordinatensystem und befindet sich mittig auf der Hinterachse~\citep{Hegerhorst.2018}. Die X-Achse des Fahrzeugkoordinatensystem zeigt die Längsrichtung des Fahrzeugs nach vorne~\citep{Hegerhorst.2018}. Die Y-Achse verläuft senkrecht zur X-Achse und zeigt nach links des Fahrtrichtung. Die Koordinatenursprung dient als ein Bezugspunkt und die Größen, z.B. die Lage eines Sensors sowie die Position eines detektierten Objekts, werden nur relativ zu dem Bezugssystem bzw. Fahrzeugkoordinatensystem angegeben. 
 \begin{figure}[htbp]
 	\centering
-	\includegraphics[width=1.0\textwidth]{pics/accBosch.pdf}
-	\caption{Folgefahrt Beispielbild}
-	\label{fig:accBosch}
+	\includegraphics[width=1.0\textwidth]{pics/DimensionVonAuto.pdf}
+	\caption{Dimension von Versuchsfahrzeug}
+	\label{fig:DimensionVonAuto}
 \end{figure}
-
-Wie in \ref{Unterkapitel1Link} gezeigt, ist es möglich, Kapitel zu \citep{Badue2019}verlinken. Abkürzungen wie das \ac{IfF} werden so dargestellt. Quellen übrigens so \citep{ams09}.
-
-Abbildung ~\ref{fig:accBosch} soll ein Beispielhaftes Bild zeigen.
-
-
-\subsubsection{Unterunterkapitel1} 
-
-\textbf{\sffamily{Möglichkeit zur weiteren Unterteilung -- Teilkapitel}} Mehr als drei Unterteilungsebenen sollen vermieden werden!
-\par
-\begingroup
-\leftskip=0.8cm
-\noindent \textbf{\sffamily{Eingerücktes Teilkapitel}} Derartige Dinge wie eingerückte Teilkapitel gibt es auch. Falls Du sie brauchen solltest.
-\par
-\endgroup
-
+\\In ifF stehen Golf7 (TIAMO) und Passat Alltrack (TEASY 3) als Versuchsfahrzeuge zur Verfügung\citep{Hegerhorst.2018}. Die der Abbildung~\ref{fig:DimensionVonAuto} entsprechenden Abmessungen von diesen Versuchsfahrzeugen werden in Tabelle~\ref{tab:Abmessung von Versuchsfahrzeuge} aufgelistet.
 \begin{table}[ht]
-	\caption{Tabular Umgebung: Simpel formatierte Tabelle}
-	\small
+	\caption{Abmessung von Versuchsfahrzeuge}
+	\label{tab:Abmessung von Versuchsfahrzeuge}
 	\centering
-	\begin{tabular}{ll}
-		\toprule
-		\multicolumn{2}{c}{Zwei miteinander verbundene Zellen}\\
-		\midrule
-		Punkt 1 & Adaptive Cruise Control\\
-		Punkt 2 & Lane Keeping Assist\\			
-		\toprule
-		\multicolumn{2}{c}{Schon wieder zwei miteinander verbundene Zellen}\\
-		\midrule
-		Punkt 3 & Elektronisches Stabilitätsprogramm\\
-		\toprule
+	\begin{tabular}{|c|c|c|}
+		\hline
+		\textbf{Abmessung} & \textbf{Golf 7 (TIAMO)} & \textbf{Passat (TEASY 3)}\\
+		\hline
+		L & $4.3$ & $4.6$\\
+		\hline
+		W & $1.8$ & $1.6$\\
+		\hline
+		D2F & $3.5$ & $3.6$\\
+		\hline
+		D2E & $0.8$ & $1.0$\\
+		\hline
+		D2L & $0.9$ & $0.8$\\
+		\hline
+		D2R & $0.9$ & $0.8$\\
+		\hline
 	\end{tabular}
-	\label{tab:Tabular1}
 \end{table}
-
+\subsubsection{Einbauposition der Ibeo-Laserscanner}
+Die Anzahl und die Anordnung der im Versuchsfahrzeug installierten Ibeo-Laserscanner dienen auch als wichtigen Parametern bei Implementierung, denn diese Informationen liefern den Startpunkt des Strahls jedes Sensors. In Abbildung~\ref{fig:DimensionVonAuto} sind die Einbauposition und der Erfassungsbereich jedes Sensors dargestellt. Dazu werden die tatsächlichen Werte in Tabelle~\ref{tab:Werte der Einbauposition und des Winkels des Anfangsstrahls jedes Sensors bei TIAMO} und Tabelle~\ref{tab:Werte der Einbauposition und des Winkels des Anfangsstrahls jedes Sensors bei Passat} gegeben. In den Tabellen bezeichnet x die x-Koordinate im Fahrzeugkoordinatensystem und b die y-Koordinate. Der Winkel $\theta$ beschreibt die ausgesandte Richtung des Anfangsstrahls. Der Anfangsstrahl jedes Laserscanners ist gegen den Uhrzeigersinn zur Endstrahl. Der Winkelbereich des Erfassungsraum des Sensors ist nach der Tabelle~\ref{tab:technische Details von Ibeo LUX 8L} auf $110^\circ$ begrenzt. Dieser Wert wird in der Praxis entsprechend der Performance des Umfeldmodells angepasst.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/AnordnungDerLaserscanner.pdf}
+	\caption{Einbauposition und Erfassungsbereich der Ibeo-Laserscanner}
+	\label{fig:AnordnungDerLaserscanner}
+\end{figure}
 \begin{table}[ht]
-	\caption{Vorteile und Nachteile von Kamera, Radar-, Lidar- und Ultraschallsensor}
+	\caption{Werte der Einbauposition und des Winkels des Anfangsstrahls jedes Sensors bei Golf 7 (TIAMO))}
+	\label{tab:Werte der Einbauposition und des Winkels des Anfangsstrahls jedes Sensors bei TIAMO}
 	\centering
-	\begin{tabular}{|m{0.15\textwidth}<{\centering}|m{0.4\textwidth}<{\centering}|m{0.4\textwidth}<{\centering}|}
-		\hline	
-		\textbf{Sensor} & \textbf{Vorteile} & \textbf{Nachteile}\\ \hline
-		Kamera& 
-		\begin{itemize}  
-			\setlength\itemsep{0em} 
-			\item eine hohe Auflösung und Farbskalen über das gesamte Sichtfeld haben 
-			\item eine farbenfrohe Perspektive der Umgebung bieten 
-			\item eine 3D-Geometrie von Objekten bei Stereokameras bereitstellen
-			\item kostengünstig Im Vergleich zu Lidar sein
-		\end{itemize}&
-		\begin{itemize}  
-			\setlength\itemsep{0em} 
-			\item ein leistungsfähiges Berechnungssystem benötigen, um nützliche Daten zu extrahieren 
-			\item empfindlich auf starken Regen, Nebel und Schneefall reagieren 
-			\item eine 3D-Geometrie von Objekten bei Stereokameras bereitstellen
-			\item begrenzte Reichweite besitzen
-		\end{itemize} 
-		\\ \hline
-		
-		Radarsensor& 
-		\begin{itemize}  
-			\setlength\itemsep{0em} 
-			\item lange Strecken bei schlechten Sichtverhältnissen vor dem Auto sehen 
-			\item klein, leicht und erschwinglich sind 
-			\item weniger Strom als ein Lidar-Sensor benötigen
-			\item im Vergleich zu Lidar robuster gegen Ausfälle sein
-		\end{itemize}&
-		\begin{itemize}  
-			\setlength\itemsep{0em} 
-			\item eine geringe Genauigkeit und Auflösung bieten
-			\item begrenzte Informationen  (z. B. weder genaue Form- noch Farbinformationen) bekommen
-			\item das Problem wegen der gegenseitigen Beeinflussung von Radarsensoren haben
-			\item schlechte Azimut- und Höhenauflösung verfügen
-			\item ohne einer Erhöhung der Leistung Radardämpfung zeigen
-		\end{itemize} 
-		\\ \hline
-		
-		Ultraschall-\newline sensor & 
-		\begin{itemize}  
-			\setlength\itemsep{0em} 
-			\item lange Strecken bei schlechten Sichtverhältnissen vor dem Auto sehen 
-			\item klein, leicht und erschwinglich sind 
-			\item weniger Strom als ein Lidar-Sensor benötigen
-			\item im Vergleich zu Lidar robuster gegen Ausfälle sein
-		\end{itemize}&
-		\begin{itemize}  
-			\setlength\itemsep{0em} 
-			\item eine geringe Genauigkeit und Auflösung bieten
-			\item begrenzte Informationen  (z. B. weder genaue Form- noch Farbinformationen) bekommen
-			\item das Problem wegen der gegenseitigen Beeinflussung von Radarsensoren haben
-			\item schlechte Azimut- und Höhenauflösung verfügen
-			\item ohne einer Erhöhung der Leistung Radardämpfung zeigen
-		\end{itemize} 
-		\\ \hline
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Sensor ID} & \textbf{x (m)} & \textbf{y (m)} & \textbf{Winkel $\theta$ des Anfangsstrahls ($^\circ$)}\\
+		\hline
+		1 & $3$ & $-0.9$ & $-10$\\
+		\hline
+		2 & $3$ & $0.9$ & $80$\\
+		\hline
+		3 & $-0.7$ & $0.9$ & $170$\\
+		\hline
+		4 & $-0.7$ & $-0.9$ & $-100$\\
+		\hline
 	\end{tabular}
 \end{table}
-
-
-\begin{table}[t]
-	\caption{Tabular technische Details von Ibeo LUX 8L }
+\begin{table}[ht]
+	\caption{Werte der Einbauposition und des Winkels des Anfangsstrahls jedes Sensors bei Passat (TEASY 3)}
+	\label{tab:Werte der Einbauposition und des Winkels des Anfangsstrahls jedes Sensors bei Passat}
 	\centering
-	\begin{tabular}{|m{0.4\textwidth}<{\centering}|m{0.6\textwidth}<{\centering}|}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\textbf{Technische Daten} & \textbf{Wert}\\
+		\textbf{Sensor ID} & \textbf{x (m)} & \textbf{y (m)} & \textbf{Winkel $\theta$ des Anfangsstrahls ($^\circ$)}\\
 		\hline
-		Reichweite & 50m mit $10\%$ Remission\\
+		1 & $3.3$ & $-0.8$ & $-35$\\
 		\hline
-		Genauigkeit & 10cm\\
+		2 & $3.6$ & $0$ & $45$\\
 		\hline
-		Entfernungsauflösung & 4cm\\
+		3 & $3.3$ & $0.8$ & $125$\\
 		\hline
-		Horizontaler Öffnungswinkel & $110^\circ ?50^\circ bis -60^\circ?$ \\
+		4 & $-0.5$ & $0.8$ & $145$\\
 		\hline
-		Vertikaler Öffnungswinkel & $6.4^\circ$\\
+		5 & $-1$ & $0$ & $-135$\\
 		\hline
-		Horizontale Winkelauflösung & $0.25^\circ$\\
-		\hline
-		Vertikale Winkelauflösung & $0.8^\circ$\\
-		\hline
-		Bildrate & 25.0 Hz\\
-		\hline
-		Multi-Layer & 8 (2 Paare von 4 Layers)\\
-		\hline
-		Ausgabe & Roh- und Objektdaten\\
-		\hline
-		Abmaße (B$\times$T$\times$H) & 164,5$\times$93,2$\times$88mm\\
-		\hline
-		Gewicht & 998,7g\\
+		6 & $-0.5$ & $-0.8$ & $-55$\\
 		\hline
 	\end{tabular}
-	\end{table}
-	
-\subsubsection{Das zu verwendendes Sensormodell}
-\begin{table}[h]
-	\caption{Tabular Umgebung: Etwas komplexere Tabelle}
-	\centering
-	\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}
-		\cline{2-10}
-		\multicolumn{1}{c|}{} & \rotatebox{90}{Fahrzeug-CAN} & \rotatebox{90}{GPS-System} & \rotatebox{90}{ESP-Cluster} & \rotatebox{90}{Correvit} & \rotatebox{90}{Lichtschranke} & \rotatebox{90}{Radar} & \rotatebox{90}{Lidar} & \rotatebox{90}{Kreiselplattform} & \rotatebox{90}{Webcam, Leuchtdiode} \\
-		\hline
-		\multicolumn{10}{|c|}{}  \\
-		\multicolumn{1}{|c}{\bfseries{Subjekt}} & \multicolumn{9}{c|}{}  \\
-		\hline
-		\hline	
-		\multicolumn{1}{|c|}{Setzgeschwindigkeit}  &  &  &  &  &  &&  &  & x\\		
-		\hline	
-		\multicolumn{10}{|c|}{}  \\
-		\multicolumn{1}{|c}{\bfseries{relative Größen}} & \multicolumn{9}{c|}{}  \\
-		\hline
-		\multicolumn{1}{|c|}{Triggersignal}  &  & x &   &  & x &   &  & & x \\		
-		\hline	
-		\multicolumn{10}{|c|}{}  \\
-		\multicolumn{1}{|c}{\bfseries{Objekt}} & \multicolumn{9}{c|}{}  \\
-		\hline
-		\multicolumn{1}{|c|}{Längsgeschwindigkeit} & x  & x &  & x &   &  &&   &    \\	
-		\hline
-	\end{tabular}
-	\label{tab:sensorik}
 \end{table}
-
-Nachfolgend das Beispiel für eine Aufzählung mit Itemize.
-\begin{itemize}
-	\item Reaktionszeit $\mathrm{\Delta t_{react}}$
-	\item Im oberen Punkt sieht man auch schön die Einbindung von Formeln in den Text.
-\end{itemize}
-
-$v_{Obj.}$ = 120\,km/h \\
-Einheiten sollten nicht kursiv dargestellt werden und werden vom Zahlenwert durch ein schmales Leerzeichen (Backslash und Komma) getrennt.
-
-Es gibt eine Vielzahl von Gleichungsumgebungen. Equation ist eine davon. Die Gleichung ergibt natürlich keinen tieferen Sinn:
-\begin{equation}
-	x_{obj} = \frac{s^{2} \cdot a \cdot \sqrt{b}}{234 \cdot h_{ego}}
-\end{equation}
-
+\subsection{Framework ROS zur Implementierung}
+Eine der zentralen Aufgaben dieser Arbeit handelt sich um die Konvertierung von dem am IfF bereits bestehenden MATLAB/Simulink-Modell nach Robot Operating System (ROS).Das Robot Operating System (ROS) ist ein Framework zum Schreiben von Robotersoftware. Es handelt sich um eine Sammlung von Tools, Bibliotheken und Konventionen, die darauf abzielen, die Erstellung komplexer und robuster Roboterverhalten auf einer Vielzahl von Roboterplattformen zu vereinfachen\citep{Quigley.2015}. Obwohl diese Idee aus dem Bereich der Robotik stammt, machen ihre verschiedenen guten Eigenschaften ihre Investition in den Bereich des autonomen Fahrens sehr bedeutsam. Um eine klare Programmstruktur und eine genaue und effiziente Umsetzung des in Kapitel~\ref{Kapitel:Theoretische Grundlagen} genannten Umfeldsmodells zu erhalten, ist eine kurze Einführung in die ROS-Grundlagen und Funktionsmodule in Bezug auf diesen Artikel erforderlich.
+\subsubsection{Grundlagen der ROS-Architektur}
+Die ROS-Architektur, die in Abbildung~\ref{fig:ROS-Architektur} dargestellt, wurde entworfen und in drei Abschnitte oder Konzeptebenen unterteilt, welche sich um die Dateisystemebene (engl. The Filesystem level), die Berechnungsdiagrammebene (engl. The Computation Graph level) und die Community-Ebene (engl. The Community level) handeln~\citep{Fernandez.2015}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1.0\textwidth]{pics/ROS-Architektur.pdf}
+	\caption{ROS-Architektur}
+	\label{fig:ROS-Architektur}
+\end{figure}
+\\Auf der Dateisystemebene wird eine Gruppe von Konzepten verwendet, um zu erklären, wie ROS intern gebildet wird. Ähnlich wie bei einem Betriebssystem ist ein ROS-Programm in Ordner unterteilt, und diese Ordner enthalten Dateien, die ihre Funktionen beschreiben~\citep{Fernandez.2015}. Hierbei sind die wichtigen Konzepte zu diesem Artikel Package und Metapackage. Das Package ist die zentrale und grundlegende Dateiorganisationseinheit, die Programmierfunktionen in ROS vollständig realisieren kann. Es enthält im Allgemeinen ROS Laufzeitprozess (engl. runtime process), Quellcode (engl. Sourcecode), Konfigurationsdateien (engl. configuration files) und das Package-manifest, das zur Bereitstellung von Informationen von build-dependencies, run-dependencies und Lizenz verwendet wird. Metapackages werden in der Regel nach einer ähnlichen Funktionalität gruppiert. Andere Grundkonzepte und Begriffe auf dieser Ebene sind aufgrund der Länge des Artikels nicht detailliert und finden sich in~\citep{Fernandez.2015}\citep{Koubaa.2016}.
+\\Die Berechnungsdiagrammebene ist die relevanteste Ebene für diese Arbeit, auf der die Kommunikation zwischen Prozessen und Systemen stattfindet. Die Grundkonzepte auf dieser Ebene sind, wie in Abbildung~\ref{fig:Berechnungsdiagrammebene} dargestellt, Nodes, ROS-Master, Parameter Server, Messages, Topics, Services und ROS-Bags, die alle Daten auf unterschiedliche Weise für das Diagramm bereitstellen~\citep{Fernandez.2015}.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/Berechnungsdiagrammebene.pdf}
+	\caption{Wesentliche Grundkonzepte von Berechnungsdiagrammebene}
+	\label{fig:Berechnungsdiagrammebene}
+\end{figure}
+Nodes sind ausführbare Dateien (engl. executables) in ROS und vervollständigen die erwartete Funktion und die zugehörigen Berechnungen. Die Nodes können miteinander kommunizieren und Daten übertragen. Daher gibt es im Allgemeinen mehrere Nodes in einem System, die unterschiedliche Funktionen ausgeführt haben. Der Datenaustausch zwischen Nodes erfolgt über Messages. ROS verwendet eine vereinfachte Nachrichtenbeschreibungssprache, um die Datenwerte zu beschreiben, die von Nodes publiziert (engl. published)~\citep{Fernandez.2015}. Damit kann ROS den richtigen Quellcode für diese Nachrichtentypen in mehreren Programmiersprachen (z.B. C++ oder Python) generieren. Zahlreiche vordefinierte Messages in ROS können direkt zum Übertragen von Daten oder zum Erstellen neuer aufgabenorientierter Messages verwendet werden. Dies erfolgt durch Definieren einer Datei mit .msg-Extension. Wenn ein Node Daten sendet, heißt es, dass das Note eine Topic publizieren. Ein anderer Knoten kann die Topic abonnieren (engl. subscribe), um die Daten abzurufen. Ein Node kann eine Topic nur abonnieren, wenn es denselben Message-Typ hat. Eine Topic kann verschiedene Subsribers und auch verschiedene Publishers haben. Wenn die Kommunikation zwischen Nodes empfangen und beantwortet (engl. receive and reply) werden muss, sollten Services anstelle von Topics verwendet werden. Services geben den Entwicklern die Möglichkeit, mit Nodes zu interagieren. Mit Parameter Server ist es möglich, Schlüssel zu verwenden, um Daten an einem zentralen Ort zu speichern und Nodes während der Ausführung zu konfigurieren oder die Nodes der Knoten zu ändern~\citep{Fernandez.2015}. Die oben genannte Kommunikation garantiert ROS-Master, der jede Nodes verwalten. Nodes werden zuerst beim Master registriert, und dann integriert der Master Nodes in das gesamte ROS-Programm. Auf diesem Grund besteht der erste Schritt darin, den Master zu starten, wenn das ROS-Programm gestartet wird. ROS-Bag ist ein Format zum Speichern und Wiedergeben aller Informationen der Messages, Topics und Services, die gewünscht werden. In dieser Arbeit wird ROS-Bag verwendet, um die Sensordaten von dem Versuchsfahrzeug zu speichern. Wenn das ROS-Bag wiedergegeben ist, simuliert es die Datenwerte von Sensoren zu messen und erfassen, was ist praktisch zum Debuggen von Implementierungsalgorithmus.
+\\Die Konzepte auf ROS-Community-Ebene sind die ROS-Ressourcen, die es separaten Communities ermöglichen, Software und Wissen auszutauschen~\citep{Fernandez.2015}. Zu den Ressourcen gehören unter anderem ROS-Repositories,ROS-Distributions und ROS-Wiki. Jedoch hat diese Ebene für diesen Artikel nur eine sehr geringe Relevanz. Auf diesem Grund ist die Auseinandersetzung damit im Rahmen dieser Arbeit zu verzichten.
+\\Aufgrund des oben erwähnten Mechanismus und der Philosophie von ROS hat der Aufbau der Implementierung des Umfeldsmodell auf ROS einen starken Vorteil. Die dezentrale Kommunikationsmethode macht das Implementierungssystem klarer und einfacher. Außerdem sind Fehler im System leichter zu finden und sortieren. Die Aufteilung zwischen verschiedenen Funktionen erleichtert die spätere Systemerweiterung, z.B. Navigation bzw. kollisionsfreie Pfadplanung. Im Rahmen dieser Arbeit ist für die Implementierung ROS-Kinetic-Kame mit Ubuntu 16.04 (Xenial) in Benutzung.
+\subsubsection{Visualisierung des Umfeldmodells in ROS}
