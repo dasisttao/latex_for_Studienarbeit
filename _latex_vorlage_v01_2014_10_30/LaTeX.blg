@@ -24,46 +24,48 @@ Database file #1: Literatur.bib
 Warning--I didn't find a database entry for "Badue2019"
 Warning--I didn't find a database entry for "ams09"
 Warning--to sort, need editor, organization, or key in .0612201908122019
+Warning--to sort, need editor, organization, or key in .1306200715062007
 Warning--empty organization and editor in .0612201908122019
-You've used 19 entries,
+Warning--empty organization and editor in .1306200715062007
+You've used 20 entries,
             4793 wiz_defined-function locations,
-            1059 strings with 11025 characters,
-and the built_in function-call counts, 15075 in all, are:
-= -- 1650
-> -- 396
-< -- 465
+            1060 strings with 11042 characters,
+and the built_in function-call counts, 15484 in all, are:
+= -- 1700
+> -- 397
+< -- 466
 + -- 524
 - -- 146
-* -- 1100
-:= -- 2534
-add.period$ -- 25
-call.type$ -- 19
-change.case$ -- 111
-chr.to.int$ -- 19
-cite$ -- 22
-duplicate$ -- 363
-empty$ -- 992
+* -- 1132
+:= -- 2585
+add.period$ -- 26
+call.type$ -- 20
+change.case$ -- 114
+chr.to.int$ -- 20
+cite$ -- 26
+duplicate$ -- 375
+empty$ -- 1037
 format.name$ -- 270
-if$ -- 2983
+if$ -- 3083
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 63
-newline$ -- 125
+newline$ -- 130
 num.names$ -- 54
-pop$ -- 134
+pop$ -- 135
 preamble$ -- 1
-purify$ -- 149
+purify$ -- 154
 quote$ -- 0
-skip$ -- 735
+skip$ -- 752
 stack$ -- 0
-substring$ -- 1421
-swap$ -- 95
-text.length$ -- 82
+substring$ -- 1473
+swap$ -- 97
+text.length$ -- 83
 text.prefix$ -- 8
 top$ -- 0
-type$ -- 164
-warning$ -- 2
-while$ -- 122
-width$ -- 22
-write$ -- 278
-(There were 4 warnings)
+type$ -- 172
+warning$ -- 4
+while$ -- 123
+width$ -- 23
+write$ -- 290
+(There were 6 warnings)

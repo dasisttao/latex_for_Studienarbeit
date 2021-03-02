@@ -4,6 +4,7 @@ Um das ober
 \subsection{Versuchsfahrzeug}
 Bevor mit Implementierung des in Kapitel~\ref{Kapitel:Theoretische Grundlagen} entwickelten Umfeldmodells begonnen wird, werden die relevanten Informationen über das Versuchsfahrzeug mitsamt die darin eingebauten Sensoren dokumentiert und in der eigentlichen Implementierung parametriert.
 \subsubsection{Dimension über Versuchsfahrzeug}
+\label{Abschnitt:DimensionVonAuto}
 Bei Implementierung im Rahmen dieser Arbeit ist es auch bedeutungsvoll, die Position bzw. den belegten Raum des Versuchsfahrzeugs zu modellieren und dokumentieren, was einen konkreten Beitrag zur kollisionsfrei Navigation leistet. Außerdem ist die Information über die Anordnung der Lasersensoren eng verbunden mit der Abmessung des Fahrzeugs. Daher wird die Dimension des Fahrzeugs als ein wichtiges Element betrachtet. Die Abbildung~\ref{fig:DimensionVonAuto} zeigt, dass die wichtige Größen von Abmessung des Fahrzeugs parametriert werden. Obwohl die Zeichnungsbemaßung eigentlich redundant ist, wird sie mit Absicht angewendet, um die Darstellung der wichtigen Größen sichtbar zu machen. Der Rot Punkt bezeichnet hierbei die Koordinatenursprung des Fahrzeugkoordinatensystem und befindet sich mittig auf der Hinterachse~\citep{Hegerhorst.2018}. Die X-Achse des Fahrzeugkoordinatensystem zeigt die Längsrichtung des Fahrzeugs nach vorne~\citep{Hegerhorst.2018}. Die Y-Achse verläuft senkrecht zur X-Achse und zeigt nach links des Fahrtrichtung. Die Koordinatenursprung dient als ein Bezugspunkt und die Größen, z.B. die Lage eines Sensors sowie die Position eines detektierten Objekts, werden nur relativ zu dem Bezugssystem bzw. Fahrzeugkoordinatensystem angegeben. 
 \begin{figure}[htbp]
 	\centering
@@ -104,3 +105,94 @@ Nodes sind ausführbare Dateien (engl. executables) in ROS und vervollständigen d
 \\Die Konzepte auf ROS-Community-Ebene sind die ROS-Ressourcen, die es separaten Communities ermöglichen, Software und Wissen auszutauschen~\citep{Fernandez.2015}. Zu den Ressourcen gehören unter anderem ROS-Repositories,ROS-Distributions und ROS-Wiki. Jedoch hat diese Ebene für diesen Artikel nur eine sehr geringe Relevanz. Auf diesem Grund ist die Auseinandersetzung damit im Rahmen dieser Arbeit zu verzichten.
 \\Aufgrund des oben erwähnten Mechanismus und der Philosophie von ROS hat der Aufbau der Implementierung des Umfeldsmodell auf ROS einen starken Vorteil. Die dezentrale Kommunikationsmethode macht das Implementierungssystem klarer und einfacher. Außerdem sind Fehler im System leichter zu finden und sortieren. Die Aufteilung zwischen verschiedenen Funktionen erleichtert die spätere Systemerweiterung, z.B. Navigation bzw. kollisionsfreie Pfadplanung. Im Rahmen dieser Arbeit ist für die Implementierung ROS-Kinetic-Kame mit Ubuntu 16.04 (Xenial) in Benutzung.
 \subsubsection{Visualisierung des Umfeldmodells in ROS}
+Die Visualisierung des Modells ist ebenso wichtig wie seine Einrichtung und Implementierung. Eine gute Visualisierung spiegelt den tatsächlichen Betriebsstatus des Modells hervorragend wider. Dies hilft bei der Behebung von Programmfehlern und beim Datenaustausch mit anderen Funktionsmodulen oder Modellen im nachfolgenden Systemerweiterungsprozess. Das ROS-System bietet eine Vielzahl von Tools zur Datenvisualisierung und zum Debuggen. Das wichtigste und am weitesten verbreitete ist RVIZ. rviz ist ein 3D-Visualisierungswerkzeug von ROS, mit dem Sensordaten und Statusinformationen visualisiert werden. RVIZ unterstützt umfangreiche Datentypen, die durch Laden verschiedener Display-Typen visualisiert werden. Jeder Display hat einen eindeutigen Namen. Wichtige Display-Typen und ihre entsprechenden Message-Typen im Bereich des autonomen Fahrens sind in Tabelle~\ref{tab:RVIZ Display-Typen} aufgeführt. Aufgrund der Philosophie des verteilten Software-Frameworks von ROS muss das RVIZ-Visualisierungstool nur den passenden Message-Typ und die passende Topic auswählen, wenn Daten auf einer Topic visualisiert werden sollen.
+\begin{table}[ht]
+	\caption{Display-Typen und ihre entsprechenden Message-Typen in RVIZ}
+	\label{tab:RVIZ Display-Typen}
+	\small
+	\centering
+	\setlength\tabcolsep{2pt}
+	\begin{tabular}{|c|c|c|}
+		
+		\hline
+		\textbf{Display-Typ} & \textbf{Message-Typ} & \textbf{Beschreibung}\\
+		\hline
+		Grid Cells & nav\_msgs/GridCells & Zeichnet Zellen aus einem Raster\\
+		\hline
+		Point Cloud 2 & sensor\_msgs/PointCloud2 & Zeigt Daten aus einer Punktwolke\\
+		\hline
+		Map & nav\_msgs/OccupancyGrid & Zeigt eine Karte in der Grundebene\\
+		\hline
+		Path & nav\_msgs/Path & Zeigt einen Pfad\\
+		\hline
+		Pose & geometry\_msgs/PoseStamped & Zeichnet eine 3D-Pose\\
+		\hline
+		Pose Array & geometry\_msgs/PoseArray & Zeichnet mehrere Posen\\
+		\hline
+		Image & sensor\_msgs/Image & Erstellt ein neues Rendering-Bild\\
+		\hline
+		Laser Scan & sensor\_msgs/LaserScan & Zeigt Daten von einem Laserscan\\
+		\hline
+		Odometry & nav\_msgs/Odometry & Sammelt Kilometerzähler-Posen aus der Zeit\\
+		\hline
+		TF & tf2\_msgs/TFMessage & Zeigt die Koordinatentransformationshierarchie \\
+		\hline
+	\end{tabular}
+\end{table}
+\\Für das auf diesen Artikel bezogene Umgebungsmodell gibt es zwei grundlegende Visualisierungsoptionen. Zum einen ist Display-Typ Map, das nav\_msgs/OccupancyGrid message anzeigt. Die Informationen in nav\_msgs/OccupancyGrid umfassen die Koordinaten des ursprünglichen Standorts, die Auflösung sowie die Länge und Breite der Karte und die Kartendaten (engl. Map data) in jeder Gitterzelle. Map data werden in zwei Situationen betrachtet. Einer ist, dass der Belegungszustand unbekannt ist und der Wert in diesem Fall -1 ist. Die andere ist, dass die Wahrscheinlichkeit der Belegung bekannt ist und der Wert in diesem Fall 0 bis 100 beträgt. Wie in Abbildung~\ref{fig:Display_Map} gezeigt, wenn Map value von einer Gitterzelle -1 ist, wird die Zellenfläche ausgegraut dargestellt. Wenn Map Value von 0 auf 100 steigt, verändert sich die entsprechende Zelle in einem Farbverlauf von Weiß zu Schwarz.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/Display_Map.pdf}
+	\caption{Display mit Map}
+	\label{fig:Display_Map}
+\end{figure}
+\\Die zweite Möglichkeit der Visualisierung eines Umfeldmodells in RVIZ ist die Verwendung von GridCells. Dies darstellt die Daten von Message-Typ nav\_msgs/GridCells. Darin handelt sich um die Informationen über die Länge und Breite sowie die Koordinaten jeder Zelle. GridCells-Display ist nur für die Visualisierung des vom Entwickler angegebenen Bereichs verantwortlich. Es ist von der Belegungswahrscheinlichkeit getrennt und wird einfach, leicht und flexibel. Je nach Aufgabe des Entwicklers oder Debugging-Anforderungen können unterschiedliche Wahrscheinlichkeitsbereiche angezeigt werden. Darüber hinaus ermöglicht es einen starken Kontrast von Farben mit unterschiedlichen Belegungswahrscheinlichkeiten. Im Gegensatz dazu ist die Graustufendarstellung von dem oben erwähnten Map nicht offensichtlich und für die Programmentwicklung und die Erkennung der Datenkorrektheit nicht geeignet. Ein Anwendungsbeispiel besteht darin, wie in Abbildung~\ref{fig:Display_GridCell} gezeigt, Gitterzellen mit unterschiedlichen Belegungswahrscheinlichkeiten in verschiedenen Topics zu organisieren und dann die verschiedenen Topics mit verschiedenen offensichtlichen Farben zu visualisieren. Neben der Flexibilität bietet GridCells-Display einige gute Vorteile gegenüber Map-Display. Zunächst kann die jeder Gitterzelle zugewiesenen zusätzlichen Informationstypen und -werten selbst definiert werden, was eine direktere Bedingung für die zukünftige Erweiterung und Verbesserung des Modells darstellt. Selbst wenn nur die Belegungswahrscheinlichkeit zu berücksichtigen ist, kann die Wahrscheinlichkeit (0 bis 100) als Ganzes betrachtet werden, anstatt den Wert -1 allein zu verwenden bzw. umrechnen, um das Unbekannte auszudrücken. Darüber hinaus erleichtert die Verwendung von GridCells-Display die anschließende Binärisierung von Werten und Bildern. Wie in Abbildung~\ref{fig:Dispaly_Grid_Cell_Binary} gezeigt, kann die Binärisierung durch Einstellen des Schwellenwerts, der durch Experimente oder Deep-Learning erhalten wurde, leicht erzielt werden. Daher im Rahmen dieser Arbeit wird GridCells-Display verwendet, um eine Visualisierung zu erreichen. Es gibt aber ein kleines Problem, das bei der Verwendung von GridCells besondere Aufmerksamkeit und Lösung erfordert. Durch tatsächliche Experimente ist bekannt, dass bei sehr großen Positionskoordinaten von GridCells (z. B. 10 bis 6 Potenzen) die Darstellung von Gitterzellen in RVIZ deformiert wird oder sogar verschwindt. Daher können bei der Implementierung des Modells die vom GPS erhaltenen UTM-Koordinateninformationen nicht direkt als Koordinaten für die Anzeige der Gitterzellen verwendet werden. Vor der eigentlichen Visualisierung werden zwei Abweichungen X\_VISUAL\_OFFSET und Y\_VISUAL\_OFFSET so eingestellt, dass der Koordinatenwert der Zellen nahe am Ursprung liegt, wodurch die Genauigkeit der Visualisierung sichergestellt wird. Dieses Abweichungspaar wird durch die anfänglichen Fahrzeugkoordinateninformationen bestimmt, die bei der Initialisierung des Modells erhalten werden, was sich in der nächsten Erläuterung des Funktionsblocks widerspiegelt.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/Display_GridCell.pdf}
+	\caption{Display mit GridCell}
+	\label{fig:Display_GridCell}
+\end{figure}
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/Dispaly_Grid_Cell_Binary.pdf}
+	\caption{Display mit GridCell nach Binärisierung}
+	\label{fig:Dispaly_Grid_Cell_Binary}
+\end{figure}
+\subsection{Koordinatensysteme}
+Daten von verschiedenen Informationsquellen bzw. Sensoren sind häufig mittels unterschiedlichen Koordinatensystemen gegeben. Auf diesem Grund wird die Konvertierung zwischen verschiedenen Koordinatensystemen bei der Realisierung des Umfeldsmodells oft durchgeführt. Hierbei gibt es 3 wesentliche Koordinatensysteme, deren Klärung für das Verständnis der nachfolgenden Funktionsbausteine dieser Arbeit sehr hilfreich ist. Wie in Abbildung~\ref{fig:Koordinaten3} gezeigt, sind diese 3 Koordinatensysteme Weltkoordinatensystem (engl. Global Coordinate System, als GCS abgekürzt), Ankerkoordinatensystem (engl. Anchor Coordinate System, als ACS abgekürzt) und Fahrzeugkoordinatensystem (engl. Vehicle Coordinate System, als ACS abgekürzt).
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/Koordinaten3.pdf}
+	\caption{3 wesentliche Koordinatensysteme im Umfeldsmodell}
+	\label{fig:Koordinaten3}
+\end{figure}
+\subsubsection{Global Coordinate System (GCS)}
+Das Weltkoordinatensystem ist das grundlegendste Koordinatensystem. Die vom GPS-Sensor erhaltenen Informationen zur Fahrzeugpose basieren auf dem Weltkoordinatensystem. Im tatsächlichen Gebrauch sind dafür zwei Umrechnungen erforderlich. Das erste ist die Notwendigkeit, die Abweichung zwischen dem Ursprung des Fahrzeugkoordinatensystems (der Mitte der Hinterachse des Fahrzeugs) und dem tatsächlichen Standort der GPS-Antenne (einer bestimmten Position auf dem Dach) zu kompensieren. Außerdem ist die Beschreibung bzw. die Berechnung der geographischen Koordinaten mittels UTM-Koordinatensystem (von englisch Universal Transverse Mercator coordinate system) notwendig. Diese beiden Berechnungen werden nach~\citep{Hegerhorst.2018} im Vorverarbeitungsprozess unter Verwendung einiger Algorithmen von ifF abgeschlossen und werden hier nicht ausführlich erläutert. Im Rahmen dieser Arbeit beziehen sich die Koordinaten im Weltkoordinatensystem auf die verarbeitete UTM-Koordinateninformationen.
+\subsubsection{Vehicle Coordinate System (VCS)}
+In Abbildung~\ref{fig:Koordinaten3} wird das blaue Rechteck verwendet, um das Fahrzeug einfach darzustellen. Wie in Abschnitt~\ref{Abschnitt:DimensionVonAuto} erwähnt, liegt der Ursprung des Fahrzeugkoordinatensystems in der Mitte der Hinterachse des Fahrzeugs. Die X-Achse des VCS zeigt die Längsrichtung des Fahrzeugs nach vorne. Die Y-Achse verläuft senkrecht zur X-Achse und zeigt nach links des Fahrtrichtung. In dieser Arbeit sind die mittels VCS angegebenen Originaldaten die Punktwolkenpositionsinformationen des Laserscanners.  und der Ausdruck der vom Fahrzeug eingenommenen Position. Darüber hinaus erfordert die Darstellung des vom Fahrzeug abgedeckten Raums auch die Hilfe von Fahrzeugkoordinatensystem. Hierbei ist zu beachten, dass die Koordinateninformation der Punktwolke jedes Laserscanners tatsächlich auf dem unabhängigen Koordinatensystem jedes Laserscanners basiert. Unter dem bestehenden Rahmen von ifF wird jedoch die Umrechnung zwischen jedem Sensorkoordinatensystem und dem Fahrzeugkoordinatensystem somit die Kombinierung aller Sensordaten während der Vorverarbeitung abgeschlossen. Schließlich wird in Form von ROS-Bag die Punktwolke aller Sensoren basierend auf den Koordinateninformationen des Fahrzeugkoordinatensystems bereitgestellt.
+
+\subsubsection{Anchor Coordinate System (ACS)}
+Ankerkoordinatensystem ist ein Hilfskoordinatensystem, das auf den Erfahrungen von ~\citep{Weiss.1306200715062007}~\citep{Pieringer.2013} basiert. Aufgrund des Speicherbedarfs und der Performance ist es unmöglich und auch unnötig, einen sehr großen Bereich von Umgebungsinformationen aufzuzeichnen und zu aktualisieren. Daher ist ein Wahrnehmungsbereich des Fahrzeugs, wie das schwarze Quadrats in Abbildung~\ref{fig:Koordinaten3} geplant. Dieser Wahrnehmungsbereich befindet sich im engen Raum des Fahrzeugs und bewegt sich mit der Änderung der Positionsinformationen des Fahrzeugs. Um die Position und Größe des Bereichs vollständig anzuzeigen, wird neben der Länge und Breite des Bereichs auch ein Ankerpunkt benötigt. Normalerweise wird dieser Ankerpunkt in der unteren linken Ecke des Wahrnehmungsbereichs eingerichtet. Das mit diesem Ankerpunkt als Ursprung festgelegte Koordinatensystem wird als Ankerkoordinatensystem bezeichnet. Es ist jedoch anzumerken, dass dieses Koordinatensystem nur mit der Position des Fahrzeugs verschoben wird. Die Richtung seiner Koordinatenachse ändert sich nicht, da das rotierende Koordinatensystem Aliasing und geringe Qualität des Umfeldsmodells verursacht~\citep{Weiss.1306200715062007}~\citep{Hegerhorst.2018}. Zusätzlich wird innerhalb dieses Bereichs der Raum in eine Gitterzelle diskretisiert,siehe Abbildung~\ref{fig:Diskretisierung der Umgebung}. Der Ursprung des ACS ist der Ausgangspunkt der in Abschnitt~\ref{Abschnitt:Gitterbasierte Modelle} erwähnten Diskretisierung und auch die 0-Stelle des Index. Abbildung ~\ref{fig:Diskretisierung der Umgebung} zeigt auch die Einschränkungen des Umfeldsmodells hinsichtlich der Position des Fahrzeugs auf der Karte. Wenn sich die Position des Fahrzeugs nicht wesentlich ändert, muss die Position des Ursprungs des ACS nicht jederzeit aktualisiert werden. Um den Fahrbereich des Fahrzeugs weiter einzuschränken, wird er im Allgemeinen nach~\citep{Weiss.1306200715062007}~\citep{Hegerhorst.2018} als mittlerer Teil der Karte festgelegt. Wenn das Fahrzeug den Bereich verlässt, wird das ACS aktualisiert, wodurch sich der Rechenaufwand verringern. Darüber hinaus wird in dieser Arbeit der Grenzwert des Bereichs parametrisiert und als Schnittstelle für das spätere Verwendung und Weiterentwicklung bereitgestellt.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/Diskretisierung der Umgebung.pdf}
+	\caption{Anordnung der Position des Autos auf der Karte~\citep{Hegerhorst.2018}}
+	\label{fig:Diskretisierung der Umgebung}
+\end{figure}
+\subsubsection{Zusammenhang zwischen Koordinatensystemen}
+Zwischen den oben erläuterten Koordinatensystemen besteht ein Zusammenhang und die Umrechnung zwischen GCS, ACS und VCS gewinnt bei Implementierung des Umfeldsmodells große Bedeutung. Wenn die x-Koordinate des Ankerpunkts anchor\_x und die x-Koordinate des Fahrzeugs pos\_x im GCS bekannt sind, wie in Abbildung~\ref{fig:Koordinaten3} gezeigt, kann die x-Koordinate des Fahrzeugs im ACS durch die Formel offset\_x=pox\_x-anchor\_x erhalten werden. Dabei ist die Umrechnung auf der y-Achse ist analog zur x-Achse. \\Darüber hinaus gibt es zwei Punkte, die besondere Aufmerksamkeit erfordern. Das erste ist die Aktualisierung bzw. Initialisierung von ACS. Im Modell wird auch die Zeit diskretisiert, um sich an Computerberechnungen anzupassen. Zu jedem einzelnen Zeitpunkt wird das ACS getestet, ob es aktualisiert werden muss und wie es sich bewegt. Dieser Prozess kann durch das in Abbildung~\ref{fig:ACS_Update} gezeigte Programmablaufdiagramm dargestellt werden. Dabei repräsentieren X\_1 und X\_2 jeweils die linke und rechte Grenze der X-Achse des grün befahrbaren Bereichs in Abbildung~\ref{fig:Diskretisierung der Umgebung}. Y\_1 und Y\_2 repräsentieren jeweils die unteren und oberen Grenzen des Bereichs. Außerdem geben dx und dy als positive Werte die Entfernung an, um die der Ursprung des ACS verschoben werden muss. Diese Werte sind so parametriert, dass sie je nach Anwendungsszenario jederzeit geändert werden können. Dabei beschreiben pox\_x, pox\_y und offset\_x, offset\_y die Position des Fahrzeugs im Weltkoordinatensystem und im Ankerkoordinatensystem. Der Kern des Algorithmus besteht darin, zu überprüfen, ob die Position des Fahrzeugs eine bestimmte Grenze überschritten hat, und sich entsprechend zu bewegen. Wenn beispielsweise offset\_x $>$ X\_2 gilt ist, bedeutet dies, dass die Position des Fahrzeugs die Grenze des befahrbaren Bereichs berührt oder überschritten hat. In diesem Fall bewegt sich der Anker nach rechts, indem der Wert der x-Koordinate erhöht wird, sodass das Fahrzeug immer in der Mitte der Rasterkarte bleibt. Dieser ganze Prozess wird als Funktionsmodul mit der Bezeichnung Update ACS betrachtet und zum Entwerfen der Initialisierung von ACS verwendet, wie in Abbildung~\ref{fig:InitializationOfACS} dargestellt. Die Initialisierung des ACS erfolgt gleichzeitig mit der Initialisierung des gesamten Umfeldsmodells. Wenn gültige Fahrzeugpositionsinformationen erhalten werden, werden die Anfangskoordinaten des Fahrzeugs auch der Anfangsposition des Ankers zugewiesen, wodurch die Anzahl der Bewegungen des ACS verringert wird. Anschließend wird mit dem Aktualisierungsmodul die Position des Ankers automatisch angepasst, bis sich die Fahrzeugposition innerhalb des eingestellten Fahrbereichs befindet.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=1\textwidth]{pics/ACS_Update.pdf}
+	\caption{Programmablaufplan der Aktualisierung von ACS}
+	\label{fig:ACS_Update}
+\end{figure}
+\begin{figure}[ht]
+	\centering
+	\includegraphics[width=0.7\textwidth]{pics/InitializationOfACS.pdf}
+	\caption{Initialisierung von ACS}
+	\label{fig:InitializationOfACS}
+\end{figure}
+\\Der zweite Punkt ist, dass Punktwolkeninformationen und die Visualisierung der Fahrzeugkarosseriestruktur von Koordinaten unter VCS in Koordinaten unter ACS umrechnet werden müssen, da der Ausgangspunkt der Diskretisierung Anker ist. Dieser Punkt wird im nächsten Abschnitt zur Verarbeitung von Sensorinformationen ausführlich erläutert. 
+\subsection{Verarbeitung von Sensordaten}
