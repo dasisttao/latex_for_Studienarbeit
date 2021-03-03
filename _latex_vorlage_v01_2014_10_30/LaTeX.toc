@@ -17,7 +17,7 @@
 \contentsline {subsubsection}{\numberline {2.2.1}\"Uberblick \"uber verschiedene Sensoren zur Umfeldmodellierung}{13}{subsubsection.2.2.1}%
 \contentsline {subsubsection}{\numberline {2.2.2}Funktionsprinzip des Lasersensors}{16}{subsubsection.2.2.2}%
 \contentsline {subsubsection}{\numberline {2.2.3}Theorie des inversen Sensormodells}{17}{subsubsection.2.2.3}%
-\contentsline {subsubsection}{\numberline {2.2.4}Technische Details von Ibeo-LUX-8L}{18}{subsubsection.2.2.4}%
+\contentsline {subsubsection}{\numberline {2.2.4}Technische Details von Ibeo-LUX}{18}{subsubsection.2.2.4}%
 \contentsline {subsubsection}{\numberline {2.2.5}Das zu verwendendes Sensormodell}{19}{subsubsection.2.2.5}%
 \contentsline {section}{\numberline {3}Implementierung}{23}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Versuchsfahrzeug}{23}{subsection.3.1}%
@@ -27,15 +27,18 @@
 \contentsline {subsubsection}{\numberline {3.2.1}Grundlagen der ROS-Architektur}{26}{subsubsection.3.2.1}%
 \contentsline {subsubsection}{\numberline {3.2.2}Visualisierung des Umfeldmodells in ROS}{29}{subsubsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.3}Koordinatensysteme}{33}{subsection.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Global Coordinate System (GCS)}{33}{subsubsection.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.1}Global Coordinate System (GCS)}{34}{subsubsection.3.3.1}%
 \contentsline {subsubsection}{\numberline {3.3.2}Vehicle Coordinate System (VCS)}{34}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}Anchor Coordinate System (ACS)}{35}{subsubsection.3.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.4}Zusammenhang zwischen Koordinatensystemen}{35}{subsubsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.4}Verarbeitung von Sensordaten}{38}{subsection.3.4}%
-\contentsline {section}{\numberline {4}Implementierung}{39}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Unterkapitel 1}{39}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Unterunterkapitel1}{39}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Das zu verwendendes Sensormodell}{40}{subsubsection.4.1.2}%
-\contentsline {section}{\nonumberline Literatur}{43}{section*.13}%
-\contentsline {section}{\nonumberline Anhang}{46}{section*.15}%
+\contentsline {subsubsection}{\numberline {3.3.4}Zusammenhang zwischen Koordinatensystemen}{36}{subsubsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.4}Verarbeitung von Sensordaten}{37}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}GPS-Information}{38}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Laserscanner-Information}{39}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Synchronization der Sensordaten}{45}{subsubsection.3.4.3}%
+\contentsline {section}{\numberline {4}Implementierung}{46}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Unterkapitel 1}{46}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Unterunterkapitel1}{46}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Das zu verwendendes Sensormodell}{47}{subsubsection.4.1.2}%
+\contentsline {section}{\nonumberline Literatur}{50}{section*.13}%
+\contentsline {section}{\nonumberline Anhang}{53}{section*.15}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -17,9 +17,13 @@
 \contentsline {figure}{\numberline {3.16}{\ignorespaces Display mit Map}}{30}{figure.16}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Display mit GridCell}}{32}{figure.17}%
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Display mit GridCell nach Bin\"arisierung}}{32}{figure.18}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces 3 wesentliche Koordinatensysteme im Umfeldsmodell}}{33}{figure.19}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces 3 wesentliche Koordinatensysteme im Umfeldmodell}}{33}{figure.19}%
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Anordnung der Position des Autos auf der Karte~\citep {Hegerhorst.2018}}}{36}{figure.20}%
-\contentsline {figure}{\numberline {3.21}{\ignorespaces Programmablaufplan der Aktualisierung von ACS}}{37}{figure.21}%
-\contentsline {figure}{\numberline {3.22}{\ignorespaces Initialisierung von ACS}}{38}{figure.22}%
-\contentsline {figure}{\numberline {4.23}{\ignorespaces Folgefahrt Beispielbild}}{39}{figure.23}%
+\contentsline {figure}{\numberline {3.21}{\ignorespaces Programmablaufplan der Aktualisierung von ACS}}{38}{figure.21}%
+\contentsline {figure}{\numberline {3.22}{\ignorespaces Initialisierung von ACS}}{39}{figure.22}%
+\contentsline {figure}{\numberline {3.23}{\ignorespaces Umrechnung des Orientierungswinkels in GCS}}{40}{figure.23}%
+\contentsline {figure}{\numberline {3.24}{\ignorespaces Kartierungsalgorithmus mit Objektinformation von Laserscanner~\citep {Hegerhorst.2018}}}{40}{figure.24}%
+\contentsline {figure}{\numberline {3.25}{\ignorespaces Programmablaufplan der Laserscannerdaten}}{42}{figure.25}%
+\contentsline {figure}{\numberline {3.26}{\ignorespaces Darstellung eines Hilfskoordinatensystem}}{43}{figure.26}%
+\contentsline {figure}{\numberline {4.27}{\ignorespaces Folgefahrt Beispielbild}}{46}{figure.27}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
