@@ -25,7 +25,9 @@
 \contentsline {figure}{\numberline {3.24}{\ignorespaces Kartierungsalgorithmus mit Objektinformation von Laserscanner~\citep {Hegerhorst.2018}}}{41}{figure.24}%
 \contentsline {figure}{\numberline {3.25}{\ignorespaces Programmablaufplan der Laserscannerdaten}}{43}{figure.25}%
 \contentsline {figure}{\numberline {3.26}{\ignorespaces Darstellung eines Hilfskoordinatensystem}}{44}{figure.26}%
-\contentsline {figure}{\numberline {3.27}{\ignorespaces Implementierung des inversen Sensormodells}}{49}{figure.27}%
+\contentsline {figure}{\numberline {3.27}{\ignorespaces Implementierung des inversen Sensormodells}}{48}{figure.27}%
 \contentsline {figure}{\numberline {3.28}{\ignorespaces Raycasting mit Bresenham-Algorithmus}}{50}{figure.28}%
-\contentsline {figure}{\numberline {4.29}{\ignorespaces Folgefahrt Beispielbild}}{51}{figure.29}%
+\contentsline {figure}{\numberline {3.29}{\ignorespaces Aktualisierung vom Array $Hisotry\_grid$ aufgrund der Verschiebung der Karte}}{51}{figure.29}%
+\contentsline {figure}{\numberline {3.30}{\ignorespaces Ausgangsinformationsfluss}}{52}{figure.30}%
+\contentsline {figure}{\numberline {4.31}{\ignorespaces Folgefahrt Beispielbild}}{54}{figure.31}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
