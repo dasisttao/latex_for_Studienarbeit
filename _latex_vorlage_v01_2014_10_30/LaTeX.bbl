@@ -8,11 +8,6 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[.0619]{.0612201908122019}
-\emph{2019 IEEE International Conference on Robotics and Biomimetics (ROBIO)}.
-\newblock IEEE, 06/12/2019 - 08/12/2019 . --
-\newblock ISBN 978--1--7281--6321--5
-
 \bibitem[APML12]{Adarve.1405201218052012}
 \textsc{Adarve}, Juan~D. ; \textsc{Perrollaz}, Mathias ; \textsc{Makris},
   Alexandros  ; \textsc{Laugier}, Christian:
@@ -121,6 +116,13 @@
 \newblock First edition.
 \newblock Cham : Springer, 2016 \url{http://link.springer.com/ BLDSS}. --
 \newblock ISBN 978--3--319--26054--9
+
+\bibitem[LRJ{\etalchar{+}}19]{L.Wang.2019}
+\textsc{{L. Wang}} ; \textsc{{R. Li}} ; \textsc{{J. Sun}} ; \textsc{{L. Zhao}}
+  ; \textsc{{H. Shi}} ; \textsc{{H. S. Seah}}  ; \textsc{{B. Tandianus}}:
+\newblock Object-Aware Hybrid Map for Indoor Robot Visual Semantic Navigation*.
+\newblock {In: }\emph{2019 IEEE International Conference on Robotics and
+  Biomimetics (ROBIO)}, 2019, S. 1166--1172
 
 \bibitem[MAA{\etalchar{+}}20]{Mohammed.2020}
 \textsc{Mohammed}, Abdul~S. ; \textsc{Amamou}, Ali ; \textsc{Ayevide},

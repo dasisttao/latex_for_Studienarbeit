@@ -1,10 +1,10 @@
 \babel@toc {ngerman}{}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces M\"ogliche Umfeldmodelle f\"ur autonome Fahrzeuge}}{4}{figure.2.1}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ein objektbasiertes Umfeldmodell~\citep {FawadAhmad.2020}}}{5}{figure.2.2}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Zwei Ebenen von Occupancy Grid}}{6}{figure.2.3}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Zwei Ebenen von Occupancy Grid Map}}{6}{figure.2.3}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Raumdiskretisierung der Umgebung um Fahrzeug \citep {Winner.2015}}}{6}{figure.2.4}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Bestandteile des Modells Ocuupancy Grid}}{7}{figure.2.5}%
-\contentsline {figure}{\numberline {2.6}{\ignorespaces Hidden Markov Model (HMM) \citep {Thrun.2005}}}{8}{figure.2.6}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Bestandteile des Modells Occupancy Grid Map}}{7}{figure.2.5}%
+\contentsline {figure}{\numberline {2.6}{\ignorespaces ~\ac {HMM} \citep {Thrun.2005}}}{8}{figure.2.6}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Das reduzierte HMM \citep {Thrun.2005}}}{10}{figure.2.7}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Bestandteile des Prinzips von Inverses Sensormodell }}{18}{figure.2.8}%
 \contentsline {figure}{\numberline {2.9}{\ignorespaces Das ideale Sensormodell}}{21}{figure.2.9}%
@@ -30,13 +30,13 @@
 \contentsline {figure}{\numberline {3.18}{\ignorespaces Aktualisierung vom Array $Hisotry\_grid$ aufgrund der Verschiebung der Karte}}{52}{figure.3.18}%
 \contentsline {figure}{\numberline {3.19}{\ignorespaces Ausgangsinformationsfluss}}{53}{figure.3.19}%
 \contentsline {figure}{\numberline {3.20}{\ignorespaces Visualisierung von Bewegungspfaden}}{55}{figure.3.20}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Freiraum hinter Hindernisse}}{57}{figure.4.1}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Modellierung beim Datenverlust}}{58}{figure.4.2}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Freiraum hinter Hindernisse}}{56}{figure.4.1}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Modellierung beim Datenverlust}}{57}{figure.4.2}%
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Modellierung mit Filter beim Datenverlust}}{58}{figure.4.3}%
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Situation \"uber die Rampe}}{59}{figure.4.4}%
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Situation \"uber die Rampe, wenn Nickelwinkel zus\"atzlich ber\"ucksichtigt wird}}{60}{figure.4.5}%
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Frequenz von Information \"uber Punktwolke}}{61}{figure.4.6}%
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Frequenz von Information \"uber UTM-Koordinaten}}{61}{figure.4.7}%
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Frequenz von Information \"uber Nickelwinkel}}{62}{figure.4.8}%
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Frequenz der Modellausgangsdaten}}{62}{figure.4.9}%
+\contentsline {figure}{\numberline {A1}{\ignorespaces Frequenz von Information \"uber Punktwolke}}{69}{figure.6.1}%
+\contentsline {figure}{\numberline {A2}{\ignorespaces Frequenz von Information \"uber UTM-Koordinaten}}{69}{figure.6.2}%
+\contentsline {figure}{\numberline {A3}{\ignorespaces Frequenz von Information \"uber Nickelwinkel}}{70}{figure.6.3}%
+\contentsline {figure}{\numberline {A4}{\ignorespaces Frequenz der Modellausgangsdaten}}{70}{figure.6.4}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

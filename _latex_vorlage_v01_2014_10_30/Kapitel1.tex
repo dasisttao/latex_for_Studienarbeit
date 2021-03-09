@@ -1,21 +1,20 @@
 \section{Einleitung}
 \label{sec:Einleitung}
-Im ersten Kapitel wird auf die Einführung des Themas, das zu erreichende Ziel und der Aufbau dieser Arbeit eingegangen.
+Im ersten Kapitel wird auf die Einführung des Themas, das zu erreichende Ziel und den Aufbau dieser Arbeit eingegangen.
 
 \subsection{Einführung}
-Das Thema \glqq Autonomes Fahren\grqq{} ist in den vergangen Jahren immer weiter in den Vordergrund gerückt. Selbstfahrende Autos verlagerten sich allmählich von Laborentwicklungs- und Testbedingungen auf öffentliche Straßen.
-Die Konzept,dass Autos autonom fahren können, beschäftigte die Menschen schon in den 1920er-1930er-Jahren.
-\\Um das Konzept praxistauglich zu machen, braucht es das kombinierte Wissen unter anderem aus Informatik, Fahrzeugtechnik, Sensorik, Mechatronik.
-Unter dem Begriff \glqq Autonomes Fahren\grqq{} werden Fahrzeuge gefasst, die ohne Eingriff und Überwachung durch einen Menschen selbstständig sowie ziel gerichtet im Straßenverkehr fahren können.
-\\Ingenieure für selbstfahrende Autos verfolgen aktuell zwei wesentliche und unterschiedliche Herangehensweisen für autonome Entwicklung, welche aus Robotik-Ansatz und Deep-Learning-Ansatz bestehen. In den vergangenen zwei Jahrzehnten hat der Robotik-Ansatz mit einer Menge von Beiträgen der zahlreichen Wissenschaftler und Technik sowohl in Akademie als auch in technologisch führenden Unternehmen großen Fortschritt gemacht.
-\\Im Rahmen dieser Arbeit handelt es sich um ein statisches Umfeld. Sollte die Echtzeitanforderung berücksichtigt, ist der Deep-Learning Ansatz zu verzichten, denn es ist mit vielen Literaturen bewiesen, dass ein statisches Umfeld mit Robotik-Ansatz zutreffend und effizient modelliert werden kann.\cite{Thrun.2005}
-\\Die zentrale Idee des Robotik-Ansatzes ist, dass die Unsicherheit in der Robotik sich unter Verwendung der Wahrscheinlichkeitsrechnung darstellen lässt.
+In den letzten Jahren hat das Thema \glqq Autonomes Fahren\grqq{} zunehmend an Bedeutung gewonnen. Selbstfahrende Autos verlagern sich allmählich von Laborentwicklung und Testbedingungen auf öffentliche Straßen. Die Konzept, dass Autos autonom fahren können, beschäftigt die Menschen schon seit den 1920er-1930er-Jahren.
+\\Um diese Konzept umzusetzen, müssen Kenntnisse aus Informationstechnologie, Fahrzeugtechnik, Sensortechnologie und Mechatronik kombiniert werden. Der Begriff \glqq Autonomes Fahren\grqq{} kann als unabhängiges und zielgerichtetes Fahren eines Fahrzeugs im Straßenverkehr ohne menschliches Eingreifen oder Aufsicht verstanden werden. Ingenieure verwenden aktuell zwei wesentliche und unterschiedliche Methoden der autonomen Fahrzeugentwicklung, einschließlich Robotermethoden und Deep-Learning-Methoden. In den vergangenen zwei Jahrzehnten hat der Robotik-Ansatz mit einer Menge von Beiträgen zahlreicher Wissenschaftler und Techniker sowohl in Akademie als auch in technologisch führenden Unternehmen große Fortschritte gemacht.
+\\In dieser Arbeit liegt der Schwerpunkt auf der Modellierung eines statischen Umfeldmodell. Sollte die Echtzeitanforderung berücksichtigt werden, ist hierbei der Deep-Learning-Methoden zu verzichten. Zudem zeigt eine große Menge an Literatur, dass statische Umgebungsmodelle durch Robotermethoden zutreffend und effizient erstellt werden können~\cite{Thrun.2005}. Die zentrale Idee Robotik-Ansatzes ist, dass die Unsicherheit der Robotik oder des autonomen Fahrens durch eine Wahrscheinlichkeitsmethode dargestellt wird.
 \subsection{Zielstellung}
 \label{sec2:Zielstellung}
-Um das automatisierte Fahren zu verwirklichen, wird die Umfelderfassung bzw. die Umfeldmodellierung des Fahrzeugs zugrunde gelegt. Das Ziel der vorliegende Arbeit ist auf Modellierung und dazu ihre Implementierung gerichtet. Es handelt sich bei dieser Arbeit um statische Umgebungen in städtischen Räumen.
+Um autonomes Fahren zu realisieren, wird die Umfelderfassung bzw. die Umfeldmodellierung des Fahrzeugs zugrunde gelegt. Ziel dieser Arbeit ist es, die relevante theoretische Grundlage durch Recherche zu erhalten und auf dieser Grundlage die Erstellung und Implementierung des Umfeldmodells durchzuführen. Es handelt sich bei dieser Arbeit um statische Umgebungen in städtischen Räumen.
 \subsection{Aufbau}
-Nach dieser Einleitung wird im Kapitel 2 die technische Grundlagen, welche sich eng mit Erfassung und Modellierung eines statischen Umfelds beziehen.
-\\ 
+Nach dieser Einleitung werden in Kapitel 2 die technische Grundlagen vorgestellt, die in engem Zusammenhang mit der Erfassung und Modellierung statischer Umgebungen stehen. Hierbei wird hauptsächlich die Auswahl von Umgebungsmodellen und die Erläuterung von Sensoren und Sensormodellen vorgestellt, die zur Erkennung der Umgebung erforderlich sind.
+\\ Kapitel 3 ist der Kern dieser Arbeit und erläutert die tatsächliche Implementierung des Umfeldmodells in Kombination mit~\ac{ROS}. Zusätzlich werden einige Features bzw. Funktionen vorgestellt, die dem Modell hinzugefügt wurden, um den nachfolgenden Datenaustausch mit anderen Modulen und die Erweiterung des Modells zu erleichtern.
+\\Nach der Implementierung konzentriert sich Kapitel 4 auf die Evaluation des Modells. Dies dient hauptsächlich dazu, die Qualität der Karte und die Rechenleistung des Modells zu berücksichtigen. Dies dient hauptsächlich dazu, die Qualität der erstellten Karte und die Berechnungsgeschwindigkeit des Modells zu berücksichtigen.
+\\Anschließend wird in Kapitel 5 die Möglichkeit der Verbesserung und Erweiterung des Modells erörtert und in Kapitel schließt die Arbeit mit einer Zusammenfassung. 
+
 
 
 

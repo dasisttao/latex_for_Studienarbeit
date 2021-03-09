@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.3)  9 MAR 2021 02:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.1.3)  9 MAR 2021 23:42
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -539,7 +539,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip67
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 100.
+Package hyperref Info: Option `colorlinks' set `true' on input line 101.
 
 (c:/texlive/2020/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2020/09/23 v2.17i AMS math features
@@ -672,7 +672,7 @@ Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
 Package graphics Info: Driver file: pdftex.def on input line 105.
-))
+)
 (c:/texlive/2020/texmf-dist/tex/latex/pdfpages/pdfpages.sty
 Package: pdfpages 2020/01/28 v0.5q Insert pages of external PDF documents (AM)
 
@@ -715,6 +715,9 @@ File: pppdftex.def 2020/01/28 v0.5q Pdfpages driver for pdfTeX (AM)
 \c@AM@survey=\count303
 \AM@templatesizebox=\box58
 )
+(c:/texlive/2020/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
@@ -725,12 +728,9 @@ File: l3backend-pdftex.def 2020-09-24 L3 backend support: PDF output (pdfTeX)
 )
 (./LaTeX.aux (./Aufgabenstellung_Dummy.aux) (./Sperrklausel.aux) (./Eid.aux)
 (./Abstract.aux) (./Abbildungsverzeichnis.aux) (./Tabellenverzeichnis.aux)
-(./Abkuerzungsverzeichnis.aux) (./Symbolverzeichnis.aux) (./Kapitel1.aux)
-(./Kapitel2.aux) (./Kapitel3.aux
-
-LaTeX Warning: Label `Kapitel:Theoretische Grundlagen' multiply defined.
-
-) (./Kapitel4.aux) (./Kapitel5.aux) (./Kapitel6.aux) (./Anhang.aux))
+(./Abkuerzungsverzeichnis.aux) (./Kapitel1.aux) (./Kapitel2.aux)
+(./Kapitel3.aux) (./Kapitel4.aux) (./Kapitel5.aux) (./Kapitel6.aux)
+(./Anhang.aux))
 \openout1 = `LaTeX.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
@@ -896,26 +896,36 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \openout2 = `Abstract.aux'.
 
- (./Abstract.tex) [6
+ (./Abstract.tex
+Package acronym Info: Label `acro:ROS' newly defined as it shall be overridden
+although it is yet undefined on input line 2.
+) [6
 
 
 
 ] (./LaTeX.toc
-Overfull \hbox (3.22107pt too wide) detected at line 5
- []\OT1/cmss/bx/n/12 XIII
- []
-
-[7
+Package acronym Info: Label `acro:GCS' newly defined as it shall be overridden
+although it is yet undefined on input line 29.
+ [7
 
 
-])
+]
+Package acronym Info: Label `acro:VCS' newly defined as it shall be overridden
+although it is yet undefined on input line 30.
+Package acronym Info: Label `acro:ACS' newly defined as it shall be overridden
+although it is yet undefined on input line 31.
+)
 \tf@toc=\write5
 \openout5 = `LaTeX.toc'.
 
  [8]
 \openout2 = `Abbildungsverzeichnis.aux'.
 
- (./Abbildungsverzeichnis.tex (./LaTeX.lof
+ (./Abbildungsverzeichnis.tex
+(./LaTeX.lof
+Package acronym Info: Label `acro:HMM' newly defined as it shall be overridden
+although it is yet undefined on input line 7.
+
 Overfull \hbox (6.27922pt too wide) in paragraph at lines 25--25
  [][] [][][]\OT1/cmr/m/n/12 Kartierungsalgorithmus mit Ob-jekt-in-for-ma-ti-on 
 von La-sers-can-ner [[]][][] [][]  
@@ -953,38 +963,19 @@ us[]atzlich ber[]ucksichtigt
 
 
 ]
-\openout2 = `Symbolverzeichnis.aux'.
-
- (./Symbolverzeichnis.tex) [13
-
-
-
-]
 \openout2 = `Kapitel1.aux'.
 
-
-(./Kapitel1.tex
-Overfull \hbox (6.63742pt too wide) in paragraph at lines 6--13
-\OT1/cmr/m/n/12 schied-li-che Her-an-ge-hens-wei-sen f[]ur au-to-no-me Ent-wick
--lung, wel-che aus Robotik-Ansatz
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
+ (./Kapitel1.texpdfTeX warning (ext4): destination with the same identifier (na
+me{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.16 \subsection
+l.12 \subsection
                 {Aufbau} [1
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 17--19
-
- []
-
-)pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
- been already used, duplicate ignored
+])pdfTeX warning (ext4): destination with the same identifier (name{page.2}) ha
+s been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.55 \include{Kapitel1}
@@ -992,10 +983,16 @@ l.55 \include{Kapitel1}
 \openout2 = `Kapitel2.aux'.
 
  (./Kapitel2.tex
+Package acronym Info: Label `acro:SLAM' newly defined as it shall be overridden
+
+although it is yet undefined on input line 4.
+Package acronym Info: Label `acro:IfF' newly defined as it shall be overridden
+although it is yet undefined on input line 4.
+
 
 pdfTeX warning: pdflatex.exe (file ./pics/Umfeldmodelle_Klassen.pdf): PDF inclu
 sion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Umfeldmodelle_Klassen.pdf, id=320, 551.05777pt x 143.03438pt>
+<pics/Umfeldmodelle_Klassen.pdf, id=379, 551.05777pt x 143.03438pt>
 File: pics/Umfeldmodelle_Klassen.pdf Graphic file (type pdf)
 <use pics/Umfeldmodelle_Klassen.pdf>
 Package pdftex.def Info: pics/Umfeldmodelle_Klassen.pdf  used on input line 10.
@@ -1014,7 +1011,7 @@ l.15 \subsubsection
 
 pdfTeX warning: pdflatex.exe (file ./pics/FeatureMap.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<pics/FeatureMap.pdf, id=334, 493.09117pt x 167.87718pt>
+<pics/FeatureMap.pdf, id=393, 493.09117pt x 167.87718pt>
 File: pics/FeatureMap.pdf Graphic file (type pdf)
 <use pics/FeatureMap.pdf>
 Package pdftex.def Info: pics/FeatureMap.pdf  used on input line 19.
@@ -1023,7 +1020,7 @@ Package pdftex.def Info: pics/FeatureMap.pdf  used on input line 19.
 
 pdfTeX warning: pdflatex.exe (file ./pics/Ebene von Occupancy Grid.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Ebene von Occupancy Grid.pdf, id=353, 276.28218pt x 110.66344pt>
+<pics/Ebene von Occupancy Grid.pdf, id=411, 276.28218pt x 110.66344pt>
 File: pics/Ebene von Occupancy Grid.pdf Graphic file (type pdf)
 <use pics/Ebene von Occupancy Grid.pdf>
 Package pdftex.def Info: pics/Ebene von Occupancy Grid.pdf  used on input line 
@@ -1033,7 +1030,7 @@ Package pdftex.def Info: pics/Ebene von Occupancy Grid.pdf  used on input line
 
 pdfTeX warning: pdflatex.exe (file ./pics/Raumdiskretisierung.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Raumdiskretisierung.pdf, id=357, 267.24844pt x 267.24844pt>
+<pics/Raumdiskretisierung.pdf, id=415, 267.24844pt x 267.24844pt>
 File: pics/Raumdiskretisierung.pdf Graphic file (type pdf)
 <use pics/Raumdiskretisierung.pdf>
 Package pdftex.def Info: pics/Raumdiskretisierung.pdf  used on input line 37.
@@ -1042,17 +1039,20 @@ Package pdftex.def Info: pics/Raumdiskretisierung.pdf  used on input line 37.
 
 pdfTeX warning: pdflatex.exe (file ./pics/OccupancyGrid.pdf): PDF inclusion: fo
 und PDF version <1.7>, but at most version <1.5> allowed
-<pics/OccupancyGrid.pdf, id=362, 581.92308pt x 192.72pt>
+<pics/OccupancyGrid.pdf, id=420, 581.92308pt x 192.72pt>
 File: pics/OccupancyGrid.pdf Graphic file (type pdf)
 <use pics/OccupancyGrid.pdf>
 Package pdftex.def Info: pics/OccupancyGrid.pdf  used on input line 44.
 (pdftex.def)             Requested size: 426.79135pt x 141.34607pt.
 [5 <./pics/FeatureMap.pdf>] [6 <./pics/Ebene von Occupancy Grid.pdf> <./pics/Ra
 umdiskretisierung.pdf>] [7 <./pics/OccupancyGrid.pdf>]
+Package acronym Info: Label `acro:DBN' newly defined as it shall be overridden
+although it is yet undefined on input line 52.
+
 
 pdfTeX warning: pdflatex.exe (file ./pics/HMM.pdf): PDF inclusion: found PDF ve
 rsion <1.7>, but at most version <1.5> allowed
-<pics/HMM.pdf, id=409, 490.83273pt x 213.04594pt>
+<pics/HMM.pdf, id=471, 490.83273pt x 213.04594pt>
 File: pics/HMM.pdf Graphic file (type pdf)
 <use pics/HMM.pdf>
 Package pdftex.def Info: pics/HMM.pdf  used on input line 59.
@@ -1061,22 +1061,16 @@ Package pdftex.def Info: pics/HMM.pdf  used on input line 59.
 
 pdfTeX warning: pdflatex.exe (file ./pics/reducedHMM.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<pics/reducedHMM.pdf, id=419, 490.83273pt x 213.04594pt>
+<pics/reducedHMM.pdf, id=483, 490.83273pt x 213.04594pt>
 File: pics/reducedHMM.pdf Graphic file (type pdf)
 <use pics/reducedHMM.pdf>
 Package pdftex.def Info: pics/reducedHMM.pdf  used on input line 84.
 (pdftex.def)             Requested size: 213.39568pt x 92.62221pt.
-[8 <./pics/HMM.pdf>] [9] [10 <./pics/reducedHMM.pdf>] [11] [12] [13]
-Overfull \hbox (16.25256pt too wide) in alignment at lines 149--153
- [] [] [] 
- []
+[8 <./pics/HMM.pdf>] [9] [10 <./pics/reducedHMM.pdf>] [11]
+Package acronym Info: Label `acro:dGPS' newly defined as it shall be overridden
 
-
-Overfull \hbox (16.25256pt too wide) in alignment at lines 153--154
- [] [] [] 
- []
-
-
+although it is yet undefined on input line 144.
+ [12] [13]
 Underfull \hbox (badness 1442) in paragraph at lines 160--161
 []\OT1/cmr/m/n/12 eine ho-he Aufl[]osung und
  []
@@ -1119,6 +1113,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 186--187
 
 Underfull \hbox (badness 10000) in paragraph at lines 186--187
 \OT1/cmr/m/n/12 Ver-gleich zur sicht-ba-ren
+ []
+
+
+Overfull \hbox (1.26666pt too wide) in paragraph at lines 191--191
+ []|\OT1/cmr/m/n/12 Radar- 
  []
 
 
@@ -1217,35 +1216,27 @@ Underfull \hbox (badness 2452) in paragraph at lines 239--240
  []
 
 
-Overfull \hbox (16.25256pt too wide) in alignment at lines 154--243
- [] [] [] 
- []
-
-
 Underfull \vbox (badness 10000) detected at line 243
  []
 
-[14] [15] [16]
+[14] [15]
+Package acronym Info: Label `acro:ToF' newly defined as it shall be overridden
+although it is yet undefined on input line 247.
+ [16]
 
 pdfTeX warning: pdflatex.exe (file ./pics/Bestandteile_Sensormodell.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Bestandteile_Sensormodell.pdf, id=523, 582.67589pt x 143.03438pt>
+<pics/Bestandteile_Sensormodell.pdf, id=588, 582.67589pt x 143.03438pt>
 File: pics/Bestandteile_Sensormodell.pdf Graphic file (type pdf)
 <use pics/Bestandteile_Sensormodell.pdf>
 Package pdftex.def Info: pics/Bestandteile_Sensormodell.pdf  used on input line
  257.
 (pdftex.def)             Requested size: 426.79135pt x 104.76996pt.
-
-Overfull \hbox (21.04375pt too wide) in paragraph at lines 254--265
-\OT1/cmr/m/n/12 Im-ple-men-tie-rung aus-gef[]uhrt. Das in-ver-se Sen-sor-mo-del
-l ist ei-ner der Schl[]usselbestandteile
- []
-
 [17] [18 <./pics/Bestandteile_Sensormodell.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./pics/ideal_sensormodell.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/ideal_sensormodell.pdf, id=552, 1445.4pt x 685.8112pt>
+<pics/ideal_sensormodell.pdf, id=617, 1445.4pt x 685.8112pt>
 File: pics/ideal_sensormodell.pdf Graphic file (type pdf)
 <use pics/ideal_sensormodell.pdf>
 Package pdftex.def Info: pics/ideal_sensormodell.pdf  used on input line 308.
@@ -1254,7 +1245,7 @@ Package pdftex.def Info: pics/ideal_sensormodell.pdf  used on input line 308.
 
 pdfTeX warning: pdflatex.exe (file ./pics/sesormodellmitD.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<pics/sesormodellmitD.pdf, id=559, 1445.4pt x 685.8112pt>
+<pics/sesormodellmitD.pdf, id=624, 1445.4pt x 685.8112pt>
 File: pics/sesormodellmitD.pdf Graphic file (type pdf)
 <use pics/sesormodellmitD.pdf>
 Package pdftex.def Info: pics/sesormodellmitD.pdf  used on input line 316.
@@ -1263,7 +1254,7 @@ Package pdftex.def Info: pics/sesormodellmitD.pdf  used on input line 316.
 
 pdfTeX warning: pdflatex.exe (file ./pics/sesormodellohneD.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<pics/sesormodellohneD.pdf, id=562, 1445.4pt x 685.8112pt>
+<pics/sesormodellohneD.pdf, id=627, 1445.4pt x 685.8112pt>
 File: pics/sesormodellohneD.pdf Graphic file (type pdf)
 <use pics/sesormodellohneD.pdf>
 Package pdftex.def Info: pics/sesormodellohneD.pdf  used on input line 323.
@@ -1276,7 +1267,7 @@ f>] [23 <./pics/sesormodellohneD.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./pics/DimensionVonAuto.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<pics/DimensionVonAuto.pdf, id=600, 765.60933pt x 426.09087pt>
+<pics/DimensionVonAuto.pdf, id=665, 765.60933pt x 426.09087pt>
 File: pics/DimensionVonAuto.pdf Graphic file (type pdf)
 <use pics/DimensionVonAuto.pdf>
 Package pdftex.def Info: pics/DimensionVonAuto.pdf  used on input line 12.
@@ -1289,29 +1280,17 @@ Package pdftex.def Info: pics/DimensionVonAuto.pdf  used on input line 12.
 
 pdfTeX warning: pdflatex.exe (file ./pics/AnordnungDerLaserscanner.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/AnordnungDerLaserscanner.pdf, id=613, 550.30496pt x 395.97937pt>
+<pics/AnordnungDerLaserscanner.pdf, id=677, 550.30496pt x 395.97937pt>
 File: pics/AnordnungDerLaserscanner.pdf Graphic file (type pdf)
 <use pics/AnordnungDerLaserscanner.pdf>
 Package pdftex.def Info: pics/AnordnungDerLaserscanner.pdf  used on input line 
 43.
 (pdftex.def)             Requested size: 298.75264pt x 214.97972pt.
-
-Overfull \hbox (13.15549pt too wide) in paragraph at lines 40--87
-\OT1/cmr/m/n/12 Die An-zahl und die An-ord-nung der im Ver-suchs-fahr-zeug in-s
-tal-lier-ten Ibeo-Laserscanner
- []
-
-[25 <./pics/DimensionVonAuto.pdf>]
-Overfull \hbox (4.76253pt too wide) in paragraph at lines 88--89
-\OT1/cmr/m/n/12 Ro-bo-ter-ver-hal-ten auf ei-ner Viel-zahl von Ro-bo-ter-platt-
-for-men zu vereinfachen[[]].
- []
-
-[26 <./pics/AnordnungDerLaserscanner.pdf>]
+[25 <./pics/DimensionVonAuto.pdf>] [26 <./pics/AnordnungDerLaserscanner.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./pics/ROS-Architektur.pdf): PDF inclusion: 
 found PDF version <1.7>, but at most version <1.5> allowed
-<pics/ROS-Architektur.pdf, id=636, 646.66496pt x 211.54031pt>
+<pics/ROS-Architektur.pdf, id=704, 646.66496pt x 211.54031pt>
 File: pics/ROS-Architektur.pdf Graphic file (type pdf)
 <use pics/ROS-Architektur.pdf>
 Package pdftex.def Info: pics/ROS-Architektur.pdf  used on input line 93.
@@ -1320,7 +1299,7 @@ Package pdftex.def Info: pics/ROS-Architektur.pdf  used on input line 93.
 
 pdfTeX warning: pdflatex.exe (file ./pics/Berechnungsdiagrammebene.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Berechnungsdiagrammebene.pdf, id=642, 428.3493pt x 246.1697pt>
+<pics/Berechnungsdiagrammebene.pdf, id=710, 428.3493pt x 246.1697pt>
 File: pics/Berechnungsdiagrammebene.pdf Graphic file (type pdf)
 <use pics/Berechnungsdiagrammebene.pdf>
 Package pdftex.def Info: pics/Berechnungsdiagrammebene.pdf  used on input line 
@@ -1328,15 +1307,10 @@ Package pdftex.def Info: pics/Berechnungsdiagrammebene.pdf  used on input line
 (pdftex.def)             Requested size: 298.75264pt x 171.6903pt.
 [27] [28 <./pics/ROS-Architektur.pdf>] [29 <./pics/Berechnungsdiagrammebene.pdf
 >]
-Overfull \hbox (22.15176pt too wide) in paragraph at lines 117--143
- [][] 
- []
-
-
 
 pdfTeX warning: pdflatex.exe (file ./pics/Display_Map.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
-<pics/Display_Map.pdf, id=673, 445.66399pt x 393.72093pt>
+<pics/Display_Map.pdf, id=741, 445.66399pt x 393.72093pt>
 File: pics/Display_Map.pdf Graphic file (type pdf)
 <use pics/Display_Map.pdf>
 Package pdftex.def Info: pics/Display_Map.pdf  used on input line 147.
@@ -1345,7 +1319,7 @@ Package pdftex.def Info: pics/Display_Map.pdf  used on input line 147.
 
 pdfTeX warning: pdflatex.exe (file ./pics/Display_GridCell.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Display_GridCell.pdf, id=675, 484.05743pt x 487.06868pt>
+<pics/Display_GridCell.pdf, id=743, 484.05743pt x 487.06868pt>
 File: pics/Display_GridCell.pdf Graphic file (type pdf)
 <use pics/Display_GridCell.pdf>
 Package pdftex.def Info: pics/Display_GridCell.pdf  used on input line 154.
@@ -1354,7 +1328,7 @@ Package pdftex.def Info: pics/Display_GridCell.pdf  used on input line 154.
 
 pdfTeX warning: pdflatex.exe (file ./pics/Dispaly_Grid_Cell_Binary.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Dispaly_Grid_Cell_Binary.pdf, id=677, 484.05743pt x 487.06868pt>
+<pics/Dispaly_Grid_Cell_Binary.pdf, id=745, 484.05743pt x 487.06868pt>
 File: pics/Dispaly_Grid_Cell_Binary.pdf Graphic file (type pdf)
 <use pics/Dispaly_Grid_Cell_Binary.pdf>
 Package pdftex.def Info: pics/Dispaly_Grid_Cell_Binary.pdf  used on input line 
@@ -1376,17 +1350,31 @@ Overfull \hbox (13.1933pt too wide) in paragraph at lines 110--166
 
 pdfTeX warning: pdflatex.exe (file ./pics/Koordinaten3.pdf): PDF inclusion: fou
 nd PDF version <1.7>, but at most version <1.5> allowed
-<pics/Koordinaten3.pdf, id=702, 480.29337pt x 527.72058pt>
+<pics/Koordinaten3.pdf, id=773, 480.29337pt x 527.72058pt>
 File: pics/Koordinaten3.pdf Graphic file (type pdf)
 <use pics/Koordinaten3.pdf>
 Package pdftex.def Info: pics/Koordinaten3.pdf  used on input line 171.
 (pdftex.def)             Requested size: 298.75264pt x 328.25433pt.
-[33 <./pics/Dispaly_Grid_Cell_Binary.pdf>] [34 <./pics/Koordinaten3.pdf>]
+[33 <./pics/Dispaly_Grid_Cell_Binary.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ac' on input line 175.
+
+[34 <./pics/Koordinaten3.pdf>]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ac' on input line 178.
+
 [35]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `\@ac' on input line 181.
+
+
 
 pdfTeX warning: pdflatex.exe (file ./pics/Diskretisierung der Umgebung.pdf): PD
 F inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/Diskretisierung der Umgebung.pdf, id=740, 279.29344pt x 258.9675pt>
+<pics/Diskretisierung der Umgebung.pdf, id=813, 279.29344pt x 258.9675pt>
 File: pics/Diskretisierung der Umgebung.pdf Graphic file (type pdf)
 <use pics/Diskretisierung der Umgebung.pdf>
 Package pdftex.def Info: pics/Diskretisierung der Umgebung.pdf  used on input l
@@ -1396,7 +1384,7 @@ ine 185.
 
 pdfTeX warning: pdflatex.exe (file ./pics/ACS_Update.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<pics/ACS_Update.pdf, id=747, 730.97995pt x 596.22652pt>
+<pics/ACS_Update.pdf, id=820, 730.97995pt x 596.22652pt>
 File: pics/ACS_Update.pdf Graphic file (type pdf)
 <use pics/ACS_Update.pdf>
 Package pdftex.def Info: pics/ACS_Update.pdf  used on input line 193.
@@ -1405,7 +1393,7 @@ Package pdftex.def Info: pics/ACS_Update.pdf  used on input line 193.
 
 pdfTeX warning: pdflatex.exe (file ./pics/InitializationOfACS.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/InitializationOfACS.pdf, id=748, 303.38344pt x 392.21532pt>
+<pics/InitializationOfACS.pdf, id=821, 303.38344pt x 392.21532pt>
 File: pics/InitializationOfACS.pdf Graphic file (type pdf)
 <use pics/InitializationOfACS.pdf>
 Package pdftex.def Info: pics/InitializationOfACS.pdf  used on input line 199.
@@ -1415,7 +1403,7 @@ Package pdftex.def Info: pics/InitializationOfACS.pdf  used on input line 199.
 
 pdfTeX warning: pdflatex.exe (file ./pics/RichtungswinkelUmrechnen.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/RichtungswinkelUmrechnen.pdf, id=781, 345.54094pt x 332.74312pt>
+<pics/RichtungswinkelUmrechnen.pdf, id=856, 345.54094pt x 332.74312pt>
 File: pics/RichtungswinkelUmrechnen.pdf Graphic file (type pdf)
 <use pics/RichtungswinkelUmrechnen.pdf>
 Package pdftex.def Info: pics/RichtungswinkelUmrechnen.pdf  used on input line 
@@ -1425,7 +1413,7 @@ Package pdftex.def Info: pics/RichtungswinkelUmrechnen.pdf  used on input line
 
 pdfTeX warning: pdflatex.exe (file ./pics/KartierungMitObjekt.pdf): PDF inclusi
 on: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/KartierungMitObjekt.pdf, id=784, 481.799pt x 175.40532pt>
+<pics/KartierungMitObjekt.pdf, id=859, 481.799pt x 175.40532pt>
 File: pics/KartierungMitObjekt.pdf Graphic file (type pdf)
 <use pics/KartierungMitObjekt.pdf>
 Package pdftex.def Info: pics/KartierungMitObjekt.pdf  used on input line 224.
@@ -1443,37 +1431,35 @@ File: omlcmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <12> not available
 (Font)              Font shape `OML/cmm/m/it' tried instead on input line 229.
+Package acronym Info: Label `acro:PCL' newly defined as it shall be overridden
+although it is yet undefined on input line 229.
 
 
 pdfTeX warning: pdflatex.exe (file ./pics/PAP_PCL.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<pics/PAP_PCL.pdf, id=790, 140.02313pt x 445.66399pt>
+<pics/PAP_PCL.pdf, id=866, 140.02313pt x 445.66399pt>
 File: pics/PAP_PCL.pdf Graphic file (type pdf)
 <use pics/PAP_PCL.pdf>
 Package pdftex.def Info: pics/PAP_PCL.pdf  used on input line 232.
 (pdftex.def)             Requested size: 119.50105pt x 380.35983pt.
+Package acronym Info: Label `acro:HCS' newly defined as it shall be overridden
+although it is yet undefined on input line 237.
 
 
 pdfTeX warning: pdflatex.exe (file ./pics/VCS2ACS.pdf): PDF inclusion: found PD
 F version <1.7>, but at most version <1.5> allowed
-<pics/VCS2ACS.pdf, id=793, 398.98961pt x 365.86688pt>
+<pics/VCS2ACS.pdf, id=870, 398.98961pt x 365.86688pt>
 File: pics/VCS2ACS.pdf Graphic file (type pdf)
 <use pics/VCS2ACS.pdf>
 Package pdftex.def Info: pics/VCS2ACS.pdf  used on input line 240.
 (pdftex.def)             Requested size: 298.75264pt x 273.96404pt.
 [40 <./pics/InitializationOfACS.pdf>] [41 <./pics/RichtungswinkelUmrechnen.pdf>
  <./pics/KartierungMitObjekt.pdf>] [42] [43 <./pics/PAP_PCL.pdf>] [44 <./pics/V
-CS2ACS.pdf>] [45] [46]
-Overfull \hbox (14.59576pt too wide) in paragraph at lines 317--318
-\OT1/cmr/m/n/12 Auf die-ser Ebe-ne wird die Um-ge-bung des Fahr-zeugs dis-kre-t
-i-siert und als 2D-Rasterkarte
- []
-
-[47]
+CS2ACS.pdf>] [45] [46] [47]
 
 pdfTeX warning: pdflatex.exe (file ./pics/ImplementierungDesSensormodells.pdf):
  PDF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/ImplementierungDesSensormodells.pdf, id=878, 270.25969pt x 572.88933pt>
+<pics/ImplementierungDesSensormodells.pdf, id=955, 270.25969pt x 572.88933pt>
 File: pics/ImplementierungDesSensormodells.pdf Graphic file (type pdf)
 <use pics/ImplementierungDesSensormodells.pdf>
 Package pdftex.def Info: pics/ImplementierungDesSensormodells.pdf  used on inpu
@@ -1486,7 +1472,7 @@ LaTeX Warning: Float too large for page by 49.9929pt on input line 327.
 
 pdfTeX warning: pdflatex.exe (file ./pics/Raycasting.pdf): PDF inclusion: found
  PDF version <1.7>, but at most version <1.5> allowed
-<pics/Raycasting.pdf, id=881, 598.48495pt x 523.95651pt>
+<pics/Raycasting.pdf, id=958, 598.48495pt x 523.95651pt>
 File: pics/Raycasting.pdf Graphic file (type pdf)
 <use pics/Raycasting.pdf>
 Package pdftex.def Info: pics/Raycasting.pdf  used on input line 334.
@@ -1495,7 +1481,7 @@ Package pdftex.def Info: pics/Raycasting.pdf  used on input line 334.
 
 pdfTeX warning: pdflatex.exe (file ./pics/MoveOfMap.pdf): PDF inclusion: found 
 PDF version <1.7>, but at most version <1.5> allowed
-<pics/MoveOfMap.pdf, id=885, 483.30461pt x 602.24902pt>
+<pics/MoveOfMap.pdf, id=962, 483.30461pt x 602.24902pt>
 File: pics/MoveOfMap.pdf Graphic file (type pdf)
 <use pics/MoveOfMap.pdf>
 Package pdftex.def Info: pics/MoveOfMap.pdf  used on input line 342.
@@ -1505,16 +1491,16 @@ df>] [51] [52 <./pics/MoveOfMap.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./pics/OutputFluss.pdf): PDF inclusion: foun
 d PDF version <1.7>, but at most version <1.5> allowed
-<pics/OutputFluss.pdf, id=923, 642.9009pt x 271.76532pt>
+<pics/OutputFluss.pdf, id=1000, 642.9009pt x 271.76532pt>
 File: pics/OutputFluss.pdf Graphic file (type pdf)
 <use pics/OutputFluss.pdf>
 Package pdftex.def Info: pics/OutputFluss.pdf  used on input line 353.
-(pdftex.def)             Requested size: 298.75264pt x 126.29077pt.
+(pdftex.def)             Requested size: 341.43437pt x 144.3335pt.
 [53 <./pics/OutputFluss.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./pics/path.pdf): PDF inclusion: found PDF v
 ersion <1.7>, but at most version <1.5> allowed
-<pics/path.pdf, id=938, 253.69781pt x 230.36063pt>
+<pics/path.pdf, id=1015, 253.69781pt x 230.36063pt>
 File: pics/path.pdf Graphic file (type pdf)
 <use pics/path.pdf>
 Package pdftex.def Info: pics/path.pdf  used on input line 365.
@@ -1529,48 +1515,50 @@ LaTeX Warning: Float too large for page by 410.67029pt on input line 369.
 
 pdfTeX warning: pdflatex.exe (file ./pics/FreiraumHinterHindernisse.pdf): PDF i
 nclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/FreiraumHinterHindernisse.pdf, id=956, 420.82118pt x 408.02336pt>
+<pics/FreiraumHinterHindernisse.pdf, id=1032, 420.82118pt x 408.02336pt>
 File: pics/FreiraumHinterHindernisse.pdf Graphic file (type pdf)
 <use pics/FreiraumHinterHindernisse.pdf>
 Package pdftex.def Info: pics/FreiraumHinterHindernisse.pdf  used on input line
  10.
-(pdftex.def)             Requested size: 213.39568pt x 206.90622pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./pics/loss_data.pdf): PDF inclusion: found 
-PDF version <1.7>, but at most version <1.5> allowed
-<pics/loss_data.pdf, id=958, 198.7425pt x 201.75375pt>
-File: pics/loss_data.pdf Graphic file (type pdf)
-<use pics/loss_data.pdf>
-Package pdftex.def Info: pics/loss_data.pdf  used on input line 19.
-(pdftex.def)             Requested size: 213.39568pt x 216.63477pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./pics/loss_data_recover.pdf): PDF inclusion
-: found PDF version <1.7>, but at most version <1.5> allowed
-<pics/loss_data_recover.pdf, id=960, 162.6075pt x 175.40532pt>
-File: pics/loss_data_recover.pdf Graphic file (type pdf)
-<use pics/loss_data_recover.pdf>
-Package pdftex.def Info: pics/loss_data_recover.pdf  used on input line 27.
-(pdftex.def)             Requested size: 213.39568pt x 230.20819pt.
+(pdftex.def)             Requested size: 170.71393pt x 165.52249pt.
 [56
 
 
 
-]
+ <./pics/FreiraumHinterHindernisse.pdf>]
+
+pdfTeX warning: pdflatex.exe (file ./pics/loss_data.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<pics/loss_data.pdf, id=1043, 198.7425pt x 201.75375pt>
+File: pics/loss_data.pdf Graphic file (type pdf)
+<use pics/loss_data.pdf>
+Package pdftex.def Info: pics/loss_data.pdf  used on input line 19.
+(pdftex.def)             Requested size: 170.71393pt x 173.30473pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/loss_data_recover.pdf): PDF inclusion
+: found PDF version <1.7>, but at most version <1.5> allowed
+<pics/loss_data_recover.pdf, id=1045, 162.6075pt x 175.40532pt>
+File: pics/loss_data_recover.pdf Graphic file (type pdf)
+<use pics/loss_data_recover.pdf>
+Package pdftex.def Info: pics/loss_data_recover.pdf  used on input line 27.
+(pdftex.def)             Requested size: 213.39568pt x 230.20819pt.
+[57 <./pics/loss_data.pdf>]
 
 pdfTeX warning: pdflatex.exe (file ./pics/BeiRampe.pdf): PDF inclusion: found P
 DF version <1.7>, but at most version <1.5> allowed
-<pics/beiRampe.pdf, id=966, 243.15843pt x 221.32687pt>
+<pics/beiRampe.pdf, id=1056, 243.15843pt x 221.32687pt>
 File: pics/beiRampe.pdf Graphic file (type pdf)
 <use pics/beiRampe.pdf>
 Package pdftex.def Info: pics/beiRampe.pdf  used on input line 35.
 (pdftex.def)             Requested size: 213.39568pt x 194.23463pt.
+Package acronym Info: Label `acro:CAN' newly defined as it shall be overridden
+although it is yet undefined on input line 39.
 
 
 pdfTeX warning: pdflatex.exe (file ./pics/RampeFIX.pdf): PDF inclusion: found P
 DF version <1.7>, but at most version <1.5> allowed
-<pics/RampeFIX.pdf, id=970, 230.36063pt x 196.48407pt>
+<pics/RampeFIX.pdf, id=1061, 230.36063pt x 196.48407pt>
 File: pics/RampeFIX.pdf Graphic file (type pdf)
 <use pics/RampeFIX.pdf>
 Package pdftex.def Info: pics/RampeFIX.pdf  used on input line 42.
@@ -1581,130 +1569,125 @@ Underfull \hbox (badness 10000) in paragraph at lines 43--43
 zlich
  []
 
-[57 <./pics/FreiraumHinterHindernisse.pdf>] [58 <./pics/loss_data.pdf> <./pics/
-loss_data_recover.pdf>] [59 <./pics/BeiRampe.pdf>]
-
-pdfTeX warning: pdflatex.exe (file ./pics/F_PCL.pdf): PDF inclusion: found PDF 
-version <1.7>, but at most version <1.5> allowed
-<pics/F_PCL.pdf, id=1006, 913.16058pt x 542.02402pt>
-File: pics/F_PCL.pdf Graphic file (type pdf)
-<use pics/F_PCL.pdf>
-Package pdftex.def Info: pics/F_PCL.pdf  used on input line 51.
-(pdftex.def)             Requested size: 384.1096pt x 227.9959pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./pics/F_UTM.pdf): PDF inclusion: found PDF 
-version <1.7>, but at most version <1.5> allowed
-<pics/F_UTM.pdf, id=1007, 447.92242pt x 232.61906pt>
-File: pics/F_UTM.pdf Graphic file (type pdf)
-<use pics/F_UTM.pdf>
-Package pdftex.def Info: pics/F_UTM.pdf  used on input line 57.
-(pdftex.def)             Requested size: 384.1096pt x 199.48412pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./pics/F_can_gsps.pdf): PDF inclusion: found
- PDF version <1.7>, but at most version <1.5> allowed
-<pics/F_can_gsps.pdf, id=1008, 447.92242pt x 232.61906pt>
-File: pics/F_can_gsps.pdf Graphic file (type pdf)
-<use pics/F_can_gsps.pdf>
-Package pdftex.def Info: pics/F_can_gsps.pdf  used on input line 63.
-(pdftex.def)             Requested size: 384.1096pt x 199.48412pt.
-
-
-pdfTeX warning: pdflatex.exe (file ./pics/OUTPUT12Hz.pdf): PDF inclusion: found
- PDF version <1.7>, but at most version <1.5> allowed
-<pics/OUTPUT12Hz.pdf, id=1009, 447.92242pt x 232.61906pt>
-File: pics/OUTPUT12Hz.pdf Graphic file (type pdf)
-<use pics/OUTPUT12Hz.pdf>
-Package pdftex.def Info: pics/OUTPUT12Hz.pdf  used on input line 70.
-(pdftex.def)             Requested size: 384.1096pt x 199.48412pt.
-) [60 <./pics/RampeFIX.pdf>] [61 <./pics/F_PCL.pdf> <./pics/F_UTM.pdf>]
-[62 <./pics/F_can_gsps.pdf> <./pics/OUTPUT12Hz.pdf>]
+[58 <./pics/loss_data_recover.pdf>]) [59 <./pics/BeiRampe.pdf>] [60 <./pics/Ram
+peFIX.pdf>]
 \openout2 = `Kapitel5.aux'.
 
  (./Kapitel5.tex
-Overfull \hbox (22.59843pt too wide) in paragraph at lines 2--9
-[]\OT1/cmr/m/n/12 Ahnliche wie bei dem in Ab-schnitt [][]4.1.1[][] erw[]ahnten 
-Pro-ble-me sind dar-auf zur[]uckzuf[]uhren,
- []
-
-[63
+Package acronym Info: Label `acro:GPU' newly defined as it shall be overridden
+although it is yet undefined on input line 8.
+ [61
 
 
 
-]) [64]
+]) [62]
 \openout2 = `Kapitel6.aux'.
 
- (./Kapitel6.tex) [65
+ (./Kapitel6.tex [63
 
 
 
-] (./LaTeX.bbl [66
+]) [64] (./LaTeX.bbl
+[65
 
 
 ]
-Underfull \hbox (badness 2726) in paragraph at lines 110--115
+Underfull \hbox (badness 2726) in paragraph at lines 105--110
 \OT1/cmr/m/it/12 8L / ibeo LUX HD DA-TA SHEET\OT1/cmr/m/n/12 .  [][]$\OT1/cmtt/
 m/n/12 https : / / cdn . www . ibeo -[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 110--115
+Underfull \hbox (badness 10000) in paragraph at lines 105--110
 \OT1/cmtt/m/n/12 as . com / f4b928ce695cc32b6e93db216f2e1bee56ddaa26 / ibeo % 2
 BLUX %
  []
 
-[67]
-Underfull \hbox (badness 1960) in paragraph at lines 162--168
+[66]
+Underfull \hbox (badness 1960) in paragraph at lines 164--170
 []\OT1/cmr/m/sc/12 Thrun\OT1/cmr/m/n/12 , Se-bas-ti-an:  Lear-ning Oc-cu-pan-cy
  Grid Maps with For-
  []
 
-[68]) [69]
+[67]) [68]
 \openout2 = `Anhang.aux'.
 
- (./Anhang.tex) [70
+ (./Anhang.tex
 
-]
+pdfTeX warning: pdflatex.exe (file ./pics/F_PCL.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<pics/F_PCL.pdf, id=1161, 913.16058pt x 542.02402pt>
+File: pics/F_PCL.pdf Graphic file (type pdf)
+<use pics/F_PCL.pdf>
+Package pdftex.def Info: pics/F_PCL.pdf  used on input line 9.
+(pdftex.def)             Requested size: 341.43437pt x 202.66301pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/F_UTM.pdf): PDF inclusion: found PDF 
+version <1.7>, but at most version <1.5> allowed
+<pics/F_UTM.pdf, id=1162, 447.92242pt x 232.61906pt>
+File: pics/F_UTM.pdf Graphic file (type pdf)
+<use pics/F_UTM.pdf>
+Package pdftex.def Info: pics/F_UTM.pdf  used on input line 15.
+(pdftex.def)             Requested size: 341.43437pt x 177.32118pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/F_can_gsps.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<pics/F_can_gsps.pdf, id=1163, 447.92242pt x 232.61906pt>
+File: pics/F_can_gsps.pdf Graphic file (type pdf)
+<use pics/F_can_gsps.pdf>
+Package pdftex.def Info: pics/F_can_gsps.pdf  used on input line 21.
+(pdftex.def)             Requested size: 384.1096pt x 199.48412pt.
+
+
+pdfTeX warning: pdflatex.exe (file ./pics/OUTPUT12Hz.pdf): PDF inclusion: found
+ PDF version <1.7>, but at most version <1.5> allowed
+<pics/OUTPUT12Hz.pdf, id=1164, 447.92242pt x 232.61906pt>
+File: pics/OUTPUT12Hz.pdf Graphic file (type pdf)
+<use pics/OUTPUT12Hz.pdf>
+Package pdftex.def Info: pics/OUTPUT12Hz.pdf  used on input line 27.
+(pdftex.def)             Requested size: 384.1096pt x 199.48412pt.
+) [69
+
+ <./pics/F_PCL.pdf> <./pics/F_UTM.pdf>] [70 <./pics/F_can_gsps.pdf> <./pics/OUT
+PUT12Hz.pdf>]
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     65.
+(LaTeX3)     67.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     65.
+(LaTeX3)     67.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     65.
+(LaTeX3)     67.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     65.
+(LaTeX3)     67.
 
 
 LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
-(LaTeX3)     65.
+(LaTeX3)     67.
 
  (./LaTeX.aux (./Aufgabenstellung_Dummy.aux)
 (./Sperrklausel.aux) (./Eid.aux) (./Abstract.aux) (./Abbildungsverzeichnis.aux)
-(./Tabellenverzeichnis.aux) (./Abkuerzungsverzeichnis.aux)
-(./Symbolverzeichnis.aux) (./Kapitel1.aux) (./Kapitel2.aux) (./Kapitel3.aux)
-(./Kapitel4.aux) (./Kapitel5.aux) (./Kapitel6.aux) (./Anhang.aux))
-
-LaTeX Warning: There were multiply-defined labels.
-
+(./Tabellenverzeichnis.aux) (./Abkuerzungsverzeichnis.aux) (./Kapitel1.aux)
+(./Kapitel2.aux) (./Kapitel3.aux) (./Kapitel4.aux) (./Kapitel5.aux)
+(./Kapitel6.aux) (./Anhang.aux))
 Package rerunfilecheck Info: File `LaTeX.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 15781 strings out of 479310
- 290013 string characters out of 5871341
- 817856 words of memory out of 5000000
- 32285 multiletter control sequences out of 15000+600000
+ 15907 strings out of 479310
+ 291508 string characters out of 5871341
+ 820032 words of memory out of 5000000
+ 32392 multiletter control sequences out of 15000+600000
  416165 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 82i,20n,93p,10615b,705s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 82i,20n,93p,10615b,707s stack positions out of 5000i,500n,10000p,200000b,80000s
 {c:/texlive/2020/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}<c:/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><c:/texlive/2020/texmf-di
@@ -1724,10 +1707,10 @@ fb><c:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><c:/tex
 live/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><c:/texlive/2020
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><c:/texlive/2020/texmf-di
 st/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on LaTeX.pdf (83 pages, 3899854 bytes).
+Output written on LaTeX.pdf (82 pages, 3909279 bytes).
 PDF statistics:
- 1390 PDF objects out of 1440 (max. 8388607)
- 1141 compressed objects within 12 object streams
- 237 named destinations out of 1000 (max. 500000)
- 630 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1478 PDF objects out of 1728 (max. 8388607)
+ 1228 compressed objects within 13 object streams
+ 262 named destinations out of 1000 (max. 500000)
+ 622 words of extra memory for PDF output out of 10000 (max. 10000000)
 

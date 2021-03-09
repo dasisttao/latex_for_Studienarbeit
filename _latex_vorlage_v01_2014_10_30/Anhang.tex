@@ -1,14 +1,30 @@
 \setcounter{secnumdepth}{-1}
 \section{Anhang}
 \setcounter{secnumdepth}{3}
-
-\subsection*{Hier sind zusätzliche Infos einzubringen}
-
-Das Beispiel für eine Tabbing Umgebung zeigt, dass es möglich ist, mehrere Zeilen mit dem gleichen Einzug darzustellen:
-\begin{tabbing}
-\hspace{1.3cm}\=\hspace{2.7cm}\=\hspace{3cm}\=\kill
-$v_{Start}$ \>= 120\,km/h \>= 33,3\,m/s\\
-$v_{End}$ \>= 80\,km/h \>= 22,2\,m/s\\
-\newline
-$v_{Diff}$ \>= 40\,km/h \>= 11,1\,m/s\\
-\end{tabbing}
+\renewcommand{\thefigure}{A\arabic{figure}}
+\setcounter{figure}{0}
+\subsection*{Abbildungen von Frequenzüberprüfung}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.8\textwidth]{pics/F_PCL.pdf}
+	\caption{Frequenz von Information über Punktwolke}
+	\label{fig:F_PCL}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.8\textwidth]{pics/F_UTM.pdf}
+	\caption{Frequenz von Information über UTM-Koordinaten}
+	\label{fig:F_UTM}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.9\textwidth]{pics/F_can_gsps.pdf}
+	\caption{Frequenz von Information über Nickelwinkel}
+	\label{fig:F_can_gsps}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.9\textwidth]{pics/OUTPUT12Hz.pdf}
+	\caption{Frequenz der Modellausgangsdaten}
+	\label{fig:OUTPUT12Hz}
+\end{figure} 
