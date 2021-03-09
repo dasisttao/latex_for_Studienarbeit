@@ -13,10 +13,14 @@
 \newblock IEEE, 06/12/2019 - 08/12/2019 . --
 \newblock ISBN 978--1--7281--6321--5
 
-\bibitem[.1307]{.1306200715062007}
-\emph{2007 IEEE Intelligent Vehicles Symposium}.
-\newblock IEEE, 13/06/2007 - 15/06/2007 . --
-\newblock ISBN 1--4244--1067--3
+\bibitem[APML12]{Adarve.1405201218052012}
+\textsc{Adarve}, Juan~D. ; \textsc{Perrollaz}, Mathias ; \textsc{Makris},
+  Alexandros  ; \textsc{Laugier}, Christian:
+\newblock Computing occupancy grids from multiple sensors using linear opinion
+  pools.
+\newblock {In: }\emph{2012 IEEE International Conference on Robotics and
+  Automation}, IEEE, 14/05/2012 - 18/05/2012. --
+\newblock ISBN 978--1--4673--1405--3, S. 4074--4079
 
 \bibitem[BGC{\etalchar{+}}19]{Badue.2019}
 \textsc{Badue}, Claudine ; \textsc{Guidolini}, R{\^a}nik ; \textsc{Carneiro},
@@ -28,12 +32,33 @@
 \newblock Self-Driving Cars: A Survey.
 \newblock   (2019)
 
+\bibitem[BKE19]{Bauer.0906201912062019}
+\textsc{Bauer}, Daniel ; \textsc{Kuhnert}, Lars  ; \textsc{Eckstein}, Lutz:
+\newblock Deep, spatially coherent Inverse Sensor Models with Uncertainty
+  Incorporation using the evidential Framework.
+\newblock {In: }\emph{2019 IEEE Intelligent Vehicles Symposium (IV)}, IEEE,
+  09/06/2019 - 12/06/2019. --
+\newblock ISBN 978--1--7281--0560--4, S. 2490--2495
+
+\bibitem[BKE21]{Bauer.2410202024012021}
+\textsc{Bauer}, Daniel ; \textsc{Kuhnert}, Lars  ; \textsc{Eckstein}, Lutz:
+\newblock Deep Inverse Sensor Models as Priors for evidential Occupancy
+  Mapping.
+\newblock {In: }\emph{2020 IEEE/RSJ International Conference on Intelligent
+  Robots and Systems (IROS)}, IEEE, 24/10/2020 - 24/01/2021. --
+\newblock ISBN 978--1--7281--6212--6, S. 6032--3067
+
 \bibitem[Bus05]{Buschka.2005}
 \textsc{Buschka}, P{\"a}r:
 \newblock \emph{{\"O}rebro studies in technology}. Bd.~20: {\emph{An
   investigation of hybrid maps for mobile robots}}.
 \newblock {\"O}rebro : Universitetsbiblioteket, 2005. --
 \newblock ISBN 91--7668--454--7
+
+\bibitem[EC10]{E.Einhorn.2010}
+\textsc{{E. Einhorn}} ; \textsc{{C. Schr{\"o}ter}}:
+\newblock Building 2D and 3D adaptive-resolution occupancy maps using Nd-Trees,
+  2010
 
 \bibitem[Eff09]{Effertz.2009}
 \textsc{Effertz}, Jan:
@@ -132,6 +157,14 @@
 \newblock Cambridge, Mass. and London : MIT, 2005 (Intelligent robotics and
   autonomous agents). --
 \newblock ISBN 978--0--262--20162--9
+
+\bibitem[Thr03]{Thrun.2003}
+\textsc{Thrun}, Sebastian:
+\newblock Learning Occupancy Grid Maps with Forward Sensor Models.
+\newblock {In: }\emph{Autonomous Robots} 15 (2003), Nr. 2, S. 111--127.
+\newblock \url{http://dx.doi.org/10.1023/A:1025584807625}. --
+\newblock DOI 10.1023/A:1025584807625. --
+\newblock ISSN 1573--7527
 
 \bibitem[WHLS15]{Winner.2015}
 \textsc{Winner}, Hermann ; \textsc{Hakuli}, Stephan ; \textsc{Lotz}, Felix  ;

@@ -1,1 +1,74 @@
 \section{Evaluation}
+Die Implementierung des Modells ist die Kombination aus Theorie und Ros-basierter Programmierung. Die tatsächlichen Ergebnisse dieses Modells in ROS werden in diesem Kapitel evaluiert. Die Evaluierung des Modells orientiert sich hier hauptsächlich an zwei Kriterien. Das erste ist die Qualität der gitterbasierten Karte. Die zweite ist die Laufgeschwindigkeit des Modells.
+\subsection{Qualität der gitterbasierten Karte}
+Im Allgemeinen kann das Modell eine statische Umgebung relativ gut beschreiben. Dieser Teil wurde übrigens erklärt, während die Implementierung in Kapitel~\ref{Kapitel:Implementierung} erläutert wurde. Hier werden hauptsächlich einige kleine Details erläutert, die auf der Karte angezeigt werden. Hierbei wird hauptsächlich auf einige kleine Details beschränkt, die auf der gitterbasierten Karte angezeigt werden.
+\subsubsection{Freiraum hinter Hindernisse}
+\label{Freiraum hinter Hindernisse}
+Theoretisch sollte sich hinter dem Hindernis ein unbekannter Bereich befinden. Das Ergebnis der Visualisierung ist jedoch, wie in Abbildung~\ref{fig:FreiraumHinterHindernisse} gezeigt, dass der Bereich links vom Hindernis im Bild als Freiraum bezeichnet wird. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/FreiraumHinterHindernisse.pdf}
+	\caption{Freiraum hinter Hindernisse}
+	\label{fig:FreiraumHinterHindernisse}
+\end{figure}
+Der Grund liegt darin, dass die Informationen eines einzelnen Punktes der Punktwolke instabil sind. Wenn zu Beginn einige Punktwolken in der Mitte des durchgehenden Hindernisses nicht erkannt werden, wird der Freiraum gemäß dem Algorithmus durch den Spalt entlang der Strahlrichtung eingerichtet. Nachdem die Informationen vollständig sind, wird das Hindernis vollständig erkannt und das Modell aktualisiert nur den Abstand zwischen dem Fahrzeug und dem Hindernis. Dies bildet einen isolierten Freiraum, der nicht mehr aktualisiert wird. Diese Situation spiegelt sich im unteren Teil des Bildes wider. Es ist jedoch geplant, dass das Fahrzeug während der Navigation in einem befahrbaren Bereich fährt. Da die Hindernisse schnell verbessert werden, hat dies keine Auswirkungen auf die tatsächlichen Navigationsanforderungen. Das Modell wird also als funktionsfähig bewertet.
+\subsubsection{Situation beim Datenverlust}
+Im Verlauf des Experiments wurde festgestellt, dass an bestimmten Stellen Punktwolkeninformationen verloren gingen. In diesem Fall berücksichtigt das Modell, dass keine Hindernisse erkannt werden können. Daher wird ein Freiraum um das Fahrzeug herum gebaut, wie in Abbildung~\ref{fig:loss_data} gezeigt. 
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/loss_data.pdf}
+	\caption{Modellierung beim Datenverlust}
+	\label{fig:loss_data}
+\end{figure}
+Nach der Überprüfung in ROS wird festgestellt, dass in diesem Datenrahmen mit Ausnahme von Informationen wie Zeit und Rahmen die gesamten Punktwolkeninformationen vollständig verloren gehen. Daher wird dem ursprünglichen Modell ein Filter hinzugefügt, und die Daten werden nur verwendet, wenn gültige Punktwolkeninformationen vorhanden sind.
+Nach experimentellen Ergebnissen wurde festgestellt, dass diese Situation angesprochen wurde. Wie in Abbildung~\ref{fig:loss_data_recover} gezeigt, tritt dieses Phänomen nicht mehr an derselben Position auf. Der Filter wird derzeit als einsatzfähig eingestuft. In der zukünftigen Forschung müssen jedoch die Situation des Datenverlusts eingehend untersucht werden. Beispielweise ist die Beurteilung der Gültigkeit von Daten zu beachtens , wenn ein Teil der Daten verloren geht.
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/loss_data_recover.pdf}
+	\caption{Modellierung mit Filter beim Datenverlust}
+	\label{fig:loss_data_recover}
+\end{figure}
+\subsubsection{Situation über die Rampe}
+Eine unangenehme Situation trat auf, als das Fahrzeug bergab fuhr. In diesem Fall erfassen die Laserscanner aufgrund der Gesamtneigung des Fahrzeuges den Raum näher am Boden. Zu diesem Zeitpunkt wurden aufgrund der zweidimensionalen Eigenschaften des Modells, wie in Abbildung~\ref{fig:beiRampe} gezeigt, Hindernisse vor dem Fahrzeug erkannt, obwohl dies tatsächlich ein befahrbarer Bereich ist.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/beiRampe.pdf}
+	\caption{Situation über die Rampe}
+	\label{fig:beiRampe}
+\end{figure}
+Dieses Phänomen setzt sich fort, bis das Fahrzeug beginnt, wieder horizontal zu werden. Durch Experimente kann eine einfache Anpassung der in Abschnitt~\ref{Probabilistischer Ansatz} genannten Sensormodellparameter wie $p\_fill$ und $p\_clear$ das Problem nicht beseitigen, ohne die Qualität des Modells in anderen Situationen zu beeinträchtigen. Daher führt das Modell den Nickwinkel des von CAN eingegebenen Fahrzeugs ein, um die Haltung des Fahrzeugs zu überprüfen. Wenn festgestellt wird, dass sich das Fahrzeug auf der Rampe befindet, wird der Laserscanner mit ID 2 an der Vorderseite des Autos ausgeschaltet, um das Problem zu beheben. Wenn der Absolutwert von Nickwinkel des Fahrzeugs unter einem bestimmten Wert liegt, wird der Laserscanner wieder eingeschaltet. Natürlich muss die Einführung der Daten mit anderen Informationen, wie in Abschnitt~\ref{Synchronization der Sensordaten} erwähnt, synchronisiert werden. Das Ergebnis des Modells mit hinzugefügten Nickwinkel-Informationen ist in Abbildung~\ref{fig:RampeFIX} dargestellt.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.5\textwidth]{pics/RampeFIX.pdf}
+	\caption{Situation über die Rampe, wenn Nickelwinkel zusätzlich berücksichtigt wird}
+	\label{fig:RampeFIX}
+\end{figure}
+Es gibt keine Fehleinschätzung von Hindernissen an derselben Position und das Modell wird als effektiv bewertet. Aufgrund der Einführung neuer Sensordaten hängt die tatsächliche Leistung und Genauigkeit des Modells jedoch von der Genauigkeit der Daten von Nickelwinkel ab.
+\subsection{Laufgeschwindigkeit des implementierten Modells}
+Da ROS über Tools verfügt, mit denen die Frequenz von Topic überprüft werden kann, wird die Berechnungszeit oder die Berechnungsgeschwindigkeit des Modells hier indirekt durch die Frequenz beschrieben. Wie in Abbildungen~\ref{fig:F_PCL}~\ref{fig:F_UTM}~\ref{fig:F_can_gsps} gezeigt, gehört die niedrigste Frequenz zu den Informationen aus der Punktwolke, die etwa 25 Hz beträgt. Die begrenzt den Maximalwert der Laufgeschwindigkeit des Modells.
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.9\textwidth]{pics/F_PCL.pdf}
+	\caption{Frequenz von Information über Punktwolke}
+	\label{fig:F_PCL}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.9\textwidth]{pics/F_UTM.pdf}
+	\caption{Frequenz von Information über UTM-Koordinaten}
+	\label{fig:F_UTM}
+\end{figure}
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.9\textwidth]{pics/F_can_gsps.pdf}
+	\caption{Frequenz von Information über Nickelwinkel}
+	\label{fig:F_can_gsps}
+\end{figure}
+Um die Laufgeschwindigkeit zu messen, wird die Frequenz der Modellausgangsdaten gemessen. Wie in Abbildung A gezeigt, beträgt die Ausgangsfrequenz etwa 12,5 Hz. 
+\begin{figure}[htbp] 
+	\centering
+	\includegraphics[width=0.9\textwidth]{pics/OUTPUT12Hz.pdf}
+	\caption{Frequenz der Modellausgangsdaten}
+	\label{fig:OUTPUT12Hz}
+\end{figure} 
+Der Grund ist die in Abschnitt~\ref{Laserscanner-Information} genannte Filterung der Daten. Die Daten, die die Layers 4 bis 7 enthalten, werden nicht verwendet, sodass die tatsächlich verwendeten Daten um 12 Hz übertragen werden. Diese Ausgangsfrequenz bedeutet, dass das System Daten in Intervallen von 0,083 Sekunden ausgibt. In der Parkplatzszene beträgt die maximale Abweichung bei einer Geschwindigkeit von $10km/h$ $0,23m$, was ungefähr der doppelten Auflösung von dem Gitter entspricht. Diese Geschwindigkeit gilt als zufriedenstellend und funktionsfähig.

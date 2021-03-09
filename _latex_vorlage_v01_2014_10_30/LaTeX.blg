@@ -13,6 +13,8 @@ A level-1 auxiliary file: Kapitel1.aux
 A level-1 auxiliary file: Kapitel2.aux
 A level-1 auxiliary file: Kapitel3.aux
 A level-1 auxiliary file: Kapitel4.aux
+A level-1 auxiliary file: Kapitel5.aux
+A level-1 auxiliary file: Kapitel6.aux
 The style file: alphadin.bst
 A level-1 auxiliary file: Anhang.aux
 Reallocated singl_function (elt_size=4) to 100 items from 50.
@@ -21,51 +23,49 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Literatur.bib
-Warning--I didn't find a database entry for "Badue2019"
-Warning--I didn't find a database entry for "ams09"
 Warning--to sort, need editor, organization, or key in .0612201908122019
-Warning--to sort, need editor, organization, or key in .1306200715062007
 Warning--empty organization and editor in .0612201908122019
-Warning--empty organization and editor in .1306200715062007
-You've used 20 entries,
+Warning--empty booktitle in E.Einhorn.2010
+Warning--empty pages in E.Einhorn.2010
+You've used 24 entries,
             4793 wiz_defined-function locations,
-            1060 strings with 11042 characters,
-and the built_in function-call counts, 15484 in all, are:
-= -- 1700
-> -- 397
-< -- 466
-+ -- 524
-- -- 146
-* -- 1132
-:= -- 2585
-add.period$ -- 26
-call.type$ -- 20
-change.case$ -- 114
-chr.to.int$ -- 20
-cite$ -- 26
-duplicate$ -- 375
-empty$ -- 1037
-format.name$ -- 270
-if$ -- 3083
+            1098 strings with 12245 characters,
+and the built_in function-call counts, 19462 in all, are:
+= -- 2156
+> -- 504
+< -- 572
++ -- 646
+- -- 185
+* -- 1441
+:= -- 3245
+add.period$ -- 30
+call.type$ -- 24
+change.case$ -- 139
+chr.to.int$ -- 24
+cite$ -- 29
+duplicate$ -- 461
+empty$ -- 1301
+format.name$ -- 340
+if$ -- 3882
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 63
-newline$ -- 130
-num.names$ -- 54
-pop$ -- 135
+missing$ -- 73
+newline$ -- 155
+num.names$ -- 69
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 154
+purify$ -- 187
 quote$ -- 0
-skip$ -- 752
+skip$ -- 911
 stack$ -- 0
-substring$ -- 1473
-swap$ -- 97
-text.length$ -- 83
-text.prefix$ -- 8
+substring$ -- 1930
+swap$ -- 122
+text.length$ -- 105
+text.prefix$ -- 9
 top$ -- 0
-type$ -- 172
+type$ -- 214
 warning$ -- 4
-while$ -- 123
-width$ -- 23
-write$ -- 290
-(There were 6 warnings)
+while$ -- 161
+width$ -- 27
+write$ -- 351
+(There were 4 warnings)
