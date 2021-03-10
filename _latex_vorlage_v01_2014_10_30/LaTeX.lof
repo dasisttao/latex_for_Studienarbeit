@@ -11,34 +11,34 @@
 \contentsline {figure}{\numberline {2.10}{\ignorespaces Das inverses Sensormodell, wenn ein Hindernis detektiert wird\relax }}{22}{figure.caption.32}%
 \contentsline {figure}{\numberline {2.11}{\ignorespaces Das inverses Sensormodell, wenn kein Hindernis detektiert wird\relax }}{23}{figure.caption.33}%
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Dimension von Versuchsfahrzeug\relax }}{25}{figure.caption.34}%
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Einbauposition und Erfassungsbereich der Ibeo-Laserscanner\relax }}{26}{figure.caption.36}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Einbauposition und Erfassungsbereich der Laserscanner~\citep {Hegerhorst.2018}\relax }}{26}{figure.caption.36}%
 \contentsline {figure}{\numberline {3.3}{\ignorespaces ROS-Architektur\relax }}{28}{figure.caption.39}%
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Wesentliche Grundkonzepte von Berechnungsdiagrammebene\relax }}{29}{figure.caption.40}%
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Wichtige Grundkonzepte von Berechnungsdiagrammebene~\citep {Fernandez.2015}\relax }}{29}{figure.caption.40}%
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Display mit Map\relax }}{31}{figure.caption.42}%
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Display mit GridCell\relax }}{32}{figure.caption.43}%
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Display mit GridCell nach Bin\"arisierung\relax }}{33}{figure.caption.44}%
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Display mit \emph {GridCells}\relax }}{32}{figure.caption.43}%
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Display mit \emph {GridCells} nach Bin\"arisierung\relax }}{33}{figure.caption.44}%
 \contentsline {figure}{\numberline {3.8}{\ignorespaces 3 wesentliche Koordinatensysteme im Umfeldmodell\relax }}{34}{figure.caption.45}%
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Anordnung der Position des Autos auf der Karte~\citep {Hegerhorst.2018}\relax }}{37}{figure.caption.46}%
-\contentsline {figure}{\numberline {3.10}{\ignorespaces Programmablaufplan der Aktualisierung von ACS\relax }}{39}{figure.caption.47}%
-\contentsline {figure}{\numberline {3.11}{\ignorespaces Initialisierung von ACS\relax }}{40}{figure.caption.48}%
-\contentsline {figure}{\numberline {3.12}{\ignorespaces Umrechnung des Orientierungswinkels in GCS\relax }}{41}{figure.caption.49}%
+\contentsline {figure}{\numberline {3.10}{\ignorespaces Programmablaufplan der Aktualisierung von ACS\relax }}{38}{figure.caption.47}%
+\contentsline {figure}{\numberline {3.11}{\ignorespaces Initialisierung von ACS\relax }}{39}{figure.caption.48}%
+\contentsline {figure}{\numberline {3.12}{\ignorespaces Umrechnung des Orientierungswinkels in GCS\relax }}{40}{figure.caption.49}%
 \contentsline {figure}{\numberline {3.13}{\ignorespaces Kartierungsalgorithmus mit Objektinformation von Laserscanner~\citep {Hegerhorst.2018}\relax }}{41}{figure.caption.50}%
-\contentsline {figure}{\numberline {3.14}{\ignorespaces Programmablaufplan der Laserscannerdaten\relax }}{43}{figure.caption.52}%
+\contentsline {figure}{\numberline {3.14}{\ignorespaces Programmablaufplan der Laserscannerdaten\relax }}{42}{figure.caption.51}%
 \contentsline {figure}{\numberline {3.15}{\ignorespaces Darstellung eines Hilfskoordinatensystem\relax }}{44}{figure.caption.54}%
-\contentsline {figure}{\numberline {3.16}{\ignorespaces Implementierung des inversen Sensormodells\relax }}{49}{figure.caption.55}%
+\contentsline {figure}{\numberline {3.16}{\ignorespaces Implementierung des inversen Sensormodells\relax }}{48}{figure.caption.55}%
 \contentsline {figure}{\numberline {3.17}{\ignorespaces Raycasting mit Bresenham-Algorithmus\relax }}{50}{figure.caption.56}%
-\contentsline {figure}{\numberline {3.18}{\ignorespaces Aktualisierung vom Array $Hisotry\_grid$ aufgrund der Verschiebung der Karte\relax }}{52}{figure.caption.57}%
-\contentsline {figure}{\numberline {3.19}{\ignorespaces Ausgangsinformationsfluss\relax }}{53}{figure.caption.58}%
-\contentsline {figure}{\numberline {3.20}{\ignorespaces Visualisierung von Bewegungspfaden\relax }}{55}{figure.caption.59}%
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Freiraum hinter Hindernisse\relax }}{56}{figure.caption.60}%
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fr\"uher}}}{56}{subfigure.1.1}%
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {sp\"ater}}}{56}{subfigure.1.2}%
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Modellierung beim Datenverlust\relax }}{57}{figure.caption.61}%
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Modellierung mit Filter beim Datenverlust\relax }}{58}{figure.caption.62}%
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Situation \"uber die Rampe\relax }}{59}{figure.caption.63}%
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Situation \"uber die Rampe, wenn Nickelwinkel zus\"atzlich ber\"ucksichtigt wird\relax }}{60}{figure.caption.65}%
-\contentsline {figure}{\numberline {A1}{\ignorespaces Frequenz von Information \"uber Punktwolke\relax }}{69}{figure.caption.72}%
-\contentsline {figure}{\numberline {A2}{\ignorespaces Frequenz von Information \"uber UTM-Koordinaten\relax }}{69}{figure.caption.73}%
-\contentsline {figure}{\numberline {A3}{\ignorespaces Frequenz von Information \"uber Nickelwinkel\relax }}{70}{figure.caption.74}%
-\contentsline {figure}{\numberline {A4}{\ignorespaces Frequenz der Modellausgangsdaten\relax }}{70}{figure.caption.75}%
+\contentsline {figure}{\numberline {3.18}{\ignorespaces Aktualisierung vom Array \emph {history\_grid} aufgrund der Verschiebung der Karte\relax }}{51}{figure.caption.57}%
+\contentsline {figure}{\numberline {3.19}{\ignorespaces Ausgangsinformationsfluss\relax }}{52}{figure.caption.58}%
+\contentsline {figure}{\numberline {3.20}{\ignorespaces Visualisierung von Bewegungspfaden\relax }}{54}{figure.caption.59}%
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Freiraum hinter Hindernisse\relax }}{55}{figure.caption.60}%
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {fr\"uher}}}{55}{subfigure.1.1}%
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {sp\"ater}}}{55}{subfigure.1.2}%
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Modellierung beim Datenverlust\relax }}{56}{figure.caption.61}%
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Modellierung mit Filter beim Datenverlust\relax }}{57}{figure.caption.62}%
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Situation \"uber die Rampe\relax }}{58}{figure.caption.63}%
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Situation \"uber die Rampe, wenn Nickelwinkel zus\"atzlich ber\"ucksichtigt wird\relax }}{59}{figure.caption.65}%
+\contentsline {figure}{\numberline {A1}{\ignorespaces Frequenz von Information \"uber Punktwolke\relax }}{68}{figure.caption.72}%
+\contentsline {figure}{\numberline {A2}{\ignorespaces Frequenz von Information \"uber UTM-Koordinaten\relax }}{68}{figure.caption.73}%
+\contentsline {figure}{\numberline {A3}{\ignorespaces Frequenz von Information \"uber Nickelwinkel\relax }}{69}{figure.caption.74}%
+\contentsline {figure}{\numberline {A4}{\ignorespaces Frequenz der Modellausgangsdaten\relax }}{69}{figure.caption.75}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

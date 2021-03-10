@@ -30,25 +30,25 @@
 \contentsline {subsubsection}{\numberline {3.3.2}\ac {VCS}}{35}{subsubsection.3.3.2}%
 \contentsline {subsubsection}{\numberline {3.3.3}\ac {ACS}}{36}{subsubsection.3.3.3}%
 \contentsline {subsubsection}{\numberline {3.3.4}Zusammenhang zwischen Koordinatensystemen}{37}{subsubsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.4}Verarbeitung von Sensordaten}{38}{subsection.3.4}%
-\contentsline {subsubsection}{\numberline {3.4.1}GPS-Information}{39}{subsubsection.3.4.1}%
-\contentsline {subsubsection}{\numberline {3.4.2}Laserscanner-Information}{40}{subsubsection.3.4.2}%
-\contentsline {subsubsection}{\numberline {3.4.3}Synchronization der Sensordaten}{46}{subsubsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.5}Implementierung von Occupancy Grid Map}{47}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.4}Verarbeitung von Sensordaten}{40}{subsection.3.4}%
+\contentsline {subsubsection}{\numberline {3.4.1}GPS-Information}{40}{subsubsection.3.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.2}Laserscanner-Information}{41}{subsubsection.3.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.3}Synchronisation der Sensordaten}{46}{subsubsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.5}Implementierung von \emph {Occupancy Grid Map}{}}{46}{subsection.3.5}%
 \contentsline {subsubsection}{\numberline {3.5.1}Raumdiskretisierung}{47}{subsubsection.3.5.1}%
-\contentsline {subsubsection}{\numberline {3.5.2}Probabilistischer Ansatz}{48}{subsubsection.3.5.2}%
+\contentsline {subsubsection}{\numberline {3.5.2}Probabilistischer Ansatz}{47}{subsubsection.3.5.2}%
 \contentsline {subsection}{\numberline {3.6}Zus\"atzliche Features}{52}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Ausgangsinformationsfluss}{53}{subsubsection.3.6.1}%
-\contentsline {subsubsection}{\numberline {3.6.2}Visualisierung des Fahrzeugs}{54}{subsubsection.3.6.2}%
+\contentsline {subsubsection}{\numberline {3.6.1}Ausgangsinformationsfluss}{52}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.2}Visualisierung des Fahrzeugs}{53}{subsubsection.3.6.2}%
 \contentsline {subsubsection}{\numberline {3.6.3}Visualisierung von Bewegungspfaden}{54}{subsubsection.3.6.3}%
-\contentsline {section}{\numberline {4}Evaluation}{56}{section.4}%
-\contentsline {subsection}{\numberline {4.1}Qualit\"at der gitterbasierten Karte}{56}{subsection.4.1}%
-\contentsline {subsubsection}{\numberline {4.1.1}Freiraum hinter Hindernisse}{56}{subsubsection.4.1.1}%
-\contentsline {subsubsection}{\numberline {4.1.2}Situation beim Datenverlust}{57}{subsubsection.4.1.2}%
-\contentsline {subsubsection}{\numberline {4.1.3}Situation \"uber die Rampe}{58}{subsubsection.4.1.3}%
+\contentsline {section}{\numberline {4}Evaluation}{55}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Qualit\"at der gitterbasierten Karte}{55}{subsection.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Freiraum hinter Hindernisse}{55}{subsubsection.4.1.1}%
+\contentsline {subsubsection}{\numberline {4.1.2}Situation beim Datenverlust}{56}{subsubsection.4.1.2}%
+\contentsline {subsubsection}{\numberline {4.1.3}Situation \"uber die Rampe}{57}{subsubsection.4.1.3}%
 \contentsline {subsection}{\numberline {4.2}Rechenleistung des implementierten Modells}{59}{subsection.4.2}%
-\contentsline {section}{\numberline {5}Diskussion}{61}{section.5}%
-\contentsline {section}{\numberline {6}Zusammenfassung}{63}{section.6}%
-\contentsline {section}{\nonumberline Literatur}{65}{section*.68}%
-\contentsline {section}{\nonumberline Anhang A}{69}{section*.70}%
+\contentsline {section}{\numberline {5}Diskussion}{60}{section.5}%
+\contentsline {section}{\numberline {6}Zusammenfassung}{62}{section.6}%
+\contentsline {section}{\nonumberline Literatur}{64}{section*.68}%
+\contentsline {section}{\nonumberline Anhang A}{68}{section*.70}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
