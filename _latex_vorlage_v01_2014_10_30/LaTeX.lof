@@ -1,9 +1,9 @@
 \babel@toc {ngerman}{}
 \contentsline {figure}{\numberline {2.1}{\ignorespaces M\"ogliche Umfeldmodelle f\"ur autonome Fahrzeuge\relax }}{4}{figure.caption.18}%
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Ein objektbasiertes Umfeldmodell~\citep {FawadAhmad.2020}\relax }}{5}{figure.caption.19}%
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Zwei Ebenen von Occupancy Grid Map\relax }}{6}{figure.caption.20}%
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Zwei Ebenen von \emph {Occupancy Grid Map}{}\relax }}{6}{figure.caption.20}%
 \contentsline {figure}{\numberline {2.4}{\ignorespaces Raumdiskretisierung der Umgebung um Fahrzeug \citep {Winner.2015}\relax }}{6}{figure.caption.21}%
-\contentsline {figure}{\numberline {2.5}{\ignorespaces Bestandteile des Modells Occupancy Grid Map\relax }}{7}{figure.caption.22}%
+\contentsline {figure}{\numberline {2.5}{\ignorespaces Bestandteile des Modells \emph {Occupancy Grid Map}{}\relax }}{7}{figure.caption.22}%
 \contentsline {figure}{\numberline {2.6}{\ignorespaces ~\ac {HMM} \citep {Thrun.2005}\relax }}{8}{figure.caption.24}%
 \contentsline {figure}{\numberline {2.7}{\ignorespaces Das reduzierte HMM \citep {Thrun.2005}\relax }}{10}{figure.caption.26}%
 \contentsline {figure}{\numberline {2.8}{\ignorespaces Bestandteile des Prinzips von Inverses Sensormodell \relax }}{18}{figure.caption.29}%
