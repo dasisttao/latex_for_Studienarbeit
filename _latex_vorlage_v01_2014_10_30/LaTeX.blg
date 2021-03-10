@@ -8,7 +8,6 @@ A level-1 auxiliary file: Abstract.aux
 A level-1 auxiliary file: Abbildungsverzeichnis.aux
 A level-1 auxiliary file: Tabellenverzeichnis.aux
 A level-1 auxiliary file: Abkuerzungsverzeichnis.aux
-A level-1 auxiliary file: Symbolverzeichnis.aux
 A level-1 auxiliary file: Kapitel1.aux
 A level-1 auxiliary file: Kapitel2.aux
 A level-1 auxiliary file: Kapitel3.aux
@@ -27,7 +26,7 @@ Warning--empty booktitle in E.Einhorn.2010
 Warning--empty pages in E.Einhorn.2010
 You've used 24 entries,
             4793 wiz_defined-function locations,
-            1100 strings with 12393 characters,
+            1099 strings with 12372 characters,
 and the built_in function-call counts, 19853 in all, are:
 = -- 2180
 > -- 548
